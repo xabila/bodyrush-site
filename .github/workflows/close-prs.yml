@@ -1,0 +1,30 @@
+name: Close External Pull Requests
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  close-pr:
+    runs-on: ubuntu-latest
+    if: github.actor != 'xabila'
+    steps:
+      - name: Close Pull Request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: "👋 Thank you for your interest! This repository hosts the public landing page for BodyRush and does not accept external pull requests or contributions. All code and assets are proprietary. This PR will be automatically closed."
+            });
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              state: "closed"
+            });

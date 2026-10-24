@@ -89,9 +89,9 @@
           BodyRush est conçue avec une priorité absolue : <strong>le respect total de votre vie privée</strong>.
         </p>
         <ul>
-          <li><strong>Utilisation de la caméra avant :</strong> Le flux vidéo de votre caméra sert exclusivement et uniquement à estimer en temps réel les coordonnées tridimensionnelles de vos articulations corporelles (Body Pose Tracking) via le framework officiel <strong>Apple Vision</strong>.</li>
-          <li><strong>Aucun enregistrement vidéo :</strong> Aucune vidéo, aucune photo ni aucune image issue de la caméra n'est stockée sur votre appareil ni transmise à un quelconque serveur externe.</li>
-          <li><strong>Traitement en mémoire vive volatile :</strong> Les images capturées par la caméra sont analysées image par image directement sur la puce de votre appareil (Neural Engine / GPU) puis immédiatement supprimées de la mémoire.</li>
+          <li><strong>Utilisation de la caméra avant :</strong> Le flux vidéo de votre caméra sert exclusivement à estimer en temps réel les coordonnées de vos articulations corporelles (Body Pose Tracking) via le framework officiel <strong>Apple Vision</strong> directement sur votre appareil.</li>
+          <li><strong>Aucun enregistrement ni transfert distant :</strong> Aucune vidéo, aucune photo ni aucune image issue de la caméra n'est jamais transmise à un serveur externe ou dans le cloud.</li>
+          <li><strong>Photo Souvenir & Replay Vidéo Finish (100% Local) :</strong> Lors d'une course, l'application génère localement en mémoire vive une photo souvenir sur votre meilleure posture validée ainsi qu'un court replay vidéo des dernières secondes de la course. Ces fichiers restent strictement en mémoire locale temporaire sur votre appareil et sont détruits à la course suivante, sauf si vous choisissez explicitement d'appuyer sur le bouton « Enregistrer » ou « Partager » (via la feuille de partage standard d'iOS).</li>
         </ul>
 
         <h2>2. Aucune Donnée Biométrique Stockée</h2>
@@ -99,14 +99,14 @@
           BodyRush ne procède à aucune reconnaissance faciale, identification biométrique ou profilage d'individus. Le tracking détecte uniquement des repères squelettiques abstraits (tête, épaules, coudes, poignets, hanches, genoux, chevilles) afin de déclencher les mécaniques de jeu (boxe, esquive, squats, sauts, postures).
         </p>
 
-        <h2>3. Données Liées aux Achats (StoreKit & RevenueCat)</h2>
+        <h2>3. Données Liées aux Achats (Apple StoreKit 2 & RevenueCat)</h2>
         <p>
-          Les achats intégrés (Pass Mensuel Pro, Pass Annuel VIP Pro, Déblocage à Vie) sont sécurisés et gérés directement par <strong>Apple StoreKit</strong>. Nous n'avons jamais accès à vos coordonnées bancaires ou informations de carte de crédit. Un identifiant anonyme de transaction peut être traité via le service RevenueCat dans le seul but de valider l'accès aux niveaux débloqués.
+          Les achats intégrés (Pass Mensuel Pro, Pass Annuel VIP Pro, Déblocage à Vie) sont sécurisés et gérés directement par <strong>Apple StoreKit</strong>. Nous n'avons jamais accès à vos coordonnées bancaires ou informations de carte de crédit. Un identifiant anonyme de transaction est traité via le service <strong>RevenueCat</strong> dans le seul but de vérifier l'état de votre abonnement et de débloquer les mondes PRO.
         </p>
 
-        <h2>4. Données de Télémétrie et Crashs</h2>
+        <h2>4. Statistiques d'Utilisation Anonymes & Télémétrie (Mixpanel)</h2>
         <p>
-          Pour garantir la fluidité du jeu (maintien des 60 FPS et détection des bugs), des rapports d'erreurs techniques entièrement anonymes et sans lien avec votre identité peuvent être collectés conformément aux réglages standards de diagnostic d'iOS (App Store Connect).
+          Afin d'améliorer l'équilibrage des niveaux, le tutoriel et la stabilité du jeu (maintien des 60 FPS), BodyRush collecte des événements techniques d'utilisation strictement anonymes via <strong>Mixpanel</strong> (ex. : niveau lancé, fin de course, étape du tutoriel franchie, ouverture du paywall) ainsi que des rapports de crash anonymes via App Store Connect. Ces données ne contiennent <strong>aucune image, aucune coordonnée corporelle ni aucune donnée personnelle identifiable</strong>.
         </p>
 
         <h2>5. Protection des Enfants</h2>

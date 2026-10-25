@@ -75,66 +75,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const levelCatalog = {
     "0": {
-      shortFr: "NIV. 00 TUTORIEL",
-      shortEn: "LVL 00 TUTORIAL",
-      tagFr: "🎓 TUTORIEL INTERACTIF DES 8 GESTES",
-      tagEn: "🎓 INTERACTIVE 8-MOVE TUTORIAL"
+      shortFr: "NIV. 00 TUTORIEL (♾️ CŒURS)",
+      shortEn: "LVL 00 TUTORIAL (♾️ HEARTS)",
+      tagFr: "🎓 TUTORIEL INTERACTIF DES 8 GESTES · ♾️ CŒURS",
+      tagEn: "🎓 INTERACTIVE 8-MOVE TUTORIAL · ♾️ HEARTS",
+      unlimitedHearts: true
     },
     "1": {
-      shortFr: "NIV. 01 BOXE",
-      shortEn: "LVL 01 BOXING",
-      tagFr: "🥊 SPÉCIALITÉ : BOXE & CIBLES RYTHMÉES",
-      tagEn: "🥊 SPECIALTY: BOXING & RHYTHM TARGETS"
+      shortFr: "NIV. 01 BOXE (🚫 SANS SAUT/SQUAT)",
+      shortEn: "LVL 01 BOXING (🚫 NO JUMP/SQUAT)",
+      tagFr: "🥊 NIV. 01 · 3 MIN · 4 ❤️ · 🚫 SANS SAUT NI SQUAT",
+      tagEn: "🥊 LVL 01 · 3 MIN · 4 ❤️ · 🚫 NO JUMP OR SQUAT",
+      unlimitedHearts: false
     },
     "2": {
-      shortFr: "NIV. 02 POSTURES",
-      shortEn: "LVL 02 POSTURES",
-      tagFr: "🧘 SPÉCIALITÉ : GYM & MURS DE POSTURE",
-      tagEn: "🧘 SPECIALTY: GYM & POSTURE GATES"
+      shortFr: "NIV. 02 POSTURES (🚫 SANS SAUT)",
+      shortEn: "LVL 02 POSTURES (🚫 NO JUMP)",
+      tagFr: "🙌 NIV. 02 · 3 MIN · 4 ❤️ · 🚫 SANS SAUT",
+      tagEn: "🙌 LVL 02 · 3 MIN · 4 ❤️ · 🚫 NO JUMP",
+      unlimitedHearts: false
     },
     "3": {
-      shortFr: "NIV. 03 PARKOUR",
-      shortEn: "LVL 03 PARKOUR",
-      tagFr: "⚡️ SPÉCIALITÉ : PARKOUR, SAUTS & ÉTAGES",
-      tagEn: "⚡️ SPECIALTY: PARKOUR, JUMPS & STAIRS"
+      shortFr: "NIV. 03 PARKOUR (🚫 SANS SQUAT)",
+      shortEn: "LVL 03 PARKOUR (🚫 NO SQUAT)",
+      tagFr: "🏃 NIV. 03 · 3 MIN · 4 ❤️ · 🚫 SANS SQUAT",
+      tagEn: "🏃 LVL 03 · 3 MIN · 4 ❤️ · 🚫 NO SQUAT",
+      unlimitedHearts: false
     },
     "4": {
-      shortFr: "NIV. 04 HYPER-MIX",
-      shortEn: "LVL 04 HYPER-MIX",
-      tagFr: "🔥 SPÉCIALITÉ : HYPER-MIX COMPLET",
-      tagEn: "🔥 SPECIALTY: FULL HYPER-MIX"
+      shortFr: "NIV. 04 HYPER-MIX (✅ COMPLET)",
+      shortEn: "LVL 04 HYPER-MIX (✅ ALL MOVES)",
+      tagFr: "⚡ NIV. 04 · 3 MIN · 4 ❤️ · ✅ TOUS LES MOUVEMENTS",
+      tagEn: "⚡ LVL 04 · 3 MIN · 4 ❤️ · ✅ ALL MOVEMENTS",
+      unlimitedHearts: false
     },
     "5": {
-      shortFr: "NIV. 05 CLOCKWORK (140 BPM)",
-      shortEn: "LVL 05 CLOCKWORK (140 BPM)",
-      tagFr: "⚙️ BEATFIT 140 BPM : BOXE HAUTE CADENCE",
-      tagEn: "⚙️ BEATFIT 140 BPM: HIGH-TEMPO BOXING"
+      shortFr: "NIV. 05 FIT CLOCKWORK (5 MIN · ♾️)",
+      shortEn: "LVL 05 FIT CLOCKWORK (5 MIN · ♾️)",
+      tagFr: "⚙️ BEATFIT 5 MIN · ♾️ CŒURS · 🚫 SANS SAUT NI SQUAT",
+      tagEn: "⚙️ BEATFIT 5 MIN · ♾️ HEARTS · 🚫 NO JUMP OR SQUAT",
+      unlimitedHearts: true
     },
     "6": {
-      shortFr: "NIV. 06 BLACK ICE (133 BPM)",
-      shortEn: "LVL 06 BLACK ICE (133 BPM)",
-      tagFr: "🧊 BEATFIT 133 BPM : SLALOM & ESQUIVES",
-      tagEn: "🧊 BEATFIT 133 BPM: SLALOM & DODGES"
+      shortFr: "NIV. 06 FIT BLACK ICE (5 MIN · ♾️)",
+      shortEn: "LVL 06 FIT BLACK ICE (5 MIN · ♾️)",
+      tagFr: "🧊 BEATFIT 5 MIN · ♾️ CŒURS · 🚫 SANS SQUAT",
+      tagEn: "🧊 BEATFIT 5 MIN · ♾️ HEARTS · 🚫 NO SQUAT",
+      unlimitedHearts: true
     },
     "7": {
-      shortFr: "NIV. 07 SHORELINE (121 BPM)",
-      shortEn: "LVL 07 SHORELINE (121 BPM)",
-      tagFr: "☀️ BEATFIT 121 BPM : POSTURES & GROOVE",
-      tagEn: "☀️ BEATFIT 121 BPM: POSTURES & GROOVE"
+      shortFr: "NIV. 07 FIT SHORELINE (5 MIN · ♾️)",
+      shortEn: "LVL 07 FIT SHORELINE (5 MIN · ♾️)",
+      tagFr: "☀️ BEATFIT 5 MIN · ♾️ CŒURS · 🚫 SANS SAUT",
+      tagEn: "☀️ BEATFIT 5 MIN · ♾️ HEARTS · 🚫 NO JUMP",
+      unlimitedHearts: true
     },
     "8": {
-      shortFr: "NIV. 08 CROWN ARENA (142 BPM)",
-      shortEn: "LVL 08 CROWN ARENA (142 BPM)",
-      tagFr: "👑 FIT INTENSE 142 BPM : ARÈNE ULTIME",
-      tagEn: "👑 FIT INTENSE 142 BPM: ULTIMATE ARENA"
+      shortFr: "NIV. 08 FIT CROWN ARENA (10 MIN · ♾️)",
+      shortEn: "LVL 08 FIT CROWN ARENA (10 MIN · ♾️)",
+      tagFr: "🔥 FIT INTENSE 10 MIN · ♾️ CŒURS · ✅ TOUS MOUVEMENTS",
+      tagEn: "🔥 FIT INTENSE 10 MIN · ♾️ HEARTS · ✅ ALL MOVEMENTS",
+      unlimitedHearts: true
+    },
+    "9": {
+      shortFr: "NIV. 09 BONUS MÉLI-MÉLO 6 MONDES (10 MIN · ♾️)",
+      shortEn: "LVL 09 BONUS 6-WORLD MEGAMIX (10 MIN · ♾️)",
+      tagFr: "🌟 BONUS 10 MIN · ♾️ CŒURS · TRAVERSE LES 6 MONDES !",
+      tagEn: "🌟 BONUS 10 MIN · ♾️ HEARTS · ALL 6 WORLDS MARATHON!",
+      unlimitedHearts: true
     }
   };
 
   const diffCatalog = {
-    chill: { label: "EASY (~38 OBS)", obs: 38 },
-    normal: { label: "NORMAL (~65 OBS)", obs: 65 },
-    fast: { label: "HARD (~100 OBS)", obs: 100 },
-    turbo: { label: "EXPERT+ (~145 OBS)", obs: 145 }
+    chill: { label: "EASY (~40 OBS)", obs: 40 },
+    normal: { label: "NORMAL (~80 OBS · COMBOS x2)", obs: 80 },
+    fast: { label: "HARD (~125 OBS · COMBOS x2/x3)", obs: 125 },
+    turbo: { label: "EXPERT+ (~175 OBS · COMBOS x3)", obs: 175 }
   };
 
   const i18n = {
@@ -159,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tuto_sub: "Pose l'iPhone à 2m et valide les 8 gestes en 1 minute",
       tuto_btn: "TUTO ➔",
       tab_1_label: "1. MONDE 3D (6)",
-      tab_2_label: "2. NIVEAU & MUSIQUE (8)",
+      tab_2_label: "2. NIVEAU & MUSIQUE (9)",
       tab_3_label: "3. DIFFICULTÉ & SALON",
       step1_heading: "CHOISIS TON UNIVERS 3D :",
       step1_hint: "Clique sur un monde pour voir son couloir et ses monstres",
@@ -172,26 +188,28 @@ document.addEventListener("DOMContentLoaded", () => {
       w_hal_sub: "Manoir hanté · Fantômes & Golem de pierre",
       w_xmas_title: "NOËL EXPRESS",
       w_xmas_sub: "Village enneigé · Bonhomme & Casse-Noisette",
-      step2_heading: "CHOISIS TON NIVEAU & SA SPÉCIALITÉ :",
-      step2_hint: "Chaque niveau oriente la chorégraphie (Boxe, Postures, Parkour ou Mix)",
+      step2_heading: "CHOISIS TON NIVEAU, LA DURÉE & LES MOUVEMENTS :",
+      step2_hint: "Niveaux 3 min (Sans Saut / Sans Squat / Complet), Cardio FIT 5 & 10 min (♾️ Cœurs Illimités) ou Bonus Méli-Mélo 6 Mondes !",
       lvl_1_name: "RYTHME & BOXE",
-      lvl_1_desc: "Vilains G/C/D, Cubes Rythmés & Murs Fissurés",
+      lvl_1_desc: "🚫 Sans Saut ni Squat · Vilains G/C/D & Cubes Rythmés",
       lvl_2_name: "GYM & POSTURES",
-      lvl_2_desc: "Murs de Posture Néon, Squats & Auto-Avance",
-      lvl_3_name: "PARKOUR MULTI-ÉTAGES",
-      lvl_3_desc: "Piliers 3 voies, Sauts, Squats & Étages +1/+2/+3",
+      lvl_2_desc: "🚫 Sans Saut · Murs de Posture Néon, Squats & Boxe",
+      lvl_3_name: "PARKOUR ÉTAGES",
+      lvl_3_desc: "🚫 Sans Squat · Piliers 3 voies, Sauts & Étages +1/+2/+3",
       lvl_4_name: "HYPER-MIX FINAL",
-      lvl_4_desc: "Combinaison totale Boxe + Postures + Parkour",
-      lvl_5_desc: "Boxe industrielle haute cadence & rafales 2 mains",
-      lvl_6_desc: "Slalom latéral rapide, murs de glace & esquives",
-      lvl_7_desc: "Groove cardio fluide, 10 postures & sauts rythmés",
-      lvl_8_desc: "Le défi ultime : 142 BPM, drops & combos complets",
-      step3_heading: "CHOISIS LA DIFFICULTÉ (DENSITÉ D'OBSTACLES SUR LA MUSIQUE) :",
-      step3_hint: "La vitesse reste confortable : c'est la densité de monstres, sauts et postures sur le beat qui augmente !",
-      diff_1_desc: "1 obstacle tous les 4 temps · 4 postures faciles · Idéal débutant & enfants",
-      diff_2_desc: "Cadence arcade rythmée · 7 postures · Alternance gauche/droite sur le beat",
-      diff_3_desc: "Combos 2 actions enchaînées · Les 10 postures · Plus de sauts, squats & monstres",
-      diff_4_desc: "Rafales 3 actions sur chaque temps fort & bass drop · Score & cardio maximum",
+      lvl_4_desc: "✅ Tous les Mouvements · Boxe + Postures + Sauts + Squats",
+      lvl_5_desc: "🚫 Sans Saut ni Squat · Cardio Boxe 5 min sans perdre",
+      lvl_6_desc: "🚫 Sans Squat · Slalom Latéral & Sauts 5 min sans perdre",
+      lvl_7_desc: "🚫 Sans Saut · Postures & Squats Cardio 5 min sans perdre",
+      lvl_8_desc: "✅ Tous les Mouvements · Endurance 10 min à Cœurs Illimités",
+      lvl_9_name: "MÉLI-MÉLO DES 6 MONDES ( MARATHON 10 MIN )",
+      lvl_9_desc: "✅ Tous les Mouvements · Traverse Toy Kingdom ➔ Sakura ➔ Temple ➔ Cristal ➔ Halloween ➔ Noël avec difficulté progressive !",
+      step3_heading: "CHOISIS LA DIFFICULTÉ (PLUS D'ÉVÉNEMENTS & COMBOS SUR LA MUSIQUE) :",
+      step3_hint: "Plus tu montes en difficulté, plus il y a d'événements et de combos enchaînés (x2 / x3) sur les temps forts !",
+      diff_1_desc: "1 événement à la fois (0.82x) · 4 postures faciles · Idéal débutant & enfants",
+      diff_2_desc: "2x plus d'événements (1.00x) · 7 postures · Premiers Combos x2 sur le beat",
+      diff_3_desc: "3x plus d'événements (1.18x) · Les 10 postures · Combos x2 & x3 enchaînés",
+      diff_4_desc: "4x plus d'événements (1.35x) · Les 10 postures · Rafales Combos x3 sur chaque drop",
       party_label: "🏆 MODE TOURNOI SALON (CHACUN SON TOUR DEVANT LA CAMÉRA) :",
       p_solo: "👤 SOLO",
       recap_label: "CONFIGURATION ACTIVE :",
@@ -245,19 +263,19 @@ document.addEventListener("DOMContentLoaded", () => {
       free_badge: "INCLUS AU TÉLÉCHARGEMENT",
       free_name: "VERSION GRATUITE",
       free_sub: "pour toujours",
-      f_1: "✓ Tutoriel Interactif des 8 Gestes (Niv. 00)",
-      f_2: "✓ Monde Toy Kingdom (Niv. 01 + Teaser PRO 20s)",
-      f_3: "✓ Difficultés EASY (~38 obs) & NORMAL (~65 obs)",
+      f_1: "✓ Tutoriel Interactif des 8 Gestes (Niv. 00 · ♾️ Cœurs)",
+      f_2: "✓ Monde Toy Kingdom (Niv. 01 Sans Saut/Squat + Teaser PRO 20s)",
+      f_3: "✓ Difficultés EASY (~40 obs) & NORMAL (~80 obs + Combos x2)",
       f_4: "✓ Mode Solo, Photo Souvenir & Replay Finish",
-      f_5: "🔒 Les 5 autres Mondes 3D & Niveaux 02 à 08",
-      f_6: "🔒 Difficultés HARD (~100 obs) & EXPERT+ (~145 obs)",
+      f_5: "🔒 Les 5 autres Mondes 3D & Niveaux 02 à 09 (FIT 5/10 min & Méli-Mélo)",
+      f_6: "🔒 Difficultés HARD (~125 obs) & EXPERT+ (~175 obs + Combos x3)",
       btn_dl_free: "⏳ Bientôt sur l'App Store",
       vip_ribbon: "👑 OFFRE LA PLUS POPULAIRE · ÉCONOMISE 50%",
       vip_name: "PASS ANNUEL PRO",
       vip_flex: "ou Pass Mensuel sans engagement à 4,99 €/mois",
       v_1: "✓ Les 6 Mondes 3D Complets (Toy, Sakura, Temple, Cristal, Halloween, Noël)",
-      v_2: "✓ Tous les 8 Niveaux Spécialisés (Boxe, Postures, Parkour, BeatFit)",
-      v_3: "✓ Les 4 Difficultés jusqu'à EXPERT+ (~145 obstacles sur le beat)",
+      v_2: "✓ Les 10 Niveaux (Modes Sans Saut/Squat, FIT 5/10 min ♾️ Cœurs & Méli-Mélo 6 Mondes)",
+      v_3: "✓ Les 4 Difficultés jusqu'à EXPERT+ (~175 événements + Combos x3 sur le beat)",
       v_4: "✓ 26 Musiques Originales avec Détecteur de Drop Musical",
       v_5: "✓ Mode Tournoi Salon 2 à 4 Joueurs & Podium Photo 3D",
       v_6: "✓ Mode TV AirPlay 16:9 Haute Définition",
@@ -266,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
       life_name: "ÉDITION INFINITY À VIE",
       life_sub: "une seule fois",
       l_1: "✓ Déblocage À Vie de tout BodyRush 3D PRO",
-      l_2: "✓ Tous les 6 Mondes, 8 Niveaux, 4 Difficultés & 26 Musiques",
+      l_2: "✓ Tous les 6 Mondes, 10 Niveaux (FIT & Méli-Mélo), 4 Difficultés & 26 Musiques",
       l_3: "✓ Tournoi Salon 2 à 4 Joueurs & Podium Photo 3D",
       l_4: "✓ Toutes les futures mises à jour et nouveaux mondes inclus",
       l_5: "✓ Compatible Partage Familial Apple",
@@ -276,10 +294,10 @@ document.addEventListener("DOMContentLoaded", () => {
       priv_btn: "Consulter la Politique de Confidentialité",
       faq_1_q: "Quelle distance faut-il prévoir devant l'iPhone ou l'iPad ?",
       faq_1_a: "Pose ton iPhone ou ton iPad à environ 1,80 m – 2,50 m face à toi (sur une table basse, un meuble TV ou un support). Le guide de cadrage intelligent passe au vert dès que ta silhouette est bien visible.",
-      faq_2_q: "Quels appareils sont compatibles ?",
-      faq_2_a: "Tous les iPhone sous iOS 17+ (iPhone 11, 12, 13, 14, 15, 16) et tous les iPad sous iPadOS 17+ équipés d'une puce A12Z, A14 Bionic ou Apple Silicon (M1, M2, M4).",
+      faq_2_q: "Peut-on jouer sans sauter (en appartement) ou sans faire de squats ?",
+      faq_2_a: "Oui ! Chaque niveau affiche clairement ses règles de mouvements : les Niveaux 01 & 05 sont 100% Sans Saut ni Squat (Boxe & Esquive), les Niveaux 02 & 07 sont Sans Saut (Postures & Squats), et les Niveaux 03 & 06 sont Sans Squat (Parkour & Sauts). Les Niveaux FIT 05 à 09 offrent en plus des Cœurs Illimités (♾️) sur 5 ou 10 minutes !",
       faq_3_q: "Comment fonctionne la difficulté façon Beat Saber ?",
-      faq_3_a: "La vitesse d'approche reste toujours naturelle et lisible : passer de EASY (~38 obstacles) à NORMAL (~65), HARD (~100) ou EXPERT+ (~145) augmente le nombre de monstres, de sauts, de squats et de postures synchronisés sur les temps forts de la musique.",
+      faq_3_a: "Passer de EASY (~40 événements) à NORMAL (~80 + Combos x2), HARD (~125 + Combos x2/x3) ou EXPERT+ (~175 + Rafales Combos x3) multiplie le nombre d'obstacles et d'enchaînements calés sur les temps forts de la musique !",
       footer_bio: "Conçu et développé en France par Xavier Larrodé. Tous droits réservés © 2026 BodyRush.",
       footer_priv_pol: "Confidentialité"
     },
@@ -304,7 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tuto_sub: "Place iPhone 2m away & test all 8 moves in 1 minute",
       tuto_btn: "TUTO ➔",
       tab_1_label: "1. 3D WORLD (6)",
-      tab_2_label: "2. LEVEL & MUSIC (8)",
+      tab_2_label: "2. LEVEL & MUSIC (9)",
       tab_3_label: "3. DIFFICULTY & PARTY",
       step1_heading: "CHOOSE YOUR 3D WORLD:",
       step1_hint: "Click any world to preview its corridor and monsters",
@@ -317,26 +335,28 @@ document.addEventListener("DOMContentLoaded", () => {
       w_hal_sub: "Haunted mansion · Ghosts & Gargoyle Golem",
       w_xmas_title: "SANTA VILLAGE",
       w_xmas_sub: "Snowy village · Snowman & Nutcracker",
-      step2_heading: "CHOOSE YOUR LEVEL & SPECIALTY:",
-      step2_hint: "Each level tailors the choreography (Boxing, Postures, Parkour or Mix)",
+      step2_heading: "CHOOSE YOUR LEVEL, DURATION & MOVEMENTS:",
+      step2_hint: "3-Min Levels (No-Jump / No-Squat / Full), 5 & 10-Min FIT (♾️ Unlimited Hearts) or 10-Min 6-World Megamix!",
       lvl_1_name: "RHYTHM & BOXING",
-      lvl_1_desc: "L/C/R Villains, Rhythm Cubes & Cracked Walls",
+      lvl_1_desc: "🚫 No Jump or Squat · L/C/R Villains & Rhythm Cubes",
       lvl_2_name: "GYM & POSTURES",
-      lvl_2_desc: "Neon Posture Gates, Squats & Auto-Glide",
-      lvl_3_name: "MULTI-FLOOR PARKOUR",
-      lvl_3_desc: "3-Lane Pillars, Jumps, Squats & +1/+2/+3 Stairs",
+      lvl_2_desc: "🚫 No Jump · Neon Posture Gates, Squats & Boxing",
+      lvl_3_name: "PARKOUR STAIRS",
+      lvl_3_desc: "🚫 No Squat · 3-Lane Pillars, Jumps & +1/+2/+3 Stairs",
       lvl_4_name: "FINAL HYPER-MIX",
-      lvl_4_desc: "Complete combination of Boxing + Poses + Parkour",
-      lvl_5_desc: "High-tempo industrial boxing & 2-hand flurries",
-      lvl_6_desc: "Fast lateral slalom, ice walls & dodges",
-      lvl_7_desc: "Smooth cardio groove, 10 poses & rhythmic jumps",
-      lvl_8_desc: "The ultimate challenge: 142 BPM, drops & full combos",
-      step3_heading: "CHOOSE DIFFICULTY (MUSICAL OBSTACLE DENSITY):",
-      step3_hint: "Approach speed stays comfortable: difficulty scales the density of monsters, jumps and poses on the beat!",
-      diff_1_desc: "1 obstacle every 4 beats · 4 easy poses · Best for beginners & kids",
-      diff_2_desc: "Balanced arcade cadence · 7 poses · Left/right beat alternation",
-      diff_3_desc: "2-step chained combos · All 10 poses · More jumps, squats & monsters",
-      diff_4_desc: "3-step flurries on every accent & bass drop · Maximum score & cardio",
+      lvl_4_desc: "✅ All Movements · Boxing + Postures + Jumps + Squats",
+      lvl_5_desc: "🚫 No Jump or Squat · 5-Min Cardio Boxing (No Game Over)",
+      lvl_6_desc: "🚫 No Squat · 5-Min Lateral Slalom & Jumps (No Game Over)",
+      lvl_7_desc: "🚫 No Jump · 5-Min Postures & Cardio Squats (No Game Over)",
+      lvl_8_desc: "✅ All Movements · 10-Min Endurance Challenge (♾️ Hearts)",
+      lvl_9_name: "6-WORLD MEGAMIX ( 10-MIN MARATHON )",
+      lvl_9_desc: "✅ All Movements · Travel through Toy Kingdom ➔ Sakura ➔ Temple ➔ Crystal ➔ Halloween ➔ Santa with progressive difficulty!",
+      step3_heading: "CHOOSE DIFFICULTY (MORE EVENTS & COMBOS ON THE BEAT):",
+      step3_hint: "Higher difficulties multiply the number of events and chained combos (x2 / x3) synced to musical accents!",
+      diff_1_desc: "1 event at a time (0.82x) · 4 easy poses · Best for beginners & kids",
+      diff_2_desc: "2x more events (1.00x) · 7 poses · First x2 Combos on the beat",
+      diff_3_desc: "3x more events (1.18x) · All 10 poses · Chained x2 & x3 Combos",
+      diff_4_desc: "4x more events (1.35x) · All 10 poses · x3 Combo flurries on every drop",
       party_label: "🏆 PARTY TOURNAMENT MODE (PASS & PLAY IN FRONT OF CAMERA):",
       p_solo: "👤 SOLO",
       recap_label: "ACTIVE SETUP:",
@@ -390,19 +410,19 @@ document.addEventListener("DOMContentLoaded", () => {
       free_badge: "INCLUDED FOR FREE",
       free_name: "FREE EDITION",
       free_sub: "forever",
-      f_1: "✓ Interactive 8-Move Gesture Tutorial (Lvl 00)",
-      f_2: "✓ Toy Kingdom World (Lvl 01 + 20s PRO Teaser)",
-      f_3: "✓ EASY (~38 obs) & NORMAL (~65 obs) Difficulties",
+      f_1: "✓ Interactive 8-Move Gesture Tutorial (Lvl 00 · ♾️ Hearts)",
+      f_2: "✓ Toy Kingdom World (Lvl 01 No-Jump/Squat + 20s PRO Teaser)",
+      f_3: "✓ EASY (~40 obs) & NORMAL (~80 obs + x2 Combos) Difficulties",
       f_4: "✓ Solo Mode, Souvenir Photo & Finish Replay",
-      f_5: "🔒 Remaining 5 3D Worlds & Levels 02 to 08",
-      f_6: "🔒 HARD (~100 obs) & EXPERT+ (~145 obs) Difficulties",
+      f_5: "🔒 Remaining 5 3D Worlds & Levels 02 to 09 (5/10-Min FIT & Megamix)",
+      f_6: "🔒 HARD (~125 obs) & EXPERT+ (~175 obs + x3 Combos) Difficulties",
       btn_dl_free: "⏳ Coming Soon on App Store",
       vip_ribbon: "👑 MOST POPULAR · SAVE 50%",
       vip_name: "ANNUAL PRO PASS",
       vip_flex: "or Monthly Flex Pass at €4.99/month",
       v_1: "✓ All 6 Complete 3D Worlds (Toy, Sakura, Temple, Crystal, Halloween, Santa)",
-      v_2: "✓ All 8 Specialized Levels (Boxing, Postures, Parkour, BeatFit)",
-      v_3: "✓ All 4 Difficulties up to EXPERT+ (~145 obstacles on the beat)",
+      v_2: "✓ All 10 Custom Levels (No-Jump/Squat, 5/10-Min FIT ♾️ Hearts & 6-World Megamix)",
+      v_3: "✓ All 4 Difficulties up to EXPERT+ (~175 events + x3 Combos on the beat)",
       v_4: "✓ 26 Original Tracks with Live Bass-Drop Detector",
       v_5: "✓ 2-to-4 Player Party Tournament & 3D Photo Podium",
       v_6: "✓ High-Definition 16:9 AirPlay TV Mode",
@@ -411,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
       life_name: "INFINITY LIFETIME EDITION",
       life_sub: "one time",
       l_1: "✓ Lifetime Unlock of all BodyRush 3D PRO content",
-      l_2: "✓ All 6 Worlds, 8 Levels, 4 Difficulties & 26 Tracks",
+      l_2: "✓ All 6 Worlds, 10 Levels (FIT & Megamix), 4 Difficulties & 26 Tracks",
       l_3: "✓ 2-to-4 Player Party Tournament & 3D Photo Podium",
       l_4: "✓ All future updates and new worlds included",
       l_5: "✓ Apple Family Sharing supported",
@@ -421,10 +441,10 @@ document.addEventListener("DOMContentLoaded", () => {
       priv_btn: "Read the Privacy Policy",
       faq_1_q: "How much space do I need in front of my iPhone or iPad?",
       faq_1_a: "Place your iPhone or iPad about 6 to 8 feet (1.8m – 2.5m) in front of you on a coffee table, TV stand or tripod. The smart framing guide turns green as soon as your full body is visible.",
-      faq_2_q: "Which devices are supported?",
-      faq_2_a: "All iPhones running iOS 17+ (iPhone 11, 12, 13, 14, 15, 16) and all iPads running iPadOS 17+ with A12Z, A14 Bionic or Apple Silicon (M1, M2, M4).",
+      faq_2_q: "Can I play without jumping (in an apartment) or without squats?",
+      faq_2_a: "Yes! Every level explicitly displays its movement rules: Levels 01 & 05 are 100% No-Jump & No-Squat (Boxing & Dodging), Levels 02 & 07 are No-Jump (Postures & Squats), and Levels 03 & 06 are No-Squat (Parkour & Jumps). Plus, FIT Levels 05 to 09 feature Unlimited Hearts (♾️) for uninterrupted 5 or 10-minute cardio workouts!",
       faq_3_q: "How does the Beat Saber-style difficulty work?",
-      faq_3_a: "Approach speed stays natural and readable: moving from EASY (~38 obstacles) to NORMAL (~65), HARD (~100) or EXPERT+ (~145) increases the density of monsters, jumps, squats and posture gates synced to the musical beat.",
+      faq_3_a: "Moving from EASY (~40 events) to NORMAL (~80 + x2 Combos), HARD (~125 + x2/x3 Combos) or EXPERT+ (~175 + x3 Combo flurries) multiplies the density of obstacles and chained actions synced to musical accents!",
       footer_bio: "Designed and built in France by Xavier Larrodé. All rights reserved © 2026 BodyRush.",
       footer_priv_pol: "Privacy"
     }
@@ -478,6 +498,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const vpBadge = document.getElementById("vp-world-badge");
     if (vpBadge) vpBadge.textContent = w.badge;
+
+    const vpHearts = document.getElementById("vp-hearts");
+    if (vpHearts) {
+      if (l.unlimitedHearts) {
+        vpHearts.textContent = currentLang === "fr" ? "♾️ CŒURS" : "♾️ HEARTS";
+      } else {
+        vpHearts.textContent = "❤️❤️❤️❤️";
+      }
+    }
 
     const vpWall = document.getElementById("vp-world-wall");
     if (vpWall) vpWall.src = w.wall;

@@ -12,8 +12,8 @@
 
 ### Key Differentiators
 - **100% Camera-Controlled Full-Body Gameplay**: Run in place, dodge across 3 lanes, jump over low barriers, squat under overhead beams, punch monsters and rhythm cubes with left/right/double fists or front kicks, and match 10 full-body neon posture silhouettes.
-- **Beat Saber-Style Musical Difficulty Scaling**: Instead of making obstacles unreadably fast, higher difficulties increase **musical obstacle density and combo complexity** synced to the song's BPM and real-time bass drops (`~38` obstacles in EASY, `~65` in NORMAL, `~100` in HARD, `~145` in EXPERT+).
-- **Category-Specialized Levels**: Each level specializes in a distinct workout pillar (Boxing & Targets, Gym & Posture Gates, 3-Lane Multi-Floor Parkour, or Full Hyper-Mix).
+- **Beat-Quantized Musical Difficulty Scaling**: Higher difficulties multiply **musical event density and chained combo complexity** synced to the song's BPM and real-time bass drops (`~40` obstacles in EASY, `~80` + x2 Combos in NORMAL, `~125` + x2/x3 Combos in HARD, `~175` + x3 Combo flurries in EXPERT+).
+- **Explicit Movement Rules (No-Jump / No-Squat Options) & Unlimited-Hearts FIT Modes**: Every level explicitly displays whether it excludes jumps (`🚫 Sans Saut` — apartment/neighbor-friendly), excludes squats (`🚫 Sans Squat` — knee-friendly), or includes all movements (`✅ Tous les Mouvements`). Levels 05–07 (`5 MIN`) and 08–09 (`10 MIN`) feature **Unlimited Hearts (`♾️`)** so players never get a Game Over during their timed cardio workout, culminating in **Level 09: 10-Min 6-World Megamix Bonus**!
 - **True 16:9 AirPlay TV + Low-Power Skeleton Cockpit**: When mirrored or connected via AirPlay to a television, the TV displays a dedicated 16:9 widescreen 3D view while the iPhone/iPad switches to a lightweight Skeleton Cockpit HUD to prevent thermal throttling.
 - **Living-Room Pass & Play Tournament (2 to 4 Players)**: Friends and family take turns in front of the camera on the same world and track, culminating in a **3D Photo Podium** with automatic action souvenir photos and shareable finish video replays.
 - **100% On-Device Privacy**: All camera frames are processed in RAM by the Apple Neural Engine and discarded immediately. No video or biometric data ever leaves the device. Works completely offline (even in Airplane Mode).
@@ -58,37 +58,38 @@
 
 ---
 
-## 4. Complete Catalog of 8 Specialized Levels + Tutorial
+## 4. Complete Catalog of 10 Custom Levels (Niv. 00 to 09)
 
-- **Level 00 — Interactive Gesture Tutorial (`GRATUIT`)**: 60-second guided calibration and test of all 8 core movements at 2 meters.
-- **Level 01 — Rythme & Boxe (`GRATUIT in Toy Kingdom`)**: Focused on boxing targets (Left/Center/Right villains), rhythm cubes, and brittle crystal walls. Includes a live 20-second PRO world preview at the end of the track.
-- **Level 02 — Gym & Postures (`PRO`)**: Focused on the 10 Neon Posture Gates, squats, and core posture stability.
-- **Level 03 — Parkour Multi-Étages (`PRO`)**: Focused on 3-lane dodging, low hurdle jumps, overhead beam squats, and climbing 3D stairs (`+1`, `+2`, `+3`).
-- **Level 04 — Hyper-Mix Final (`PRO`)**: Full arcade combination of Boxing, Posture Gates, and Multi-Floor Parkour.
-- **Level 05 — Clockwork (`140 BPM · PRO`)**: High-tempo industrial BeatFit boxing & rapid two-hand combinations.
-- **Level 06 — Black Ice (`133 BPM · PRO`)**: Fast lateral slalom, ice walls, squats, and parkour dodges.
-- **Level 07 — Shoreline (`121 BPM · PRO`)**: Smooth cardio groove combining all 10 postures with rhythmic jumps.
-- **Level 08 — Crown Arena (`142 BPM · PRO`)**: Ultimate high-intensity arena synced to heavy bass drops.
+- **Level 00 — Interactive Gesture Tutorial (`GRATUIT · ♾️ Unlimited Hearts`)**: Guided calibration and test of all 8 core movements at 2 meters.
+- **Level 01 — Rythme & Boxe (`GRATUIT in Toy Kingdom · 3 MIN · 4 ❤️ · 🚫 No Jump or Squat`)**: Focused on boxing targets (Left/Center/Right villains), 3-lane dodging, rhythm cubes, and brittle crystal walls. Includes a live 20-second PRO world preview at the end of the track.
+- **Level 02 — Gym & Postures (`PRO · 3 MIN · 4 ❤️ · 🚫 No Jump`)**: Focused on the 10 Neon Posture Gates, squats, and boxing (zero jumping required).
+- **Level 03 — Parkour Étages (`PRO · 3 MIN · 4 ❤️ · 🚫 No Squat`)**: Focused on 3-lane dodging, low hurdle jumps, and climbing 3D stairs (`+1`, `+2`, `+3`) with zero squats.
+- **Level 04 — Hyper-Mix Final (`PRO · 3 MIN · 4 ❤️ · ✅ All Movements`)**: Full arcade combination of Boxing, Posture Gates, Jumps, Squats, and Multi-Floor Parkour.
+- **Level 05 — BeatFit · Clockwork (`140 BPM · PRO · 5 MIN · ♾️ Unlimited Hearts · 🚫 No Jump or Squat`)**: 5-minute uninterrupted high-tempo boxing & dodging cardio session.
+- **Level 06 — BeatFit · Black Ice (`133 BPM · PRO · 5 MIN · ♾️ Unlimited Hearts · 🚫 No Squat`)**: 5-minute uninterrupted lateral slalom, ice walls, and jumps.
+- **Level 07 — BeatFit · Shoreline (`121 BPM · PRO · 5 MIN · ♾️ Unlimited Hearts · 🚫 No Jump`)**: 5-minute uninterrupted posture flow and squats.
+- **Level 08 — Fit Intense · Crown Arena (`142 BPM · PRO · 10 MIN · ♾️ Unlimited Hearts · ✅ All Movements`)**: 10-minute high-intensity endurance arena with all movements and unlimited hearts.
+- **Level 09 — 🌟 Bonus 10 Min · Méli-Mélo des 6 Mondes (`PRO · 10 MIN · ♾️ Unlimited Hearts · ✅ All Movements`)**: 10-minute marathon travelling sequentially through all 6 3D Worlds (1m40s per world: Toy Kingdom ➔ Sakura Zen ➔ Indiana Temple ➔ Red Cristal ➔ Halloween ➔ Noël Express) with automatic progressive difficulty!
 
 ---
 
-## 5. The 4 Beat Saber-Style Difficulties
+## 5. The 4 Beat-Quantized Difficulties
 
-| Difficulty | Target Obstacles / Song | Beat Spacing | Postures Unlocked | Description |
+| Difficulty | Target Obstacles (3 min) | Speed & Beat Grid | Postures Unlocked | Description |
 |---|---|---|---|---|
-| **EASY** (`Chill`) | `~38 obstacles` | Every 4 beats | 4 easy postures | Gentle rhythm, single clear obstacles, ideal for kids, beginners & warm-ups |
-| **NORMAL** (`Normal`) | `~65 obstacles` | Every 2 beats | 7 postures | Balanced arcade flow, left/right beat alternation |
-| **HARD** (`Fast`) | `~100 obstacles` | Every 1.5 beats + 2-step combos | All 10 postures | Chained 2-action combinations (Squat ➔ Jump, Left Jab ➔ Right Straight) |
-| **EXPERT+** (`Turbo`) | `~145 obstacles` | Every beat + 3-step flurries | All 10 postures | Intense 3-action flurries on musical accents & bass drops, maximum HIIT burn |
+| **EASY** (`Chill`) | `~40 obstacles` | `0.82x` · Every 2 beats (0% combos) | 4 easy postures | 1 event at a time, ideal for kids, beginners & warm-ups |
+| **NORMAL** (`Normal`) | `~80 obstacles` | `1.00x` · Every 1 beat (22% x2 combos) | 7 postures | **2x more events**, balanced arcade cadence + first x2 beat combos |
+| **HARD** (`Fast`) | `~125 obstacles` | `1.18x` · Every 0.75 beat (48% x2/x3 combos) | All 10 postures | **3x more events**, chained 2-action & 3-action combinations |
+| **EXPERT+** (`Turbo`) | `~175 obstacles` | `1.35x` · Every 0.5 beat (72% x3 flurries) | All 10 postures | **4x more events**, intense 3-action flurries on every bass drop |
 
 ---
 
 ## 6. Pricing & Editions (EUR / USD)
 
-- **Free Download**: Includes the Interactive Tutorial (Lvl 00), Toy Kingdom (Lvl 01 + 20s PRO Teaser), EASY & NORMAL difficulties, Solo mode, Souvenir Photo, and Finish Replay.
+- **Free Download**: Includes the Interactive Tutorial (Lvl 00), Toy Kingdom (Lvl 01 No-Jump/Squat + 20s PRO Teaser), EASY & NORMAL difficulties, Solo mode, Souvenir Photo, and Finish Replay.
 - **BodyRush PRO Monthly Pass**: `4,99 € / month` (`$4.99 / month`) — Cancel anytime.
 - **BodyRush PRO Annual VIP Pass**: `29,99 € / year` (`$29.99 / year`) — Save 50%.
-- **BodyRush PRO Infinity Lifetime Edition**: `79,99 €` (`$79.99`) one-time purchase — Permanent unlock of all 6 worlds, 8 levels, 4 difficulties, 26 music tracks, 2–4 player Party Tournament, AirPlay 16:9 TV mode, future updates, and Apple Family Sharing.
+- **BodyRush PRO Infinity Lifetime Edition**: `79,99 €` (`$79.99`) one-time purchase — Permanent unlock of all 6 worlds, 10 levels (including 5/10-Min FIT & 6-World Megamix), 4 difficulties, 26 music tracks, 2–4 player Party Tournament, AirPlay 16:9 TV mode, future updates, and Apple Family Sharing.
 
 ---
 

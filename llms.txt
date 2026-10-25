@@ -32,25 +32,27 @@
 5. **🎃 Halloween Sprint (132 BPM — PRO)** : Manoir hanté, Golem Gargouille, fantômes farceurs, barrières de citrouilles.
 6. **🎄 Noël Express (135 BPM — PRO)** : Village enneigé du Père Noël, Bonhomme de neige boxeur, Casse-Noisette, traîneau de cadeaux.
 
-## Les 8 Niveaux Spécialisés (+ Tutoriel Interactif)
+## Les 10 Niveaux Sur-Mesure (Modes Sans Saut / Sans Squat, FIT 5/10 min ♾️ Cœurs & Méli-Mélo)
 
-- **Niv. 00 — Tutoriel Interactif (Gratuit)** : Apprentissage guidé des 8 gestes à 2m en 1 minute.
-- **Niv. 01 — Rythme & Boxe (Gratuit dans Toy Kingdom)** : Spécialité Boxe, cibles G/C/D, cubes rythmés & murs fissurés (inclut un aperçu en direct des mondes PRO dans les 20 dernières secondes).
-- **Niv. 02 — Gym & Postures (PRO)** : Spécialité Murs de Posture Néon, squats et maintien postural.
-- **Niv. 03 — Parkour Multi-Étages (PRO)** : Spécialité Évitement 3 voies, sauts, squats et escaliers 3D (+1/+2/+3).
-- **Niv. 04 — Hyper-Mix Final (PRO)** : Combinaison complète Boxe + Postures + Parkour.
-- **Niv. 05 — Clockwork 140 BPM (PRO)** : BeatFit Boxe industrielle haute cadence & rafales 2 mains.
-- **Niv. 06 — Black Ice 133 BPM (PRO)** : BeatFit Slalom latéral rapide, murs de glace & esquives.
-- **Niv. 07 — Shoreline 121 BPM (PRO)** : BeatFit Groove cardio fluide, 10 postures & sauts rythmés.
-- **Niv. 08 — Crown Arena 142 BPM (PRO)** : Défi ultime haute intensité sur les bass drops.
+Chaque niveau indique explicitement sa durée, son nombre de cœurs (`4 ❤️` ou `♾️ Cœurs Illimités`) et ses règles de mouvements (idéal en appartement sans sauter ou pour ménager ses genoux sans squats) :
+- **Niv. 00 — Tutoriel Interactif (Gratuit · ♾️ Cœurs)** : Apprentissage guidé des 8 gestes à 2m en 1 minute.
+- **Niv. 01 — Rythme & Boxe (Gratuit dans Toy Kingdom · 3 MIN · 4 ❤️ · 🚫 Sans Saut ni Squat)** : Spécialité Boxe, cibles G/C/D, cubes rythmés & murs fissurés (inclut un aperçu en direct des mondes PRO dans les 20 dernières secondes).
+- **Niv. 02 — Gym & Postures (PRO · 3 MIN · 4 ❤️ · 🚫 Sans Saut)** : Spécialité Murs de Posture Néon, squats et boxe.
+- **Niv. 03 — Parkour Étages (PRO · 3 MIN · 4 ❤️ · 🚫 Sans Squat)** : Spécialité Évitement 3 voies, sauts et escaliers 3D (+1/+2/+3).
+- **Niv. 04 — Hyper-Mix Final (PRO · 3 MIN · 4 ❤️ · ✅ Tous les Mouvements)** : Combinaison complète Boxe + Postures + Sauts + Squats.
+- **Niv. 05 — BeatFit · Clockwork 140 BPM (PRO · 5 MIN · ♾️ Cœurs Illimités · 🚫 Sans Saut ni Squat)** : Cardio Boxe haute cadence 5 minutes sans Game Over.
+- **Niv. 06 — BeatFit · Black Ice 133 BPM (PRO · 5 MIN · ♾️ Cœurs Illimités · 🚫 Sans Squat)** : Slalom latéral rapide & sauts 5 minutes sans Game Over.
+- **Niv. 07 — BeatFit · Shoreline 121 BPM (PRO · 5 MIN · ♾️ Cœurs Illimités · 🚫 Sans Saut)** : Groove cardio fluide, postures & squats 5 minutes sans Game Over.
+- **Niv. 08 — Fit Intense · Crown Arena 142 BPM (PRO · 10 MIN · ♾️ Cœurs Illimités · ✅ Tous les Mouvements)** : Défi endurance de 10 minutes à Cœurs Illimités.
+- **Niv. 09 — 🌟 Bonus 10 Min · Méli-Mélo des 6 Mondes (PRO · 10 MIN · ♾️ Cœurs Illimités · ✅ Tous les Mouvements)** : Marathon de 10 minutes traversant successivement les 6 Mondes 3D (Toy Kingdom ➔ Sakura Zen ➔ Temple Indiana ➔ Red Cristal ➔ Halloween ➔ Noël Express) avec montée progressive de la difficulté !
 
-## Les 4 Difficultés Musicales (Façon Beat Saber)
+## Les 4 Difficultés Musicales (Plus d'Événements & Combos sur le Beat)
 
-La vitesse d'approche reste toujours confortable et lisible ; c'est la **densité chorégraphique d'obstacles synchronisés sur le beat** qui augmente :
-- **EASY (~38 obstacles / chanson)** : 1 obstacle tous les 4 temps, 4 postures faciles. Idéal débutants, enfants et échauffement.
-- **NORMAL (~65 obstacles / chanson)** : Cadence arcade équilibrée, 7 postures, alternance gauche/droite sur le beat.
-- **HARD (~100 obstacles / chanson)** : Combos de 2 actions enchaînées (ex. Squat ➔ Saut, Jab Gauche ➔ Direct Droit), les 10 postures complètes.
-- **EXPERT+ (~145 obstacles / chanson)** : Rafales de 3 actions sur chaque temps fort et bass drop, cardio HIIT maximum.
+Plus le joueur monte en difficulté, plus le nombre d'événements et d'enchaînements (Combos x2 / x3) calés sur la musique augmente :
+- **EASY (~40 obstacles / 3 min · 0.82x)** : 1 obstacle à la fois, 4 postures faciles, zéro combo simultané. Idéal débutants, enfants et échauffement.
+- **NORMAL (~80 obstacles / 3 min · 1.00x)** : 2x plus d'événements qu'en Easy, 7 postures, premiers Combos x2 sur les temps forts.
+- **HARD (~125 obstacles / 3 min · 1.18x)** : 3x plus d'événements, les 10 postures complètes, Combos x2 et x3 enchaînés (ex. Squat ➔ Saut, Jab Gauche ➔ Direct Droit).
+- **EXPERT+ (~175 obstacles / 3 min · 1.35x)** : 4x plus d'événements, rafales de Combos x3 sur chaque temps fort et bass drop, cardio HIIT maximum.
 
 ## Mode TV AirPlay 16:9 & Tournoi Salon 2 à 4 Joueurs
 

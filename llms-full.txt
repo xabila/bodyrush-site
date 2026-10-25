@@ -47,14 +47,14 @@
 
 ## 3. Complete Catalog of 6 3D Worlds
 
-| # | World Name | Tempo | Theme & Obstacles | Availability |
+| # | World Name | Music Track & Tempo | Theme & Obstacles | Availability |
 |---|---|---|---|---|
-| 1 | **🐱 Toy Kingdom** | 128 BPM | Playroom hallway, Orange Maine Coon Cat boxer, Toy Robot, wooden train, alphabet blocks | **FREE** (Level 01 + 20s PRO Teaser) |
-| 2 | **🌸 Sakura Zen** | 130 BPM | Japanese cherry blossom fitness studio, Pink Panda, Kitsune boxer, sakura arches, zen pillars | **PRO** |
-| 3 | **🏺 Temple Indiana** | 136 BPM | Aztec jungle temple ruins, Golden Tiki Idol warrior, giant rolling stone boulder, ceiling spikes | **PRO** |
-| 4 | **💎 Red Cristal** | 134 BPM | Tactical crystal bunker, low-poly Ruby Crystal Boxers, red security lasers, cracked glass walls | **PRO** |
-| 5 | **🎃 Halloween Sprint** | 132 BPM | Haunted mansion corridor, Gothic Gargoyle Golem, spooky ghosts, glowing pumpkin hurdles | **PRO** |
-| 6 | **🎄 Noël Express** | 135 BPM | Santa's snowy alpine village, Snowman boxer, Toy Nutcracker soldier, gift sleigh hurdles | **PRO** |
+| 1 | **🐱 Toy Kingdom** | *Clockwork* · 128 BPM | Playroom hallway, Orange Maine Coon Cat boxer, Toy Robot, wooden train, alphabet blocks | **FREE** (Level 01 + 20s PRO Teaser) |
+| 2 | **🌸 Sakura Zen** | *Candy Velocity* · 130 BPM | Japanese cherry blossom fitness studio, Pink Panda, Kitsune boxer, sakura arches, zen pillars | **PRO** |
+| 3 | **🏺 Temple Indiana** | *Hardened Clockwork* · 136 BPM | Aztec jungle temple ruins, Golden Tiki Idol warrior, giant rolling stone boulder, ceiling spikes | **PRO** |
+| 4 | **💎 Red Cristal** | *Red Cristal* · 134 BPM | Tactical crystal bunker, low-poly Ruby Crystal Boxers, red security lasers, cracked glass walls | **PRO** |
+| 5 | **🎃 Halloween Sprint** | *Spooky Mansion* · 132 BPM | Haunted mansion corridor, Gothic Gargoyle Golem, spooky ghosts, glowing pumpkin hurdles | **PRO** |
+| 6 | **🎄 Noël Express** | *Noël Express* · 135 BPM | Santa's snowy alpine village, Snowman boxer, Toy Nutcracker soldier, gift sleigh hurdles | **PRO** |
 
 ---
 

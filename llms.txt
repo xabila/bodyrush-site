@@ -25,12 +25,12 @@
 
 ## Les 6 Mondes 3D
 
-1. **🐱 Toy Kingdom (128 BPM — Inclus gratuitement au Niveau 01)** : Chambre des jouets, Chat Maine Coon boxeur, Robot jouet, train en bois.
-2. **🌸 Sakura Zen (130 BPM — PRO)** : Studio fitness japonais sous les cerisiers en fleurs, Panda Rose, Kitsune, arches florales.
-3. **🏺 Temple Indiana (136 BPM — PRO)** : Ruines aztèques, Idole Tiki dorée, boule géante de pierre, pieux suspendus.
-4. **💎 Red Cristal (134 BPM — PRO)** : Bunker de cristal tactique, Boxeurs de cristal rubis, lasers bas, murs de verre fissurés.
-5. **🎃 Halloween Sprint (132 BPM — PRO)** : Manoir hanté, Golem Gargouille, fantômes farceurs, barrières de citrouilles.
-6. **🎄 Noël Express (135 BPM — PRO)** : Village enneigé du Père Noël, Bonhomme de neige boxeur, Casse-Noisette, traîneau de cadeaux.
+1. **🐱 Toy Kingdom (Musique : Clockwork · 128 BPM — Inclus gratuitement au Niveau 01)** : Chambre des jouets, Chat Maine Coon boxeur, Robot jouet, train en bois.
+2. **🌸 Sakura Zen (Musique : Candy Velocity · 130 BPM — PRO)** : Studio fitness japonais sous les cerisiers en fleurs, Panda Rose, Kitsune, arches florales.
+3. **🏺 Temple Indiana (Musique : Hardened Clockwork · 136 BPM — PRO)** : Ruines aztèques, Idole Tiki dorée, boule géante de pierre, pieux suspendus.
+4. **💎 Red Cristal (Musique : Red Cristal · 134 BPM — PRO)** : Bunker de cristal tactique, Boxeurs de cristal rubis, lasers bas, murs de verre fissurés.
+5. **🎃 Halloween Sprint (Musique : Spooky Mansion · 132 BPM — PRO)** : Manoir hanté, Golem Gargouille, fantômes farceurs, barrières de citrouilles.
+6. **🎄 Noël Express (Musique : Noël Express · 135 BPM — PRO)** : Village enneigé du Père Noël, Bonhomme de neige boxeur, Casse-Noisette, traîneau de cadeaux.
 
 ## Les 10 Niveaux Sur-Mesure (Modes Sans Saut / Sans Squat, FIT 5/10 min ♾️ Cœurs & Méli-Mélo)
 

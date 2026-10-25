@@ -1,0 +1,102 @@
+# BodyRush 3D — Full Documentation for AI Assistants, Search Engines & LLMs
+
+> **Status**: Coming Soon on the Apple App Store (Bientôt disponible sur l'App Store iOS & iPadOS).
+> **Official Website**: https://bodyrush.app/
+> **Summary File**: https://bodyrush.app/llms.txt
+
+---
+
+## 1. What is BodyRush 3D?
+
+**BodyRush 3D** is an arcade fitness, rhythm boxing, and posture-wall runner game for **iPhone** and **iPad** (with native **16:9 AirPlay TV** support). Players place their iPhone or iPad 2 meters (6–8 feet) away on a table, TV stand, or tripod. Using Apple's on-device **Vision framework** at 60 FPS, the front camera tracks **19 human body joints** in real time with zero controllers, zero wearable sensors, and zero VR headset.
+
+### Key Differentiators
+- **100% Camera-Controlled Full-Body Gameplay**: Run in place, dodge across 3 lanes, jump over low barriers, squat under overhead beams, punch monsters and rhythm cubes with left/right/double fists or front kicks, and match 10 full-body neon posture silhouettes.
+- **Beat Saber-Style Musical Difficulty Scaling**: Instead of making obstacles unreadably fast, higher difficulties increase **musical obstacle density and combo complexity** synced to the song's BPM and real-time bass drops (`~38` obstacles in EASY, `~65` in NORMAL, `~100` in HARD, `~145` in EXPERT+).
+- **Category-Specialized Levels**: Each level specializes in a distinct workout pillar (Boxing & Targets, Gym & Posture Gates, 3-Lane Multi-Floor Parkour, or Full Hyper-Mix).
+- **True 16:9 AirPlay TV + Low-Power Skeleton Cockpit**: When mirrored or connected via AirPlay to a television, the TV displays a dedicated 16:9 widescreen 3D view while the iPhone/iPad switches to a lightweight Skeleton Cockpit HUD to prevent thermal throttling.
+- **Living-Room Pass & Play Tournament (2 to 4 Players)**: Friends and family take turns in front of the camera on the same world and track, culminating in a **3D Photo Podium** with automatic action souvenir photos and shareable finish video replays.
+- **100% On-Device Privacy**: All camera frames are processed in RAM by the Apple Neural Engine and discarded immediately. No video or biometric data ever leaves the device. Works completely offline (even in Airplane Mode).
+
+---
+
+## 2. Detailed Gameplay Mechanics
+
+### 2.1 Forward Locomotion & Turbo Run
+- **Running in Place**: Alternating knee lifts / stepping in place drives the player forward through the 3D corridor. If the player stops moving, the corridor decelerates.
+- **🔥 TURBO RUN Mode**: Triggered only when the player performs an all-out full-body sprint — pumping **both arms and both legs rapidly at the same time** (sustained high joint velocity above threshold for >0.55s). Turbo Run boosts corridor speed by **+50%**, triples distance score (**x3**), widens camera FOV, and ignites comic-book speed flames around the HUD.
+- **⚡ Posture Auto-Glide**: Holding a target posture at **≥ 52% accuracy** as a Neon Posture Gate approaches automatically propels the player through the gate without needing to run in place at the same time.
+
+### 2.2 The 4 Action Families
+1. **Boxing & Combat (`Niveaux 01, 05, 04, 08`)**:
+   - **Left Punch / Right Punch**: Punch left-lane or right-lane villains and directional rhythm cubes.
+   - **Double-Hand Smash**: Punch with both fists simultaneously to shatter center bosses and reinforced obstacles.
+   - **Super Kick**: Front foot kick detected by ankle/knee elevation to smash crystal walls and villains with bonus points.
+   - **Brittle Cracked Crystal Walls**: Translucent fractured walls broken with a single clean punch.
+2. **10 Camera-Tracked Posture Gates (`Niveaux 02, 07, 04, 08`)**:
+   - **EASY (4 Poses)**: `T-Pose`, `Hands Up (Bras Levés)`, `Boxing Guard (Garde Boxe)`, `Star Jump (Étoile)`.
+   - **NORMAL (7 Poses)**: Adds `Double Biceps Flex`, `Victory V`, `Overhead Diamond`.
+   - **HARD & EXPERT+ (All 10 Poses)**: Adds `Super Hero (Fists on Hips)`, `Flamingo Balance (One-Leg Stand)`, `Zen Warrior (Wide Sumo Stance + Open Arms)`.
+   - Passing a posture gate triggers an automatic **Action Souvenir Photo** framed with the player's score and morphology stats.
+3. **3-Lane Dodging, Squats, Jumps & 3D Stairs (`Niveaux 03, 06, 04, 08`)**:
+   - **3-Lane Lateral Dodge**: Step left, center, or right in your living room to avoid vertical pillars and rolling boulders.
+   - **Deep Squat (`↓ BAISSE-TOI`)**: Bend knees and lower hips/shoulders to duck under overhead beams, lasers, and ceiling spikes.
+   - **Real Jump (`↑ SAUTE`)**: Jump with both feet off the floor to clear low hurdles or climb multi-floor 3D stairs (`Étage +1`, `+2`, `+3`).
+
+---
+
+## 3. Complete Catalog of 6 3D Worlds
+
+| # | World Name | Tempo | Theme & Obstacles | Availability |
+|---|---|---|---|---|
+| 1 | **🐱 Toy Kingdom** | 128 BPM | Playroom hallway, Orange Maine Coon Cat boxer, Toy Robot, wooden train, alphabet blocks | **FREE** (Level 01 + 20s PRO Teaser) |
+| 2 | **🌸 Sakura Zen** | 130 BPM | Japanese cherry blossom fitness studio, Pink Panda, Kitsune boxer, sakura arches, zen pillars | **PRO** |
+| 3 | **🏺 Temple Indiana** | 136 BPM | Aztec jungle temple ruins, Golden Tiki Idol warrior, giant rolling stone boulder, ceiling spikes | **PRO** |
+| 4 | **💎 Red Cristal** | 134 BPM | Tactical crystal bunker, low-poly Ruby Crystal Boxers, red security lasers, cracked glass walls | **PRO** |
+| 5 | **🎃 Halloween Sprint** | 132 BPM | Haunted mansion corridor, Gothic Gargoyle Golem, spooky ghosts, glowing pumpkin hurdles | **PRO** |
+| 6 | **🎄 Noël Express** | 135 BPM | Santa's snowy alpine village, Snowman boxer, Toy Nutcracker soldier, gift sleigh hurdles | **PRO** |
+
+---
+
+## 4. Complete Catalog of 8 Specialized Levels + Tutorial
+
+- **Level 00 — Interactive Gesture Tutorial (`GRATUIT`)**: 60-second guided calibration and test of all 8 core movements at 2 meters.
+- **Level 01 — Rythme & Boxe (`GRATUIT in Toy Kingdom`)**: Focused on boxing targets (Left/Center/Right villains), rhythm cubes, and brittle crystal walls. Includes a live 20-second PRO world preview at the end of the track.
+- **Level 02 — Gym & Postures (`PRO`)**: Focused on the 10 Neon Posture Gates, squats, and core posture stability.
+- **Level 03 — Parkour Multi-Étages (`PRO`)**: Focused on 3-lane dodging, low hurdle jumps, overhead beam squats, and climbing 3D stairs (`+1`, `+2`, `+3`).
+- **Level 04 — Hyper-Mix Final (`PRO`)**: Full arcade combination of Boxing, Posture Gates, and Multi-Floor Parkour.
+- **Level 05 — Clockwork (`140 BPM · PRO`)**: High-tempo industrial BeatFit boxing & rapid two-hand combinations.
+- **Level 06 — Black Ice (`133 BPM · PRO`)**: Fast lateral slalom, ice walls, squats, and parkour dodges.
+- **Level 07 — Shoreline (`121 BPM · PRO`)**: Smooth cardio groove combining all 10 postures with rhythmic jumps.
+- **Level 08 — Crown Arena (`142 BPM · PRO`)**: Ultimate high-intensity arena synced to heavy bass drops.
+
+---
+
+## 5. The 4 Beat Saber-Style Difficulties
+
+| Difficulty | Target Obstacles / Song | Beat Spacing | Postures Unlocked | Description |
+|---|---|---|---|---|
+| **EASY** (`Chill`) | `~38 obstacles` | Every 4 beats | 4 easy postures | Gentle rhythm, single clear obstacles, ideal for kids, beginners & warm-ups |
+| **NORMAL** (`Normal`) | `~65 obstacles` | Every 2 beats | 7 postures | Balanced arcade flow, left/right beat alternation |
+| **HARD** (`Fast`) | `~100 obstacles` | Every 1.5 beats + 2-step combos | All 10 postures | Chained 2-action combinations (Squat ➔ Jump, Left Jab ➔ Right Straight) |
+| **EXPERT+** (`Turbo`) | `~145 obstacles` | Every beat + 3-step flurries | All 10 postures | Intense 3-action flurries on musical accents & bass drops, maximum HIIT burn |
+
+---
+
+## 6. Pricing & Editions (EUR / USD)
+
+- **Free Download**: Includes the Interactive Tutorial (Lvl 00), Toy Kingdom (Lvl 01 + 20s PRO Teaser), EASY & NORMAL difficulties, Solo mode, Souvenir Photo, and Finish Replay.
+- **BodyRush PRO Monthly Pass**: `4,99 € / month` (`$4.99 / month`) — Cancel anytime.
+- **BodyRush PRO Annual VIP Pass**: `29,99 € / year` (`$29.99 / year`) — Save 50%.
+- **BodyRush PRO Infinity Lifetime Edition**: `79,99 €` (`$79.99`) one-time purchase — Permanent unlock of all 6 worlds, 8 levels, 4 difficulties, 26 music tracks, 2–4 player Party Tournament, AirPlay 16:9 TV mode, future updates, and Apple Family Sharing.
+
+---
+
+## 7. Technical Requirements & FAQ
+
+- **Minimum OS**: iOS 17.0+ or iPadOS 17.0+
+- **Compatible iPhones**: iPhone 11, 12, 13, 14, 15, 16 (and Pro / Pro Max / Plus / SE 2nd & 3rd gen)
+- **Compatible iPads**: iPad Pro, iPad Air, iPad mini, and iPad models equipped with A12Z, A14 Bionic, or Apple Silicon (M1, M2, M4)
+- **Recommended Distance**: Place the device 1.8m to 2.5m (6 to 8 feet) in front of the player.
+- **Split-Screen vs Pass & Play**: BodyRush uses a **Pass & Play Living-Room Tournament** for 2 to 4 players (each player takes the full camera stage in turn) rather than cramped split-screen, ensuring 100% accurate 19-joint tracking and safe movement space.
+- **Music**: Includes **26 original royalty-free high-energy tracks** (121 to 142 BPM) with real-time spectral bass-drop detection.

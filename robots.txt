@@ -1,4 +1,47 @@
+# BodyRush 3D — Official Search & AI / LLM Crawler Policy
 User-agent: *
 Allow: /
 
+# OpenAI / ChatGPT Search
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini / Search
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Apple / Spotlight / Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemaps & LLM Context Documentation
 Sitemap: https://bodyrush.app/sitemap.xml
+# LLMs.txt (https://llmstxt.org):
+# - https://bodyrush.app/llms.txt
+# - https://bodyrush.app/llms-full.txt

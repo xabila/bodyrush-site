@@ -1388,6 +1388,7 @@ a {
 
 .game-capture-card img {
   width: 100%;
+  height: auto;
   aspect-ratio: 9 / 19.5;
   object-fit: cover;
   border-bottom: 2px solid rgba(255, 255, 255, 0.14);

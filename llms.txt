@@ -9,7 +9,7 @@
 - **Plateformes** : iPhone (iOS 17+), iPad (iPadOS 17+), et affichage grand écran TV 16:9 sans fil via AirPlay
 - **Créateur** : Xavier Larrodé (France)
 - **Site officiel** : https://bodyrush.app/
-- **Confidentialité** : Traitement caméra 100% local sur la puce Apple Neural Engine. Zéro vidéo ou photo envoyée sur le cloud. Fonctionne hors-ligne (mode Avion).
+- **Confidentialité** : La caméra est analysée sur l'appareil (Apple Vision). Aucune vidéo, photo ou donnée biométrique issue de la caméra n'est envoyée. Des statistiques d'usage anonymes partent vers Mixpanel (UE). RevenueCat vérifie l'abonnement PRO avec un identifiant de transaction anonyme.
 
 ## Comment fonctionne le Gameplay ?
 
@@ -59,12 +59,14 @@ Plus le joueur monte en difficulté, plus le nombre d'événements et d'enchaîn
 - **AirPlay TV 16:9 + Cockpit Squelette** : Diffuse le couloir 3D en vrai 16:9 plein écran sur la TV via AirPlay, tandis que l'iPhone passe automatiquement en mode « Cockpit Squelette » basse consommation pour suivre les 19 articulations sans surchauffe.
 - **Tournoi Salon 2 à 4 Joueurs (Chacun son tour)** : Jusqu'à 4 joueurs s'affrontent à tour de rôle devant la caméra sur la même chanson. À la fin, BodyRush affiche le **Podium 3D des vainqueurs** avec la Photo Souvenir de chaque joueur et le Replay Vidéo du sprint final.
 
-## Modèle Économique & Tarifs
+## Modèle Économique
 
-- **Essai Gratuit au téléchargement** : Tutoriel (Niv. 00) + Monde Toy Kingdom (Niv. 01 avec Teaser PRO) + Difficultés EASY & NORMAL.
-- **Pass Mensuel PRO** : 4,99 € / mois (sans engagement).
-- **Pass Annuel VIP PRO** : 29,99 € / an (économise 50%).
-- **Édition Infinity À Vie (Lifetime Unlock)** : 79,99 € en paiement unique (inclut le Partage Familial Apple).
+Les montants sont affichés dans l'app (RevenueCat) et peuvent changer. Ce site ne publie pas de prix.
+
+- **Inclus au téléchargement** : Tutoriel (Niv. 00) + Monde Toy Kingdom (Niv. 01 avec Teaser PRO) + Difficultés EASY & NORMAL.
+- **Pass Mensuel PRO** : sans engagement.
+- **Pass Annuel PRO**.
+- **Édition Infinity À Vie** : paiement unique, sans renouvellement (inclut le Partage Familial Apple).
 
 ## Liens & Ressources
 

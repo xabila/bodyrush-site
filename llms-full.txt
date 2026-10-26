@@ -16,7 +16,7 @@
 - **Explicit Movement Rules (No-Jump / No-Squat Options) & Unlimited-Hearts FIT Modes**: Every level explicitly displays whether it excludes jumps (`🚫 Sans Saut` — apartment/neighbor-friendly), excludes squats (`🚫 Sans Squat` — knee-friendly), or includes all movements (`✅ Tous les Mouvements`). Levels 05–07 (`5 MIN`) and 08–09 (`10 MIN`) feature **Unlimited Hearts (`♾️`)** so players never get a Game Over during their timed cardio workout, culminating in **Level 09: 10-Min 6-World Megamix Bonus**!
 - **True 16:9 AirPlay TV + Low-Power Skeleton Cockpit**: When mirrored or connected via AirPlay to a television, the TV displays a dedicated 16:9 widescreen 3D view while the iPhone/iPad switches to a lightweight Skeleton Cockpit HUD to prevent thermal throttling.
 - **Living-Room Pass & Play Tournament (2 to 4 Players)**: Friends and family take turns in front of the camera on the same world and track, culminating in a **3D Photo Podium** with automatic action souvenir photos and shareable finish video replays.
-- **100% On-Device Privacy**: All camera frames are processed in RAM by the Apple Neural Engine and discarded immediately. No video or biometric data ever leaves the device. Works completely offline (even in Airplane Mode).
+- **On-Device Camera**: Camera frames are processed on the device by Apple Vision. No camera video, photo, or biometric data is uploaded. Anonymous usage stats go to Mixpanel (EU). RevenueCat checks the PRO subscription with an anonymous transaction id.
 
 ---
 
@@ -84,12 +84,14 @@
 
 ---
 
-## 6. Pricing & Editions (EUR / USD)
+## 6. Editions
 
-- **Free Download**: Includes the Interactive Tutorial (Lvl 00), Toy Kingdom (Lvl 01 No-Jump/Squat + 20s PRO Teaser), EASY & NORMAL difficulties, Solo mode, Souvenir Photo, and Finish Replay.
-- **BodyRush PRO Monthly Pass**: `4,99 € / month` (`$4.99 / month`) — Cancel anytime.
-- **BodyRush PRO Annual VIP Pass**: `29,99 € / year` (`$29.99 / year`) — Save 50%.
-- **BodyRush PRO Infinity Lifetime Edition**: `79,99 €` (`$79.99`) one-time purchase — Permanent unlock of all 6 worlds, 10 levels (including 5/10-Min FIT & 6-World Megamix), 4 difficulties, 26 music tracks, 2–4 player Party Tournament, AirPlay 16:9 TV mode, future updates, and Apple Family Sharing.
+Amounts are shown in the app (RevenueCat) and can change. This site does not publish prices.
+
+- **Included with the download**: Interactive Tutorial (Lvl 00), Toy Kingdom (Lvl 01 No-Jump/Squat + 20s PRO Teaser), EASY & NORMAL difficulties, Solo mode, Souvenir Photo, and Finish Replay.
+- **BodyRush PRO Monthly Pass**: no commitment. Cancel anytime in iOS Settings.
+- **BodyRush PRO Annual Pass**.
+- **BodyRush PRO Infinity Lifetime Edition**: one-time payment, no renewal. Permanent unlock of all 6 worlds, 10 levels (including 5/10-Min FIT & 6-World Megamix), 4 difficulties, 26 music tracks, 2–4 player Party Tournament, AirPlay 16:9 TV mode, future updates, and Apple Family Sharing.
 
 ---
 

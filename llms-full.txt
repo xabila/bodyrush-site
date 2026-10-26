@@ -34,9 +34,16 @@
    - **Super Kick**: Front foot kick detected by ankle/knee elevation to smash crystal walls and villains with bonus points.
    - **Brittle Cracked Crystal Walls**: Translucent fractured walls broken with a single clean punch.
 2. **10 Camera-Tracked Posture Gates (`Niveaux 02, 07, 04, 08`)**:
-   - **EASY (4 Poses)**: `T-Pose`, `Hands Up (Bras Levés)`, `Boxing Guard (Garde Boxe)`, `Star Jump (Étoile)`.
-   - **NORMAL (7 Poses)**: Adds `Double Biceps Flex`, `Victory V`, `Overhead Diamond`.
-   - **HARD & EXPERT+ (All 10 Poses)**: Adds `Super Hero (Fists on Hips)`, `Flamingo Balance (One-Leg Stand)`, `Zen Warrior (Wide Sumo Stance + Open Arms)`.
+   - `Hands Up (V-Pose)` / Mains en l'air (V)
+   - `T-Pose Arms Wide` / Bras en croix (T)
+   - `Double Biceps Flex` / Double biceps gym
+   - `Boxing Guard` / Garde de boxe
+   - `Power Squat Shield` / Squat bouclier — **Power Squat is not used in treadmill mode.**
+   - `Disco Right` / Disco droit
+   - `Disco Left` / Disco gauche
+   - `Pharaoh X-Cross` / Croix pharaon
+   - `Superman Left` / Superman gauche
+   - `Superman Right` / Superman droit
    - Passing a posture gate triggers an automatic **Action Souvenir Photo** framed with the player's score and morphology stats.
 3. **3-Lane Dodging, Squats, Jumps & 3D Stairs (`Niveaux 03, 06, 04, 08`)**:
    - **3-Lane Lateral Dodge**: Step left, center, or right in your living room to avoid vertical pillars and rolling boulders.
@@ -73,7 +80,7 @@
 
 ---
 
-## 5. The 4 Beat-Quantized Difficulties
+## 5. The 4 Neon Blades Difficulties
 
 | Difficulty | Target Obstacles (3 min) | Speed & Beat Grid | Postures Unlocked | Description |
 |---|---|---|---|---|

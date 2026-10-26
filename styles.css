@@ -514,7 +514,7 @@ a {
   white-space: nowrap;
 }
 
-/* 3-Step Beat Saber Navigation Bar */
+/* 3-step Neon Blades difficulty navigation */
 .console-step-tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

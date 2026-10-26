@@ -314,12 +314,9 @@ a {
 
 .lobby-hero-banner {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 520px);
-  grid-template-areas:
-    "copy photo"
-    "stickers photo";
+  grid-template-columns: minmax(0, 1fr) 335px;
   align-items: center;
-  gap: 12px 22px;
+  gap: 22px;
   padding: 18px 22px;
   margin-bottom: 20px;
   background: var(--bg-panel);
@@ -329,14 +326,14 @@ a {
 }
 
 .lobby-hero-copy {
-  grid-area: copy;
+  max-width: 820px;
   min-width: 0;
 }
 
 .lobby-hero-photo {
-  grid-area: photo;
   margin: 0;
   min-width: 0;
+  width: 100%;
 }
 
 .lobby-hero-photo img {
@@ -394,24 +391,6 @@ a {
   font-size: 0.98rem;
   color: var(--text-light);
   max-width: 68ch;
-}
-
-.lobby-hero-stickers {
-  grid-area: stickers;
-  display: flex;
-  align-items: center;
-  justify-self: start;
-  gap: 6px;
-  flex-shrink: 0;
-}
-
-.hero-sticker-runner {
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.65));
-}
-
-.hero-sticker-glove {
-  transform: rotate(-10deg);
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.65));
 }
 
 /* SPLIT COCKPIT GRID */
@@ -2030,10 +2009,6 @@ a {
 @media (max-width: 860px) {
   .lobby-hero-banner {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "copy"
-      "photo"
-      "stickers";
   }
 }
 
@@ -2070,9 +2045,6 @@ a {
     flex-basis: 100%;
     justify-content: flex-start;
     overflow-x: auto;
-  }
-  .lobby-hero-stickers {
-    display: none;
   }
   .worlds-console-grid,
   .levels-console-grid,

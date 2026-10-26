@@ -260,6 +260,30 @@ a {
   border-color: var(--cyan);
 }
 
+.hud-menu-btn {
+  display: none;
+  align-items: center;
+  padding: 7px 11px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-panel);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-white);
+}
+
+.hud-example-badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #000;
+  background: var(--cyan);
+  padding: 2px 6px;
+  border-radius: var(--radius-pill);
+}
+
 .hud-store-btn {
   display: inline-flex;
   align-items: center;
@@ -267,7 +291,7 @@ a {
   padding: 8px 14px;
   border-radius: var(--radius-pill);
   background: var(--ruby);
-  color: #FFF;
+  color: #000;
   border: 2px solid #FFF;
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -490,7 +514,7 @@ a {
   white-space: nowrap;
 }
 
-/* 3-Step Beat Saber Navigation Bar */
+/* 3-step Neon Blades difficulty navigation */
 .console-step-tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1138,7 +1162,7 @@ a {
 .vp-switch-btn.active,
 .vp-switch-btn:hover {
   background: var(--ruby);
-  color: #FFF;
+  color: #000;
   border-color: #FFF;
 }
 
@@ -1655,6 +1679,7 @@ a {
 }
 
 .pt-btn {
+  display: block;
   margin-top: auto;
   padding: 12px 16px;
   border-radius: 14px;
@@ -1677,7 +1702,7 @@ a {
 
 .pt-btn-ruby {
   background: var(--ruby);
-  color: #FFF;
+  color: #000;
 }
 
 /* Privacy & FAQ Strip */
@@ -1808,8 +1833,24 @@ a {
 }
 
 @media (max-width: 720px) {
+  .hud-menu-btn {
+    display: inline-flex;
+  }
   .hud-nav {
     display: none;
+    order: 5;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hud-nav.is-open {
+    display: flex;
+  }
+  .hud-telemetry-pill {
+    order: 4;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
   }
   .lobby-hero-stickers {
     display: none;
@@ -1832,5 +1873,100 @@ a {
   }
   .vp-switcher-bar {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Legal pages share the homepage tokens */
+.legal-page-container {
+  max-width: 860px;
+  margin: 28px auto 64px;
+  padding: 0 16px;
+}
+
+.legal-card {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-console);
+  padding: 22px 16px;
+}
+
+.legal-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 4vw, 2.25rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.legal-updated {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--cyan);
+  margin-bottom: 32px;
+  display: block;
+}
+
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.legal-content p,
+.legal-content li {
+  font-size: 1.02rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.legal-content ul {
+  margin-left: 20px;
+  list-style: disc;
+  margin-bottom: 20px;
+}
+
+.legal-content a,
+.btn-back-home,
+.site-footer a {
+  color: var(--cyan);
+}
+
+.btn-back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.site-footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+  padding: 28px 16px 48px;
+}
+
+.footer-bottom-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 721px) {
+  .legal-page-container {
+    margin: 48px auto 80px;
+    padding: 0 24px;
+  }
+
+  .legal-card {
+    padding: 48px;
   }
 }

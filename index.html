@@ -24,9 +24,11 @@
   <link rel="canonical" href="https://bodyrush.app/">
   <link rel="alternate" type="text/plain" href="https://bodyrush.app/llms.txt" title="BodyRush 3D — LLM Summary">
   <link rel="alternate" type="text/plain" href="https://bodyrush.app/llms-full.txt" title="BodyRush 3D — Full LLM Documentation">
+  <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <meta name="apple-itunes-app" content="app-id=6826362298">
   <meta name="theme-color" content="#0A0B14">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,13 +43,7 @@
     "@type": "SoftwareApplication",
     "name": "BodyRush 3D",
     "operatingSystem": "iOS 17+, iPadOS 17+",
-    "applicationCategory": "GameApplication, HealthApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/PreOrder"
-    },
+    "applicationCategory": ["GameApplication", "HealthApplication"],
     "description": "Jeu d'arcade fitness, boxe et postures en 3D piloté à 100% par la caméra de l'iPhone et de l'iPad.",
     "author": {
       "@type": "Person",
@@ -70,7 +66,8 @@
       </a>
 
       <!-- Live In-Game Telemetry Capsule (from SuperHotGameView) -->
-      <div class="hud-telemetry-pill" aria-label="Télémétrie Arcade">
+      <div class="hud-telemetry-pill" id="hud-telemetry" aria-label="Exemple de télémétrie, pas vos statistiques">
+        <span class="hud-example-badge" data-i18n="hud_example">EXEMPLE</span>
         <div class="combo-ring-mini" aria-hidden="true">
           <span>x8</span>
         </div>
@@ -79,7 +76,7 @@
         <div class="hud-fps-badge">60 FPS</div>
       </div>
 
-      <nav class="hud-nav" aria-label="Menu du jeu">
+      <nav class="hud-nav" id="site-nav" aria-label="Menu du jeu">
         <a href="#arcade-lobby" class="hud-nav-btn active" data-i18n="nav_console">🕹️ Menu du Jeu</a>
         <a href="#gameplay-deck" class="hud-nav-btn" data-i18n="nav_moves">🥊 Gestes & 10 Postures</a>
         <a href="#captures-wall" class="hud-nav-btn" data-i18n="nav_captures">📸 Captures</a>
@@ -88,16 +85,19 @@
       </nav>
 
       <div class="hud-actions">
+        <button type="button" class="hud-menu-btn" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+          <span data-i18n="nav_menu">Menu</span>
+        </button>
         <button type="button" class="hud-lang-btn" id="lang-toggle" aria-label="Changer la langue">
           <span id="lang-flag">🇫🇷</span>
           <span id="lang-code">FR</span>
         </button>
-        <a href="https://apps.apple.com/app/id6826362298" target="_blank" rel="noopener" class="hud-store-btn">
+        <span class="hud-store-btn">
           <svg viewBox="0 0 170 170" width="16" height="16" fill="currentColor" aria-hidden="true">
             <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.69-7.85-12-14.42-6.19-9.39-10.9-20.09-14.13-32.09-3.23-12-4.85-23.32-4.85-33.97 0-14.42 3.63-26.4 10.9-35.95 7.27-9.55 16.48-14.43 27.64-14.65 4.35 0 9.27 1.15 14.76 3.44 5.48 2.29 9.38 3.5 11.71 3.65 1.96-.15 5.92-1.36 11.89-3.65 5.97-2.29 10.88-3.32 14.73-3.08 13.43.83 23.94 5.96 31.54 15.4-11.89 7.27-17.7 17.1-17.44 29.49.27 9.8 4.18 18.06 11.74 24.78 7.56 6.72 16.48 10.45 26.77 11.2-.82 2.61-1.85 5.34-3.09 8.19zm-38.3-108.38c0-7.39 2.64-14.28 7.92-20.67 5.28-6.39 12-10.44 20.15-12.16.54 2.28.81 4.56.81 6.84 0 7.39-2.73 14.39-8.19 21-5.46 6.61-12.28 10.63-20.47 12.06-.11-2.39-.22-4.75-.22-7.07z"/>
           </svg>
           <span data-i18n="cta_store_short">⏳ Bientôt sur l'App Store</span>
-        </a>
+        </span>
       </div>
     </div>
   </header>
@@ -183,7 +183,7 @@
                     <img src="assets/stickers/villain_toystory_mainecoon.png" alt="Maine Coon" class="wc-sprite" width="48" height="48">
                     <span class="wc-badge-free" data-i18n="badge_free">GRATUIT</span>
                   </div>
-                  <div class="wc-title">TOY KINGDOM</div>
+                  <div class="wc-title" data-i18n="w_toy_title">TOY KINGDOM</div>
                   <div class="wc-sub" data-i18n="w_toy_sub">Chambre des jouets · Chat Maine Coon & Robot</div>
                   <div class="wc-music-pill">🎵 Clockwork · 128 BPM</div>
                 </button>
@@ -195,7 +195,7 @@
                     <img src="assets/stickers/villain_sakura_pink_panda.png" alt="Panda Rose" class="wc-sprite" width="48" height="48">
                     <span class="wc-badge-pro">🔒 PRO</span>
                   </div>
-                  <div class="wc-title">SAKURA ZEN</div>
+                  <div class="wc-title" data-i18n="w_sakura_title">SAKURA ZEN</div>
                   <div class="wc-sub" data-i18n="w_sakura_sub">Studio rose & cerisiers · Kitsune & Panda</div>
                   <div class="wc-music-pill">🎵 Candy Velocity · 130 BPM</div>
                 </button>
@@ -219,7 +219,7 @@
                     <img src="assets/stickers/villain_red_crystal_boxer.png" alt="Boxeur Cristal" class="wc-sprite" width="48" height="48">
                     <span class="wc-badge-pro">🔒 PRO</span>
                   </div>
-                  <div class="wc-title">RED CRISTAL</div>
+                  <div class="wc-title" data-i18n="w_red_title">RED CRISTAL</div>
                   <div class="wc-sub" data-i18n="w_red_sub">Bunker de cristal · Boxeurs Rubis & Lasers</div>
                   <div class="wc-music-pill">🎵 Red Cristal · 134 BPM</div>
                 </button>
@@ -231,7 +231,7 @@
                     <img src="assets/stickers/villain_halloween_golem.png" alt="Golem Gargouille" class="wc-sprite" width="48" height="48">
                     <span class="wc-badge-pro">🔒 PRO</span>
                   </div>
-                  <div class="wc-title">HALLOWEEN</div>
+                  <div class="wc-title" data-i18n="w_hal_title">HALLOWEEN</div>
                   <div class="wc-sub" data-i18n="w_hal_sub">Manoir hanté · Fantômes & Golem de pierre</div>
                   <div class="wc-music-pill">🎵 Spooky Mansion · 132 BPM</div>
                 </button>
@@ -261,7 +261,7 @@
                 <button type="button" class="level-console-card selected" data-level="1" data-cat="boxe" style="--lvl-color: #FF2E52;">
                   <span class="lvl-icon">🥊</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 01 · GRATUIT · 3 MIN · 4 ❤️</span>
+                    <span class="lvl-badge" data-i18n="lvl_1_badge">NIV. 01 · GRATUIT · 3 MIN · 4 ❤️</span>
                     <strong class="lvl-name" data-i18n="lvl_1_name">RYTHME & BOXE</strong>
                     <span class="lvl-music" data-i18n="lvl_1_desc">🚫 Sans Saut ni Squat · Vilains G/C/D & Cubes Rythmés</span>
                   </div>
@@ -270,7 +270,7 @@
                 <button type="button" class="level-console-card" data-level="2" data-cat="posture" style="--lvl-color: #00E5FF;">
                   <span class="lvl-icon">🙌</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 02 · POSTURES · 3 MIN · 4 ❤️</span>
+                    <span class="lvl-badge" data-i18n="lvl_2_badge">NIV. 02 · POSTURES · 3 MIN · 4 ❤️</span>
                     <strong class="lvl-name" data-i18n="lvl_2_name">GYM & POSTURES</strong>
                     <span class="lvl-music" data-i18n="lvl_2_desc">🚫 Sans Saut · Murs de Posture Néon, Squats & Boxe</span>
                   </div>
@@ -279,7 +279,7 @@
                 <button type="button" class="level-console-card" data-level="3" data-cat="parkour" style="--lvl-color: #26E07A;">
                   <span class="lvl-icon">🏃</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 03 · PARKOUR · 3 MIN · 4 ❤️</span>
+                    <span class="lvl-badge" data-i18n="lvl_3_badge">NIV. 03 · PARKOUR · 3 MIN · 4 ❤️</span>
                     <strong class="lvl-name" data-i18n="lvl_3_name">PARKOUR ÉTAGES</strong>
                     <span class="lvl-music" data-i18n="lvl_3_desc">🚫 Sans Squat · Piliers 3 voies, Sauts & Étages +1/+2/+3</span>
                   </div>
@@ -288,7 +288,7 @@
                 <button type="button" class="level-console-card" data-level="4" data-cat="mix" style="--lvl-color: #FFBD24;">
                   <span class="lvl-icon">⚡</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 04 · HYPER-MIX · 3 MIN · 4 ❤️</span>
+                    <span class="lvl-badge" data-i18n="lvl_4_badge">NIV. 04 · HYPER-MIX · 3 MIN · 4 ❤️</span>
                     <strong class="lvl-name" data-i18n="lvl_4_name">HYPER-MIX FINAL</strong>
                     <span class="lvl-music" data-i18n="lvl_4_desc">✅ Tous les Mouvements · Boxe + Postures + Sauts + Squats</span>
                   </div>
@@ -297,8 +297,8 @@
                 <button type="button" class="level-console-card" data-level="5" data-cat="boxe" style="--lvl-color: #FF7A1A;">
                   <span class="lvl-icon">⚙️</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 05 · FIT 5 MIN · ♾️ CŒURS · 140 BPM</span>
-                    <strong class="lvl-name">BEATFIT · CLOCKWORK</strong>
+                    <span class="lvl-badge" data-i18n="lvl_5_badge">NIV. 05 · FIT 5 MIN · ♾️ CŒURS · 140 BPM</span>
+                    <strong class="lvl-name" data-i18n="lvl_5_name">BEATFIT · CLOCKWORK</strong>
                     <span class="lvl-music" data-i18n="lvl_5_desc">🚫 Sans Saut ni Squat · Cardio Boxe 5 min sans perdre</span>
                   </div>
                 </button>
@@ -306,8 +306,8 @@
                 <button type="button" class="level-console-card" data-level="6" data-cat="parkour" style="--lvl-color: #33C9FF;">
                   <span class="lvl-icon">🧊</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 06 · FIT 5 MIN · ♾️ CŒURS · 133 BPM</span>
-                    <strong class="lvl-name">BEATFIT · BLACK ICE</strong>
+                    <span class="lvl-badge" data-i18n="lvl_6_badge">NIV. 06 · FIT 5 MIN · ♾️ CŒURS · 133 BPM</span>
+                    <strong class="lvl-name" data-i18n="lvl_6_name">BEATFIT · BLACK ICE</strong>
                     <span class="lvl-music" data-i18n="lvl_6_desc">🚫 Sans Squat · Slalom Latéral & Sauts 5 min sans perdre</span>
                   </div>
                 </button>
@@ -315,8 +315,8 @@
                 <button type="button" class="level-console-card" data-level="7" data-cat="posture" style="--lvl-color: #FFD600;">
                   <span class="lvl-icon">☀️</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 07 · FIT 5 MIN · ♾️ CŒURS · 121 BPM</span>
-                    <strong class="lvl-name">BEATFIT · SHORELINE</strong>
+                    <span class="lvl-badge" data-i18n="lvl_7_badge">NIV. 07 · FIT 5 MIN · ♾️ CŒURS · 121 BPM</span>
+                    <strong class="lvl-name" data-i18n="lvl_7_name">BEATFIT · SHORELINE</strong>
                     <span class="lvl-music" data-i18n="lvl_7_desc">🚫 Sans Saut · Postures & Squats Cardio 5 min sans perdre</span>
                   </div>
                 </button>
@@ -324,8 +324,8 @@
                 <button type="button" class="level-console-card" data-level="8" data-cat="mix" style="--lvl-color: #FF2E88;">
                   <span class="lvl-icon">🔥</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 08 · FIT 10 MIN · ♾️ CŒURS · 142 BPM</span>
-                    <strong class="lvl-name">FIT INTENSE · CROWN ARENA</strong>
+                    <span class="lvl-badge" data-i18n="lvl_8_badge">NIV. 08 · FIT 10 MIN · ♾️ CŒURS · 142 BPM</span>
+                    <strong class="lvl-name" data-i18n="lvl_8_name">FIT INTENSE · CROWN ARENA</strong>
                     <span class="lvl-music" data-i18n="lvl_8_desc">✅ Tous les Mouvements · Endurance 10 min à Cœurs Illimités</span>
                   </div>
                 </button>
@@ -333,7 +333,7 @@
                 <button type="button" class="level-console-card" data-level="9" data-cat="mix" style="--lvl-color: #C96BFF; grid-column: 1 / -1;">
                   <span class="lvl-icon">🌟</span>
                   <div class="lvl-info">
-                    <span class="lvl-badge">NIV. 09 · BONUS 10 MIN · ♾️ CŒURS ILLIMITÉS · 6 MONDES</span>
+                    <span class="lvl-badge" data-i18n="lvl_9_badge">NIV. 09 · BONUS 10 MIN · ♾️ CŒURS ILLIMITÉS · 6 MONDES</span>
                     <strong class="lvl-name" data-i18n="lvl_9_name">MÉLI-MÉLO DES 6 MONDES ( MARATHON 10 MIN )</strong>
                     <span class="lvl-music" data-i18n="lvl_9_desc">✅ Tous les Mouvements · Traverse Toy Kingdom ➔ Sakura ➔ Temple ➔ Cristal ➔ Halloween ➔ Noël avec difficulté progressive !</span>
                   </div>
@@ -344,7 +344,7 @@
             <!-- STEP 3 PANEL: CHOOSE DIFFICULTY (STYLE NEON BLADES) & PARTY MODE -->
             <div class="console-step-pane" id="pane-step-3" role="tabpanel">
               <div class="pane-section-head">
-                <span class="pane-label" data-i18n="step3_heading">CHOISIS LA DIFFICULTÉ (PLUS D'ÉVÉNEMENTS & COMBOS SUR LA MUSIQUE) :</span>
+                <span class="pane-label" data-i18n="step3_heading">CHOISIS LA DIFFICULTÉ (STYLE NEON BLADES) :</span>
                 <span class="pane-sub-hint" data-i18n="step3_hint">Plus tu montes en difficulté, plus il y a d'événements et de combos enchaînés (x2 / x3) sur les temps forts !</span>
               </div>
 
@@ -438,7 +438,7 @@
               <div class="vp-stage">
                 <!-- Mode A: Live Video Demo + Vision PiP + Dynamic World Banner -->
                 <div class="vp-media-slide active" id="vp-slide-video">
-                  <video class="vp-video" id="hero-video" autoplay loop muted playsinline poster="assets/images/capture_fr_01_corridor.png">
+                  <video class="vp-video" id="hero-video" autoplay loop muted playsinline poster="assets/images/capture_fr_01_corridor.webp">
                     <source src="assets/videos/demo_tracking.mp4" type="video/mp4">
                   </video>
 
@@ -460,22 +460,22 @@
 
                 <!-- Mode B: Real In-Game Capture 1 (Corridor & Ghost) -->
                 <div class="vp-media-slide" id="vp-slide-cap1">
-                  <img src="assets/images/capture_fr_01_corridor.png" alt="Capture en jeu : Couloir 3D Toy Kingdom et Fantôme" class="vp-capture-img">
+                  <img src="assets/images/capture_fr_01_corridor.webp" alt="Capture en jeu : Couloir 3D Toy Kingdom et Fantôme" class="vp-capture-img" width="780" height="1688">
                 </div>
 
                 <!-- Mode C: Real In-Game Capture 2 (Posture Gate) -->
                 <div class="vp-media-slide" id="vp-slide-cap2">
-                  <img src="assets/images/capture_fr_02_posture.png" alt="Capture en jeu : Mur de Posture Double Biceps" class="vp-capture-img">
+                  <img src="assets/images/capture_fr_02_posture.webp" alt="Capture en jeu : Mur de Posture Double Biceps" class="vp-capture-img" width="780" height="1688">
                 </div>
 
                 <!-- Mode D: Real In-Game Capture 3 (Sprint & x3) -->
                 <div class="vp-media-slide" id="vp-slide-cap3">
-                  <img src="assets/images/capture_fr_03_turborun.png" alt="Capture en jeu : Sprint rapide et multiplicateur" class="vp-capture-img">
+                  <img src="assets/images/capture_fr_03_turborun.webp" alt="Capture en jeu : Sprint rapide et multiplicateur" class="vp-capture-img" width="780" height="1688">
                 </div>
 
                 <!-- Mode E: Real In-Game Capture 4 (Crystal Smash) -->
                 <div class="vp-media-slide" id="vp-slide-cap4">
-                  <img src="assets/images/capture_fr_04_crystal_smash.png" alt="Capture en jeu : Frappe de cristal au poing" class="vp-capture-img">
+                  <img src="assets/images/capture_fr_04_crystal_smash.webp" alt="Capture en jeu : Frappe de cristal au poing" class="vp-capture-img" width="780" height="1688">
                 </div>
               </div>
 
@@ -593,74 +593,64 @@
           </div>
 
           <div class="postures-pills-grid">
-            <div class="pose-chip pose-tier-easy">
+            <div class="pose-chip">
               <span class="pose-emoji">🙌</span>
               <div>
-                <strong>MAINS EN L'AIR</strong>
-                <small>EASY · NORMAL · HARD · EXPERT+</small>
+                <strong data-i18n="pose_1">MAINS EN L'AIR (V)</strong>
               </div>
             </div>
-            <div class="pose-chip pose-tier-easy">
+            <div class="pose-chip">
               <span class="pose-emoji">✈️</span>
               <div>
-                <strong>T-POSE AVION</strong>
-                <small>EASY · NORMAL · HARD · EXPERT+</small>
+                <strong data-i18n="pose_2">BRAS EN CROIX (T)</strong>
               </div>
             </div>
-            <div class="pose-chip pose-tier-easy">
+            <div class="pose-chip">
               <span class="pose-emoji">💪</span>
               <div>
-                <strong>DOUBLE BICEPS</strong>
-                <small>EASY · NORMAL · HARD · EXPERT+</small>
+                <strong data-i18n="pose_3">DOUBLE BICEPS GYM</strong>
               </div>
             </div>
-            <div class="pose-chip pose-tier-easy">
-              <span class="pose-emoji">🏋️</span>
-              <div>
-                <strong>POWER SQUAT</strong>
-                <small>EASY · NORMAL · HARD · EXPERT+</small>
-              </div>
-            </div>
-            <div class="pose-chip pose-tier-normal">
-              <span class="pose-emoji">🕺</span>
-              <div>
-                <strong>DISCO DROITE</strong>
-                <small>NORMAL · HARD · EXPERT+</small>
-              </div>
-            </div>
-            <div class="pose-chip pose-tier-normal">
-              <span class="pose-emoji">💃</span>
-              <div>
-                <strong>DISCO GAUCHE</strong>
-                <small>NORMAL · HARD · EXPERT+</small>
-              </div>
-            </div>
-            <div class="pose-chip pose-tier-normal">
+            <div class="pose-chip">
               <span class="pose-emoji">🥊</span>
               <div>
-                <strong>GARDE BOXEUR</strong>
-                <small>NORMAL · HARD · EXPERT+</small>
+                <strong data-i18n="pose_4">GARDE DE BOXE</strong>
               </div>
             </div>
-            <div class="pose-chip pose-tier-hard">
-              <span class="pose-emoji">🧘</span>
+            <div class="pose-chip">
+              <span class="pose-emoji">🏋️</span>
               <div>
-                <strong>ARBRE ZEN</strong>
-                <small>HARD · EXPERT+</small>
+                <strong data-i18n="pose_5">SQUAT BOUCLIER</strong>
               </div>
             </div>
-            <div class="pose-chip pose-tier-hard">
-              <span class="pose-emoji">⭐️</span>
+            <div class="pose-chip">
+              <span class="pose-emoji">🕺</span>
               <div>
-                <strong>ÉTOILE NINJA</strong>
-                <small>HARD · EXPERT+</small>
+                <strong data-i18n="pose_6">DISCO DROIT</strong>
               </div>
             </div>
-            <div class="pose-chip pose-tier-hard">
-              <span class="pose-emoji">🤺</span>
+            <div class="pose-chip">
+              <span class="pose-emoji">💃</span>
               <div>
-                <strong>FENTE GUERRIER</strong>
-                <small>HARD · EXPERT+</small>
+                <strong data-i18n="pose_7">DISCO GAUCHE</strong>
+              </div>
+            </div>
+            <div class="pose-chip">
+              <span class="pose-emoji">✖️</span>
+              <div>
+                <strong data-i18n="pose_8">CROIX PHARAON</strong>
+              </div>
+            </div>
+            <div class="pose-chip">
+              <span class="pose-emoji">🦸</span>
+              <div>
+                <strong data-i18n="pose_9">SUPERMAN GAUCHE</strong>
+              </div>
+            </div>
+            <div class="pose-chip">
+              <span class="pose-emoji">🦸</span>
+              <div>
+                <strong data-i18n="pose_10">SUPERMAN DROIT</strong>
               </div>
             </div>
           </div>
@@ -684,7 +674,7 @@
 
         <div class="captures-4-grid">
           <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_01_corridor.png" alt="Course 3D dans Toy Kingdom avec Fantôme du record" loading="lazy">
+            <img src="assets/images/capture_fr_01_corridor.webp" alt="Course 3D dans Toy Kingdom avec Fantôme du record" loading="lazy" width="780" height="1688">
             <figcaption>
               <strong>1. Couloir 3D & Fantôme du Record</strong>
               <span data-i18n="cap1_txt">Cours pour faire avancer le monde et dépasse le Fantôme 3D de ton meilleur score.</span>
@@ -692,7 +682,7 @@
           </figure>
 
           <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_02_posture.png" alt="Validation d'un Mur de Posture Double Biceps" loading="lazy">
+            <img src="assets/images/capture_fr_02_posture.webp" alt="Validation d'un Mur de Posture Double Biceps" loading="lazy" width="780" height="1688">
             <figcaption>
               <strong>2. Murs de Posture & Photo Souvenir</strong>
               <span data-i18n="cap2_txt">Aligne tes bras dans la découpe néon pour faire exploser le mur et capturer ta photo.</span>
@@ -700,7 +690,7 @@
           </figure>
 
           <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_03_turborun.png" alt="Sprint rapide et multiplicateur x8" loading="lazy">
+            <img src="assets/images/capture_fr_03_turborun.webp" alt="Sprint rapide et multiplicateur x8" loading="lazy" width="780" height="1688">
             <figcaption>
               <strong>3. Multiplicateur x8 & Sprint</strong>
               <span data-i18n="cap3_txt">Enchaîne les obstacles sans faute pour monter à x8 et brûler un maximum de calories.</span>
@@ -708,7 +698,7 @@
           </figure>
 
           <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_04_crystal_smash.png" alt="Frappe de cristal au poing en rythme" loading="lazy">
+            <img src="assets/images/capture_fr_04_crystal_smash.webp" alt="Frappe de cristal au poing en rythme" loading="lazy" width="780" height="1688">
             <figcaption>
               <strong>4. Boxe & Smash Cristal sur le Beat</strong>
               <span data-i18n="cap4_txt">Pulvérise les boss et les murs fissurés d'un direct du poing sur les drops de la musique.</span>
@@ -716,7 +706,7 @@
           </figure>
 
           <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_05_airplay_tv.jpg" alt="Rendu TV AirPlay 16:9 en plein écran" loading="lazy">
+            <img src="assets/images/capture_fr_05_airplay_tv.webp" alt="Rendu TV AirPlay 16:9 en plein écran" loading="lazy" width="800" height="450">
             <figcaption>
               <strong>5. Rendu TV AirPlay 16:9 (1080p · 60 FPS)</strong>
               <span data-i18n="cap5_txt">Vue grand angle 16:9 sans bordures sur la télévision du salon via AirPlay.</span>
@@ -724,7 +714,7 @@
           </figure>
 
           <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_06_iphone_skeleton.jpg" alt="Cockpit Squelette sur iPhone pendant AirPlay" loading="lazy">
+            <img src="assets/images/capture_fr_06_iphone_skeleton.webp" alt="Cockpit Squelette sur iPhone pendant AirPlay" loading="lazy" width="800" height="1732">
             <figcaption>
               <strong>6. Cockpit Squelette iPhone (Mode AirPlay)</strong>
               <span data-i18n="cap6_txt">Pendant qu'AirPlay diffuse sur la TV, l'iPhone affiche ton squelette Vision à 60 FPS.</span>
@@ -732,7 +722,7 @@
           </figure>
 
           <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_07_ipad_portrait.jpg" alt="BodyRush sur iPad Pro en mode Portrait" loading="lazy">
+            <img src="assets/images/capture_fr_07_ipad_portrait.webp" alt="BodyRush sur iPad Pro en mode Portrait" loading="lazy" width="800" height="1068">
             <figcaption>
               <strong>7. iPad Pro Portrait — Manoir Halloween</strong>
               <span data-i18n="cap7_txt">Interface native grand format sur iPad avec mur de posture vert émeraude validé.</span>
@@ -740,7 +730,7 @@
           </figure>
 
           <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_08_ipad_paysage.jpg" alt="BodyRush sur iPad Pro en mode Paysage" loading="lazy">
+            <img src="assets/images/capture_fr_08_ipad_paysage.webp" alt="BodyRush sur iPad Pro en mode Paysage" loading="lazy" width="800" height="600">
             <figcaption>
               <strong>8. iPad Pro Paysage — Noël Express</strong>
               <span data-i18n="cap8_txt">Joue en portrait ou en paysage sur iPad avec détection caméra intégrale à 2 mètres.</span>
@@ -771,14 +761,14 @@
                   <span class="diagram-tag-green">CAPTURE TV RÉELLE</span>
                 </div>
                 <div class="diagram-tv-screen" style="padding:0; overflow:hidden;">
-                  <img src="assets/images/capture_fr_05_airplay_tv.jpg" alt="Capture réelle AirPlay TV 16:9" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:10px;">
+                  <img src="assets/images/capture_fr_05_airplay_tv.webp" alt="Capture réelle AirPlay TV 16:9" style="width:100%; height:100%; object-fit:cover; display:block; border-radius:10px;" width="800" height="450">
                 </div>
               </div>
 
               <div class="diagram-phone-box">
                 <div class="diagram-phone-header">📱 iPHONE À 2M · COCKPIT SQUELETTE</div>
                 <div class="diagram-phone-body" style="gap:14px;">
-                  <img src="assets/images/capture_fr_06_iphone_skeleton.jpg" alt="Cockpit Squelette iPhone Réel" style="width:84px; height:172px; object-fit:cover; border-radius:12px; border:2px solid #38bdf8; box-shadow: 0 8px 20px rgba(0,0,0,0.45);">
+                  <img src="assets/images/capture_fr_06_iphone_skeleton.webp" alt="Cockpit Squelette iPhone Réel" style="width:84px; height:172px; object-fit:cover; border-radius:12px; border:2px solid #38bdf8; box-shadow: 0 8px 20px rgba(0,0,0,0.45);" width="800" height="1732">
                   <div>
                     <strong>CADRAGE & SQUELETTE 60 FPS ✓</strong>
                     <span>Capture réelle du mode AirPlay : suivi temps réel des 19 articulations & économie batterie</span>
@@ -833,10 +823,10 @@
         <div class="arcade-section-header">
           <div>
             <span class="arcade-kicker" data-i18n="pro_kicker">DÉBLOCAGE BODYRUSH PRO</span>
-            <h2 class="arcade-h2" data-i18n="pro_title">TESTE GRATUITEMENT, DÉBLOQUE TOUTE L'ARCADE</h2>
+            <h2 class="arcade-h2" data-i18n="pro_title">BIENTÔT DISPONIBLE : TESTE GRATUITEMENT, DÉBLOQUE TOUTE L'ARCADE</h2>
           </div>
           <p class="arcade-header-desc" data-i18n="pro_desc">
-            Télécharge gratuitement BodyRush sur l'App Store pour jouer au Tutoriel complet (Niv. 00) et au Niveau 01 de Toy Kingdom (avec un aperçu en direct des mondes PRO dans les 20 dernières secondes !).
+            Dès sa sortie imminente sur l'App Store, télécharge gratuitement BodyRush pour jouer au Tutoriel complet (Niv. 00) et au Niveau 01 de Toy Kingdom (avec un aperçu en direct des mondes PRO dans les 20 dernières secondes !).
           </p>
         </div>
 
@@ -847,7 +837,7 @@
             <div class="pt-head">
               <span class="pt-badge" data-i18n="free_badge">INCLUS AU TÉLÉCHARGEMENT</span>
               <h3 class="pt-name" data-i18n="free_name">VERSION GRATUITE</h3>
-              <div class="pt-price">0 € <small data-i18n="free_sub">pour toujours</small></div>
+              <span class="pt-sub-note" data-i18n="price_in_app">Les montants sont affichés dans l'app.</span>
             </div>
             <ul class="pt-list">
               <li class="pt-yes" data-i18n="f_1">✓ Tutoriel Interactif des 8 Gestes (Niv. 00 · ♾️ Cœurs)</li>
@@ -857,18 +847,18 @@
               <li class="pt-no" data-i18n="f_5">🔒 Les 5 autres Mondes 3D & Niveaux 02 à 09 (FIT 5/10 min & Méli-Mélo)</li>
               <li class="pt-no" data-i18n="f_6">🔒 Difficultés HARD (~125 obs) & EXPERT+ (~175 obs + Combos x3)</li>
             </ul>
-            <a href="#arcade-lobby" class="pt-btn pt-btn-cyan" data-i18n="btn_dl_free">⏳ Bientôt sur l'App Store (Gratuit)</a>
+            <span class="pt-btn pt-btn-cyan" data-i18n="btn_offers">Voir les offres dans l'app</span>
           </div>
 
           <!-- Tier 2: Annual VIP Pass -->
           <div class="pro-tier-card pro-tier-featured">
-            <div class="pt-ribbon" data-i18n="vip_ribbon">👑 OFFRE LA PLUS POPULAIRE · ÉCONOMISE 50%</div>
+            <div class="pt-ribbon" data-i18n="vip_ribbon">👑 OFFRE LA PLUS POPULAIRE</div>
             <div class="pt-art-row">
-              <img src="assets/images/iap_promo_yearly_1024x1024.png" alt="Pass Annuel VIP" class="pt-iap-img" width="76" height="76">
+              <img src="assets/images/iap_promo_yearly_1024x1024.webp" alt="Pass Annuel VIP" class="pt-iap-img" width="216" height="216">
               <div>
                 <h3 class="pt-name text-gold" data-i18n="vip_name">PASS ANNUEL PRO</h3>
-                <div class="pt-price">29,99 € <small>/ an (2,49 €/mois)</small></div>
-                <span class="pt-sub-note" data-i18n="vip_flex">ou Pass Mensuel sans engagement à 4,99 €/mois</span>
+                <span class="pt-sub-note" data-i18n="vip_flex">ou Pass Mensuel, sans engagement</span>
+                <span class="pt-sub-note" data-i18n="price_in_app">Les montants sont affichés dans l'app.</span>
               </div>
             </div>
             <ul class="pt-list">
@@ -879,17 +869,18 @@
               <li class="pt-yes"><strong data-i18n="v_5">✓ Mode Tournoi Salon 2 à 4 Joueurs & Podium Photo 3D</strong></li>
               <li class="pt-yes"><strong data-i18n="v_6">✓ Mode TV AirPlay 16:9 Haute Définition</strong></li>
             </ul>
-            <a href="#arcade-lobby" class="pt-btn pt-btn-gold" data-i18n="btn_start_vip">⏳ Bientôt disponible dans l'App</a>
+            <span class="pt-btn pt-btn-gold" data-i18n="btn_offers">Voir les offres dans l'app</span>
           </div>
 
           <!-- Tier 3: Lifetime Unlock -->
           <div class="pro-tier-card">
             <div class="pt-art-row">
-              <img src="assets/images/iap_promo_lifetime_1024x1024.png" alt="Déblocage à Vie" class="pt-iap-img" width="76" height="76">
+              <img src="assets/images/iap_promo_lifetime_1024x1024.webp" alt="Déblocage à Vie" class="pt-iap-img" width="216" height="216">
               <div>
                 <span class="pt-badge" data-i18n="life_badge">PAIEMENT UNIQUE · ZÉRO ABONNEMENT</span>
                 <h3 class="pt-name" data-i18n="life_name">ÉDITION INFINITY À VIE</h3>
-                <div class="pt-price">79,99 € <small data-i18n="life_sub">une seule fois</small></div>
+                <span class="pt-sub-note" data-i18n="life_sub">Paiement unique, sans renouvellement</span>
+                <span class="pt-sub-note" data-i18n="price_in_app">Les montants sont affichés dans l'app.</span>
               </div>
             </div>
             <ul class="pt-list">
@@ -899,7 +890,7 @@
               <li class="pt-yes" data-i18n="l_4">✓ Toutes les futures mises à jour et nouveaux mondes inclus</li>
               <li class="pt-yes" data-i18n="l_5">✓ Compatible Partage Familial Apple</li>
             </ul>
-            <a href="#arcade-lobby" class="pt-btn pt-btn-ruby" data-i18n="btn_buy_life">⏳ Bientôt disponible (À Vie)</a>
+            <span class="pt-btn pt-btn-ruby" data-i18n="btn_offers">Voir les offres dans l'app</span>
           </div>
 
         </div>
@@ -907,10 +898,10 @@
         <!-- Privacy & FAQ Compact Arcade Strip -->
         <div class="privacy-faq-grid">
           <div class="privacy-arcade-box">
-            <div class="priv-badge">🔒 100% LOCAL · APPLE NEURAL ENGINE</div>
-            <h3 data-i18n="priv_title">Aucune image ne quitte jamais ton iPhone ou ton iPad</h3>
+            <div class="priv-badge" data-i18n="priv_badge">CAMÉRA SUR L'APPAREIL</div>
+            <h3 data-i18n="priv_title">La caméra est analysée sur ton iPhone ou ton iPad</h3>
             <p data-i18n="priv_desc">
-              La détection des 19 articulations du corps s'exécute intégralement en local sur la puce Apple de ton appareil. Aucune vidéo, aucune photo et aucune donnée biométrique n'est envoyée sur un serveur externe. Le jeu fonctionne même en mode Avion.
+              Les 19 articulations sont estimées sur l'appareil avec Apple Vision. Aucune vidéo, photo ou donnée biométrique issue de la caméra n'est envoyée. Des statistiques d'usage anonymes partent vers Mixpanel (UE), et RevenueCat vérifie l'abonnement PRO avec un identifiant de transaction anonyme.
             </p>
             <a href="privacy.html" class="priv-link" data-i18n="priv_btn">Consulter la Politique de Confidentialité</a>
           </div>
@@ -925,7 +916,7 @@
               <p data-i18n="faq_2_a">Oui ! Chaque niveau affiche clairement ses règles de mouvements : les Niveaux 01 & 05 sont 100% Sans Saut ni Squat (Boxe & Esquive), les Niveaux 02 & 07 sont Sans Saut (Postures & Squats), et les Niveaux 03 & 06 sont Sans Squat (Parkour & Sauts). Les Niveaux FIT 05 à 09 offrent en plus des Cœurs Illimités (♾️) sur 5 ou 10 minutes !</p>
             </details>
             <details class="arcade-faq-item">
-              <summary data-i18n="faq_3_q">Comment fonctionne la difficulté façon Beat Saber ?</summary>
+              <summary data-i18n="faq_3_q">Comment le style Neon Blades change-t-il le nombre d'obstacles ?</summary>
               <p data-i18n="faq_3_a">Passer de EASY (~40 événements) à NORMAL (~80 + Combos x2), HARD (~125 + Combos x2/x3) ou EXPERT+ (~175 + Rafales Combos x3) multiplie le nombre d'obstacles et d'enchaînements calés sur les temps forts de la musique !</p>
             </details>
           </div>
@@ -952,13 +943,14 @@
       </div>
 
       <div class="footer-links-row">
-        <a href="#arcade-lobby" data-i18n="nav_console">Menu du Jeu</a>
-        <a href="#gameplay-deck" data-i18n="nav_moves">10 Postures</a>
-        <a href="#captures-wall" data-i18n="nav_captures">Captures</a>
-        <a href="#tv-salon" data-i18n="nav_tv">AirPlay TV</a>
+        <a href="#arcade-lobby" data-i18n="footer_menu">Menu du Jeu</a>
+        <a href="#gameplay-deck" data-i18n="footer_poses">10 Postures</a>
+        <a href="#captures-wall" data-i18n="footer_captures">Captures</a>
+        <a href="#tv-salon" data-i18n="footer_tv">AirPlay TV</a>
         <a href="privacy.html" data-i18n="footer_priv_pol">Confidentialité</a>
-        <a href="support.html">Support</a>
-        <a href="mailto:support@bodyrush.app">support@bodyrush.app</a>
+        <a href="terms.html" data-i18n="footer_terms">Conditions</a>
+        <a href="support.html" data-i18n="footer_support">Support</a>
+        <a href="mailto:xlarrodeapp+bodyrush@gmail.com">xlarrodeapp+bodyrush@gmail.com</a>
       </div>
     </div>
   </footer>

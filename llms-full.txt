@@ -16,7 +16,7 @@
 - **Explicit Movement Rules (No-Jump / No-Squat Options) & Unlimited-Hearts FIT Modes**: Every level explicitly displays whether it excludes jumps (`🚫 Sans Saut` — apartment/neighbor-friendly), excludes squats (`🚫 Sans Squat` — knee-friendly), or includes all movements (`✅ Tous les Mouvements`). Levels 05–07 (`5 MIN`) and 08–09 (`10 MIN`) feature **Unlimited Hearts (`♾️`)** so players never get a Game Over during their timed cardio workout, culminating in **Level 09: 10-Min 6-World Megamix Bonus**!
 - **True 16:9 AirPlay TV + Low-Power Skeleton Cockpit**: When mirrored or connected via AirPlay to a television, the TV displays a dedicated 16:9 widescreen 3D view while the iPhone/iPad switches to a lightweight Skeleton Cockpit HUD to prevent thermal throttling.
 - **Living-Room Pass & Play Tournament (2 to 4 Players)**: Friends and family take turns in front of the camera on the same world and track, culminating in a **3D Photo Podium** with automatic action souvenir photos and shareable finish video replays.
-- **100% On-Device Privacy**: All camera frames are processed in RAM by the Apple Neural Engine and discarded immediately. No video or biometric data ever leaves the device. Works completely offline (even in Airplane Mode).
+- **On-Device Camera**: Camera frames are processed on the device by Apple Vision. No camera video, photo, or biometric data is uploaded. Anonymous usage stats go to Mixpanel (EU). RevenueCat checks the PRO subscription with an anonymous transaction id.
 
 ---
 
@@ -34,9 +34,16 @@
    - **Super Kick**: Front foot kick detected by ankle/knee elevation to smash crystal walls and villains with bonus points.
    - **Brittle Cracked Crystal Walls**: Translucent fractured walls broken with a single clean punch.
 2. **10 Camera-Tracked Posture Gates (`Niveaux 02, 07, 04, 08`)**:
-   - **EASY (4 Poses)**: `T-Pose`, `Hands Up (Bras Levés)`, `Boxing Guard (Garde Boxe)`, `Star Jump (Étoile)`.
-   - **NORMAL (7 Poses)**: Adds `Double Biceps Flex`, `Victory V`, `Overhead Diamond`.
-   - **HARD & EXPERT+ (All 10 Poses)**: Adds `Super Hero (Fists on Hips)`, `Flamingo Balance (One-Leg Stand)`, `Zen Warrior (Wide Sumo Stance + Open Arms)`.
+   - `Hands Up (V-Pose)` / Mains en l'air (V)
+   - `T-Pose Arms Wide` / Bras en croix (T)
+   - `Double Biceps Flex` / Double biceps gym
+   - `Boxing Guard` / Garde de boxe
+   - `Power Squat Shield` / Squat bouclier — **Power Squat is not used in treadmill mode.**
+   - `Disco Right` / Disco droit
+   - `Disco Left` / Disco gauche
+   - `Pharaoh X-Cross` / Croix pharaon
+   - `Superman Left` / Superman gauche
+   - `Superman Right` / Superman droit
    - Passing a posture gate triggers an automatic **Action Souvenir Photo** framed with the player's score and morphology stats.
 3. **3-Lane Dodging, Squats, Jumps & 3D Stairs (`Niveaux 03, 06, 04, 08`)**:
    - **3-Lane Lateral Dodge**: Step left, center, or right in your living room to avoid vertical pillars and rolling boulders.
@@ -73,7 +80,7 @@
 
 ---
 
-## 5. The 4 Beat-Quantized Difficulties
+## 5. The 4 Neon Blades Difficulties
 
 | Difficulty | Target Obstacles (3 min) | Speed & Beat Grid | Postures Unlocked | Description |
 |---|---|---|---|---|
@@ -84,12 +91,14 @@
 
 ---
 
-## 6. Pricing & Editions (EUR / USD)
+## 6. Editions
 
-- **Free Download**: Includes the Interactive Tutorial (Lvl 00), Toy Kingdom (Lvl 01 No-Jump/Squat + 20s PRO Teaser), EASY & NORMAL difficulties, Solo mode, Souvenir Photo, and Finish Replay.
-- **BodyRush PRO Monthly Pass**: `4,99 € / month` (`$4.99 / month`) — Cancel anytime.
-- **BodyRush PRO Annual VIP Pass**: `29,99 € / year` (`$29.99 / year`) — Save 50%.
-- **BodyRush PRO Infinity Lifetime Edition**: `79,99 €` (`$79.99`) one-time purchase — Permanent unlock of all 6 worlds, 10 levels (including 5/10-Min FIT & 6-World Megamix), 4 difficulties, 26 music tracks, 2–4 player Party Tournament, AirPlay 16:9 TV mode, future updates, and Apple Family Sharing.
+Amounts are shown in the app (RevenueCat) and can change. This site does not publish prices.
+
+- **Included with the download**: Interactive Tutorial (Lvl 00), Toy Kingdom (Lvl 01 No-Jump/Squat + 20s PRO Teaser), EASY & NORMAL difficulties, Solo mode, Souvenir Photo, and Finish Replay.
+- **BodyRush PRO Monthly Pass**: no commitment. Cancel anytime in iOS Settings.
+- **BodyRush PRO Annual Pass**.
+- **BodyRush PRO Infinity Lifetime Edition**: one-time payment, no renewal. Permanent unlock of all 6 worlds, 10 levels (including 5/10-Min FIT & 6-World Megamix), 4 difficulties, 26 music tracks, 2–4 player Party Tournament, AirPlay 16:9 TV mode, future updates, and Apple Family Sharing.
 
 ---
 

@@ -9,7 +9,7 @@
 - **Plateformes** : iPhone (iOS 17+), iPad (iPadOS 17+), et affichage grand écran TV 16:9 sans fil via AirPlay
 - **Créateur** : Xavier Larrodé (France)
 - **Site officiel** : https://bodyrush.app/
-- **Confidentialité** : Traitement caméra 100% local sur la puce Apple Neural Engine. Zéro vidéo ou photo envoyée sur le cloud. Fonctionne hors-ligne (mode Avion).
+- **Confidentialité** : La caméra est analysée sur l'appareil (Apple Vision). Aucune vidéo, photo ou donnée biométrique issue de la caméra n'est envoyée. Des statistiques d'usage anonymes partent vers Mixpanel (UE). RevenueCat vérifie l'abonnement PRO avec un identifiant de transaction anonyme.
 
 ## Comment fonctionne le Gameplay ?
 
@@ -19,7 +19,7 @@
    - **⚡ Auto-Avance sur Posture** : Maintenir une posture à plus de 52% de précision devant un mur de posture propulse automatiquement le joueur.
 2. **4 Familles d'Actions Synchronisées sur la Musique** :
    - **Boxe & Combat** : Direct du poing gauche, direct du poing droit, coup double à 2 poings simultanés, ou Super Kick du pied pour détruire les monstres en carton 2.5D, trancher les cubes rythmés et briser les murs de cristal fissurés.
-   - **10 Murs de Posture Néon ("Hole in the Wall")** : T-Pose, Bras Levés, Garde Boxe, Étoile (Star Jump), Flexion Biceps, Victoire V, Diamant, Super Héros, Flamant Rose, Guerrier Zen. Déclenche la Photo Souvenir automatique en pleine action.
+   - **10 Murs de Posture** : Mains en l'air (V) / Hands Up (V-Pose), Bras en croix (T) / T-Pose Arms Wide, Double biceps gym / Double Biceps Flex, Garde de boxe / Boxing Guard, Squat bouclier / Power Squat Shield, Disco droit / Disco Right, Disco gauche / Disco Left, Croix pharaon / Pharaoh X-Cross, Superman gauche / Superman Left, Superman droit / Superman Right. Power Squat (Squat bouclier) n'est pas utilisé en mode tapis de course. Déclenche la Photo Souvenir automatique en pleine action.
    - **Parkour 3 Voies & Multi-Étages** : Esquive latérale (Gauche / Centre / Droite), vrai Squat pour passer sous les poutres hautes, et vrai Saut pour franchir les barrières basses ou grimper aux étages supérieurs (+1, +2, +3).
    - **Mode Fantôme 3D** : Affronte en direct le Fantôme 3D de ton meilleur score sur chaque niveau.
 
@@ -46,9 +46,9 @@ Chaque niveau indique explicitement sa durée, son nombre de cœurs (`4 ❤️` 
 - **Niv. 08 — Fit Intense · Crown Arena 142 BPM (PRO · 10 MIN · ♾️ Cœurs Illimités · ✅ Tous les Mouvements)** : Défi endurance de 10 minutes à Cœurs Illimités.
 - **Niv. 09 — 🌟 Bonus 10 Min · Méli-Mélo des 6 Mondes (PRO · 10 MIN · ♾️ Cœurs Illimités · ✅ Tous les Mouvements)** : Marathon de 10 minutes traversant successivement les 6 Mondes 3D (Toy Kingdom ➔ Sakura Zen ➔ Temple Indiana ➔ Red Cristal ➔ Halloween ➔ Noël Express) avec montée progressive de la difficulté !
 
-## Les 4 Difficultés Musicales (Plus d'Événements & Combos sur le Beat)
+## Les 4 Difficultés, style Neon Blades (Plus d'Événements & Combos sur le Beat)
 
-Plus le joueur monte en difficulté, plus le nombre d'événements et d'enchaînements (Combos x2 / x3) calés sur la musique augmente :
+Le style de difficulté s'appelle Neon Blades. Plus le joueur monte en difficulté, plus le nombre d'événements et d'enchaînements (Combos x2 / x3) calés sur la musique augmente :
 - **EASY (~40 obstacles / 3 min · 0.82x)** : 1 obstacle à la fois, 4 postures faciles, zéro combo simultané. Idéal débutants, enfants et échauffement.
 - **NORMAL (~80 obstacles / 3 min · 1.00x)** : 2x plus d'événements qu'en Easy, 7 postures, premiers Combos x2 sur les temps forts.
 - **HARD (~125 obstacles / 3 min · 1.18x)** : 3x plus d'événements, les 10 postures complètes, Combos x2 et x3 enchaînés (ex. Squat ➔ Saut, Jab Gauche ➔ Direct Droit).
@@ -59,12 +59,14 @@ Plus le joueur monte en difficulté, plus le nombre d'événements et d'enchaîn
 - **AirPlay TV 16:9 + Cockpit Squelette** : Diffuse le couloir 3D en vrai 16:9 plein écran sur la TV via AirPlay, tandis que l'iPhone passe automatiquement en mode « Cockpit Squelette » basse consommation pour suivre les 19 articulations sans surchauffe.
 - **Tournoi Salon 2 à 4 Joueurs (Chacun son tour)** : Jusqu'à 4 joueurs s'affrontent à tour de rôle devant la caméra sur la même chanson. À la fin, BodyRush affiche le **Podium 3D des vainqueurs** avec la Photo Souvenir de chaque joueur et le Replay Vidéo du sprint final.
 
-## Modèle Économique & Tarifs
+## Modèle Économique
 
-- **Essai Gratuit au téléchargement** : Tutoriel (Niv. 00) + Monde Toy Kingdom (Niv. 01 avec Teaser PRO) + Difficultés EASY & NORMAL.
-- **Pass Mensuel PRO** : 4,99 € / mois (sans engagement).
-- **Pass Annuel VIP PRO** : 29,99 € / an (économise 50%).
-- **Édition Infinity À Vie (Lifetime Unlock)** : 79,99 € en paiement unique (inclut le Partage Familial Apple).
+Les montants sont affichés dans l'app (RevenueCat) et peuvent changer. Ce site ne publie pas de prix.
+
+- **Inclus au téléchargement** : Tutoriel (Niv. 00) + Monde Toy Kingdom (Niv. 01 avec Teaser PRO) + Difficultés EASY & NORMAL.
+- **Pass Mensuel PRO** : sans engagement.
+- **Pass Annuel PRO**.
+- **Édition Infinity À Vie** : paiement unique, sans renouvellement (inclut le Partage Familial Apple).
 
 ## Liens & Ressources
 

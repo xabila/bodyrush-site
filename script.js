@@ -180,8 +180,12 @@ document.addEventListener("DOMContentLoaded", () => {
       step1_heading: "CHOISIS TON UNIVERS 3D :",
       step1_hint: "Clique sur un monde pour voir son couloir et ses monstres",
       badge_free: "GRATUIT",
+      w_toy_title: "TOY KINGDOM",
       w_toy_sub: "Chambre des jouets · Chat Maine Coon & Robot",
+      w_sakura_title: "SAKURA ZEN",
       w_sakura_sub: "Studio rose & cerisiers · Kitsune & Panda",
+      w_red_title: "RED CRISTAL",
+      w_hal_title: "HALLOWEEN",
       w_temple_title: "TEMPLE INDIANA",
       w_temple_sub: "Boule géante, pieux & Gardien Tiki",
       w_red_sub: "Bunker de cristal · Boxeurs Rubis & Lasers",
@@ -190,21 +194,34 @@ document.addEventListener("DOMContentLoaded", () => {
       w_xmas_sub: "Village enneigé · Bonhomme & Casse-Noisette",
       step2_heading: "CHOISIS TON NIVEAU, LA DURÉE & LES MOUVEMENTS :",
       step2_hint: "Niveaux 3 min (Sans Saut / Sans Squat / Complet), Cardio FIT 5 & 10 min (♾️ Cœurs Illimités) ou Bonus Méli-Mélo 6 Mondes !",
+      lvl_1_badge: "NIV. 01 · GRATUIT · 3 MIN · 4 ❤️",
       lvl_1_name: "RYTHME & BOXE",
       lvl_1_desc: "🚫 Sans Saut ni Squat · Vilains G/C/D & Cubes Rythmés",
+      lvl_2_badge: "NIV. 02 · POSTURES · 3 MIN · 4 ❤️",
       lvl_2_name: "GYM & POSTURES",
       lvl_2_desc: "🚫 Sans Saut · Murs de Posture Néon, Squats & Boxe",
+      lvl_3_badge: "NIV. 03 · PARKOUR · 3 MIN · 4 ❤️",
       lvl_3_name: "PARKOUR ÉTAGES",
       lvl_3_desc: "🚫 Sans Squat · Piliers 3 voies, Sauts & Étages +1/+2/+3",
+      lvl_4_badge: "NIV. 04 · HYPER-MIX · 3 MIN · 4 ❤️",
       lvl_4_name: "HYPER-MIX FINAL",
       lvl_4_desc: "✅ Tous les Mouvements · Boxe + Postures + Sauts + Squats",
+      lvl_5_badge: "NIV. 05 · FIT 5 MIN · ♾️ CŒURS · 140 BPM",
+      lvl_5_name: "BEATFIT · CLOCKWORK",
       lvl_5_desc: "🚫 Sans Saut ni Squat · Cardio Boxe 5 min sans perdre",
+      lvl_6_badge: "NIV. 06 · FIT 5 MIN · ♾️ CŒURS · 133 BPM",
+      lvl_6_name: "BEATFIT · BLACK ICE",
       lvl_6_desc: "🚫 Sans Squat · Slalom Latéral & Sauts 5 min sans perdre",
+      lvl_7_badge: "NIV. 07 · FIT 5 MIN · ♾️ CŒURS · 121 BPM",
+      lvl_7_name: "BEATFIT · SHORELINE",
       lvl_7_desc: "🚫 Sans Saut · Postures & Squats Cardio 5 min sans perdre",
+      lvl_8_badge: "NIV. 08 · FIT 10 MIN · ♾️ CŒURS · 142 BPM",
+      lvl_8_name: "FIT INTENSE · CROWN ARENA",
       lvl_8_desc: "✅ Tous les Mouvements · Endurance 10 min à Cœurs Illimités",
+      lvl_9_badge: "NIV. 09 · BONUS 10 MIN · ♾️ CŒURS ILLIMITÉS · 6 MONDES",
       lvl_9_name: "MÉLI-MÉLO DES 6 MONDES ( MARATHON 10 MIN )",
       lvl_9_desc: "✅ Tous les Mouvements · Traverse Toy Kingdom ➔ Sakura ➔ Temple ➔ Cristal ➔ Halloween ➔ Noël avec difficulté progressive !",
-      step3_heading: "CHOISIS LA DIFFICULTÉ (PLUS D'ÉVÉNEMENTS & COMBOS SUR LA MUSIQUE) :",
+      step3_heading: "CHOISIS LA DIFFICULTÉ (STYLE NEON BLADES) :",
       step3_hint: "Plus tu montes en difficulté, plus il y a d'événements et de combos enchaînés (x2 / x3) sur les temps forts !",
       diff_1_desc: "1 événement à la fois (0.82x) · 4 postures faciles · Idéal débutant & enfants",
       diff_2_desc: "2x plus d'événements (1.00x) · 7 postures · Premiers Combos x2 sur le beat",
@@ -229,15 +246,30 @@ document.addEventListener("DOMContentLoaded", () => {
       spec2_tag: "NIVEAUX 02 & 07 · GYM & POSTURES",
       spec2_title: "Traverse les 10 Murs de Posture Néon",
       spec2_desc: "Reproduis la silhouette découpée dans le mur de verre avant l'impact ! Dès que ta posture dépasse 52% de précision, le mur s'illumine en vert émeraude, déclenche l'auto-propulsion et prend ta Photo Souvenir en pleine action.",
+      spec2_p1: "🟢 Easy : 4 Postures",
+      spec2_p2: "🔵 Normal : 7 Postures",
+      spec2_p3: "🔥 Hard/Expert+ : 10 Postures",
       spec3_tag: "NIVEAUX 03 & 06 · PARKOUR & ÉVITEMENT",
       spec3_title: "Esquive sur 3 Voies, Saute & Grimpe les Étages",
       spec3_desc: "Décale ton corps à gauche, au centre ou à droite pour éviter les piliers, plie les genoux en vrai squat pour passer sous les poutres hautes, et saute pour franchir les barrières basses ou grimper aux étages supérieurs (+1, +2, +3).",
       spec4_tag: "SPRINT INTENSE & MODE FANTÔME",
       spec4_title: "Active le Turbo Run & Bats ton Fantôme 3D",
       spec4_desc: "Si tu t'arrêtes, le couloir ralentit. Mais si tu sprintes à fond en faisant travailler tes bras ET tes jambes très vite en même temps, tu déclenches le 🔥 TURBO RUN (+50% vitesse, points de distance x3) pour dépasser le Fantôme 3D de ton record !",
+      spec4_p1: "🏃‍♂️ Bras + Jambes Rapides",
+      spec4_p3: "👻 Fantôme 3D du Record",
       poses_label: "LES 10 POSTURES DU JEU DÉTECTÉES PAR LA CAMÉRA :",
       poses_sub: "En difficulté EASY tu commences avec les 4 postures les plus simples, puis tu débloques les 7 et 10 postures en NORMAL, HARD et EXPERT+.",
       poses_autoglide: "⚡ POSTURE MAINTENUE ≥ 52% = AUTO-AVANCE ACTIVE !",
+      pose_1: "MAINS EN L'AIR (V)",
+      pose_2: "BRAS EN CROIX (T)",
+      pose_3: "DOUBLE BICEPS GYM",
+      pose_4: "GARDE DE BOXE",
+      pose_5: "SQUAT BOUCLIER",
+      pose_6: "DISCO DROIT",
+      pose_7: "DISCO GAUCHE",
+      pose_8: "CROIX PHARAON",
+      pose_9: "SUPERMAN GAUCHE",
+      pose_10: "SUPERMAN DROIT",
       caps_kicker: "CAPTURES D'ÉCRAN AUTHENTIQUES",
       caps_title: "L'INTERFACE EXACTE SUR iPHONE & iPAD",
       caps_desc: "Découvre le rendu 2.5D cartoon, le radar squelette Apple Vision en direct en bas de l'écran et les retours de score instantanés.",
@@ -274,9 +306,9 @@ document.addEventListener("DOMContentLoaded", () => {
       f_5: "🔒 Les 5 autres Mondes 3D & Niveaux 02 à 09 (FIT 5/10 min & Méli-Mélo)",
       f_6: "🔒 Difficultés HARD (~125 obs) & EXPERT+ (~175 obs + Combos x3)",
       btn_dl_free: "⏳ Bientôt sur l'App Store",
-      vip_ribbon: "👑 OFFRE LA PLUS POPULAIRE · ÉCONOMISE 50%",
+      vip_ribbon: "👑 OFFRE LA PLUS POPULAIRE",
       vip_name: "PASS ANNUEL PRO",
-      vip_flex: "ou Pass Mensuel sans engagement à 4,99 €/mois",
+      vip_flex: "ou Pass Mensuel, sans engagement",
       v_1: "✓ Les 6 Mondes 3D Complets (Toy, Sakura, Temple, Cristal, Halloween, Noël)",
       v_2: "✓ Les 10 Niveaux (Modes Sans Saut/Squat, FIT 5/10 min ♾️ Cœurs & Méli-Mélo 6 Mondes)",
       v_3: "✓ Les 4 Difficultés jusqu'à EXPERT+ (~175 événements + Combos x3 sur le beat)",
@@ -286,24 +318,42 @@ document.addEventListener("DOMContentLoaded", () => {
       btn_start_vip: "⏳ Bientôt disponible",
       life_badge: "PAIEMENT UNIQUE · ZÉRO ABONNEMENT",
       life_name: "ÉDITION INFINITY À VIE",
-      life_sub: "une seule fois",
+      life_sub: "Paiement unique, sans renouvellement",
       l_1: "✓ Déblocage À Vie de tout BodyRush 3D PRO",
       l_2: "✓ Tous les 6 Mondes, 10 Niveaux (FIT & Méli-Mélo), 4 Difficultés & 26 Musiques",
       l_3: "✓ Tournoi Salon 2 à 4 Joueurs & Podium Photo 3D",
       l_4: "✓ Toutes les futures mises à jour et nouveaux mondes inclus",
       l_5: "✓ Compatible Partage Familial Apple",
       btn_buy_life: "⏳ Bientôt disponible",
-      priv_title: "Aucune image ne quitte jamais ton iPhone ou ton iPad",
-      priv_desc: "La détection des 19 articulations du corps s'exécute intégralement en local sur la puce Apple de ton appareil. Aucune vidéo, aucune photo et aucune donnée biométrique n'est envoyée sur un serveur externe. Le jeu fonctionne même en mode Avion.",
+      priv_badge: "CAMÉRA SUR L'APPAREIL",
+      priv_title: "La caméra est analysée sur ton iPhone ou ton iPad",
+      priv_desc: "Les 19 articulations sont estimées sur l'appareil avec Apple Vision. Aucune vidéo, photo ou donnée biométrique issue de la caméra n'est envoyée. Des statistiques d'usage anonymes partent vers Mixpanel (UE), et RevenueCat vérifie l'abonnement PRO avec un identifiant de transaction anonyme.",
+      price_in_app: "Les montants sont affichés dans l'app.",
+      btn_offers: "Voir les offres dans l'app",
       priv_btn: "Consulter la Politique de Confidentialité",
       faq_1_q: "Quelle distance faut-il prévoir devant l'iPhone ou l'iPad ?",
       faq_1_a: "Pose ton iPhone ou ton iPad à environ 1,80 m – 2,50 m face à toi (sur une table basse, un meuble TV ou un support). Le guide de cadrage intelligent passe au vert dès que ta silhouette est bien visible.",
       faq_2_q: "Peut-on jouer sans sauter (en appartement) ou sans faire de squats ?",
       faq_2_a: "Oui ! Chaque niveau affiche clairement ses règles de mouvements : les Niveaux 01 & 05 sont 100% Sans Saut ni Squat (Boxe & Esquive), les Niveaux 02 & 07 sont Sans Saut (Postures & Squats), et les Niveaux 03 & 06 sont Sans Squat (Parkour & Sauts). Les Niveaux FIT 05 à 09 offrent en plus des Cœurs Illimités (♾️) sur 5 ou 10 minutes !",
-      faq_3_q: "Comment fonctionne la difficulté façon Beat Saber ?",
+      faq_3_q: "Comment le style Neon Blades change-t-il le nombre d'obstacles ?",
       faq_3_a: "Passer de EASY (~40 événements) à NORMAL (~80 + Combos x2), HARD (~125 + Combos x2/x3) ou EXPERT+ (~175 + Rafales Combos x3) multiplie le nombre d'obstacles et d'enchaînements calés sur les temps forts de la musique !",
       footer_bio: "Conçu et développé en France par Xavier Larrodé. Tous droits réservés © 2026 BodyRush.",
-      footer_priv_pol: "Confidentialité"
+      footer_menu: "Menu du Jeu",
+      footer_poses: "10 Postures",
+      footer_captures: "Captures",
+      footer_tv: "AirPlay TV",
+      footer_priv_pol: "Confidentialité",
+      footer_terms: "Conditions",
+      footer_support: "Support",
+      hud_example: "EXEMPLE",
+      hud_example_aria: "Exemple de télémétrie, pas vos statistiques",
+      nav_menu: "Menu",
+      nav_menu_open: "Ouvrir le menu",
+      nav_menu_close: "Fermer le menu",
+      lang_aria: "Changer la langue",
+      sound_off: "🔇 SON OFF",
+      sound_on: "🔊 SON ON",
+      sound_aria: "Activer ou couper le son"
     },
     en: {
       brand_sub: "FITNESS · BOXING · POSES",
@@ -331,8 +381,12 @@ document.addEventListener("DOMContentLoaded", () => {
       step1_heading: "CHOOSE YOUR 3D WORLD:",
       step1_hint: "Click any world to preview its corridor and monsters",
       badge_free: "FREE",
+      w_toy_title: "TOY KINGDOM",
       w_toy_sub: "Toy room hallway · Maine Coon Cat & Robot",
+      w_sakura_title: "SAKURA ZEN",
       w_sakura_sub: "Pink zen studio · Kitsune & Pink Panda",
+      w_red_title: "RED CRYSTAL",
+      w_hal_title: "HALLOWEEN",
       w_temple_title: "INDIANA TEMPLE",
       w_temple_sub: "Giant boulder, spikes & Tiki Guardian",
       w_red_sub: "Crystal bunker · Ruby Boxers & Lasers",
@@ -341,21 +395,34 @@ document.addEventListener("DOMContentLoaded", () => {
       w_xmas_sub: "Snowy village · Snowman & Nutcracker",
       step2_heading: "CHOOSE YOUR LEVEL, DURATION & MOVEMENTS:",
       step2_hint: "3-Min Levels (No-Jump / No-Squat / Full), 5 & 10-Min FIT (♾️ Unlimited Hearts) or 10-Min 6-World Megamix!",
+      lvl_1_badge: "LVL 01 · FREE · 3 MIN · 4 ❤️",
       lvl_1_name: "RHYTHM & BOXING",
       lvl_1_desc: "🚫 No Jump or Squat · L/C/R Villains & Rhythm Cubes",
+      lvl_2_badge: "LVL 02 · POSTURES · 3 MIN · 4 ❤️",
       lvl_2_name: "GYM & POSTURES",
       lvl_2_desc: "🚫 No Jump · Neon Posture Gates, Squats & Boxing",
+      lvl_3_badge: "LVL 03 · PARKOUR · 3 MIN · 4 ❤️",
       lvl_3_name: "PARKOUR STAIRS",
       lvl_3_desc: "🚫 No Squat · 3-Lane Pillars, Jumps & +1/+2/+3 Stairs",
+      lvl_4_badge: "LVL 04 · HYPER-MIX · 3 MIN · 4 ❤️",
       lvl_4_name: "FINAL HYPER-MIX",
       lvl_4_desc: "✅ All Movements · Boxing + Postures + Jumps + Squats",
+      lvl_5_badge: "LVL 05 · FIT 5 MIN · ♾️ HEARTS · 140 BPM",
+      lvl_5_name: "BEATFIT · CLOCKWORK",
       lvl_5_desc: "🚫 No Jump or Squat · 5-Min Cardio Boxing (No Game Over)",
+      lvl_6_badge: "LVL 06 · FIT 5 MIN · ♾️ HEARTS · 133 BPM",
+      lvl_6_name: "BEATFIT · BLACK ICE",
       lvl_6_desc: "🚫 No Squat · 5-Min Lateral Slalom & Jumps (No Game Over)",
+      lvl_7_badge: "LVL 07 · FIT 5 MIN · ♾️ HEARTS · 121 BPM",
+      lvl_7_name: "BEATFIT · SHORELINE",
       lvl_7_desc: "🚫 No Jump · 5-Min Postures & Cardio Squats (No Game Over)",
+      lvl_8_badge: "LVL 08 · FIT 10 MIN · ♾️ HEARTS · 142 BPM",
+      lvl_8_name: "FIT INTENSE · CROWN ARENA",
       lvl_8_desc: "✅ All Movements · 10-Min Endurance Challenge (♾️ Hearts)",
+      lvl_9_badge: "LVL 09 · BONUS 10 MIN · ♾️ UNLIMITED HEARTS · 6 WORLDS",
       lvl_9_name: "6-WORLD MEGAMIX ( 10-MIN MARATHON )",
       lvl_9_desc: "✅ All Movements · Travel through Toy Kingdom ➔ Sakura ➔ Temple ➔ Crystal ➔ Halloween ➔ Santa with progressive difficulty!",
-      step3_heading: "CHOOSE DIFFICULTY (MORE EVENTS & COMBOS ON THE BEAT):",
+      step3_heading: "CHOOSE THE NEON BLADES DIFFICULTY:",
       step3_hint: "Higher difficulties multiply the number of events and chained combos (x2 / x3) synced to musical accents!",
       diff_1_desc: "1 event at a time (0.82x) · 4 easy poses · Best for beginners & kids",
       diff_2_desc: "2x more events (1.00x) · 7 poses · First x2 Combos on the beat",
@@ -380,15 +447,30 @@ document.addEventListener("DOMContentLoaded", () => {
       spec2_tag: "LEVELS 02 & 07 · GYM & POSTURES",
       spec2_title: "Clear All 10 Neon Posture Gates",
       spec2_desc: "Match the glowing silhouette cut into the glass wall before impact! Once your pose reaches 52% accuracy, the gate lights up emerald green, activates auto-glide and snaps your Action Souvenir Photo.",
+      spec2_p1: "🟢 Easy: 4 Postures",
+      spec2_p2: "🔵 Normal: 7 Postures",
+      spec2_p3: "🔥 Hard/Expert+: 10 Postures",
       spec3_tag: "LEVELS 03 & 06 · PARKOUR & DODGING",
       spec3_title: "Dodge Across 3 Lanes, Jump & Climb Floors",
       spec3_desc: "Step left, center or right to dodge side pillars, drop into a real squat to duck under overhead beams, and jump to clear low hurdles or climb 3D stairs (+1, +2, +3).",
       spec4_tag: "FAST SPRINT & GHOST MODE",
       spec4_title: "Trigger Turbo Run & Beat Your 3D Ghost",
       spec4_desc: "Stop moving and the corridor slows down. Pump BOTH arms and BOTH legs fast simultaneously to trigger 🔥 TURBO RUN (+50% speed, 3x distance points) and overtake your personal best 3D Ghost!",
+      spec4_p1: "🏃‍♂️ Fast Arms + Legs",
+      spec4_p3: "👻 3D Ghost of Your Best Score",
       poses_label: "ALL 10 CAMERA-TRACKED BODY POSTURES:",
       poses_sub: "Start with 4 intuitive postures in EASY, then unlock 7 and all 10 postures in NORMAL, HARD and EXPERT+.",
       poses_autoglide: "⚡ POSE HELD ≥ 52% = AUTO-GLIDE ACTIVE!",
+      pose_1: "HANDS UP (V-POSE)",
+      pose_2: "T-POSE ARMS WIDE",
+      pose_3: "DOUBLE BICEPS FLEX",
+      pose_4: "BOXING GUARD",
+      pose_5: "POWER SQUAT SHIELD",
+      pose_6: "DISCO RIGHT",
+      pose_7: "DISCO LEFT",
+      pose_8: "PHARAOH X-CROSS",
+      pose_9: "SUPERMAN LEFT",
+      pose_10: "SUPERMAN RIGHT",
       caps_kicker: "AUTHENTIC IN-GAME CAPTURES",
       caps_title: "THE EXACT INTERFACE ON iPHONE & iPAD",
       caps_desc: "See the 2.5D cartoon rendering, the live Apple Vision skeleton radar at the bottom of the screen and instant score callouts.",
@@ -425,9 +507,9 @@ document.addEventListener("DOMContentLoaded", () => {
       f_5: "🔒 Remaining 5 3D Worlds & Levels 02 to 09 (5/10-Min FIT & Megamix)",
       f_6: "🔒 HARD (~125 obs) & EXPERT+ (~175 obs + x3 Combos) Difficulties",
       btn_dl_free: "⏳ Coming Soon on App Store",
-      vip_ribbon: "👑 MOST POPULAR · SAVE 50%",
+      vip_ribbon: "👑 MOST POPULAR",
       vip_name: "ANNUAL PRO PASS",
-      vip_flex: "or Monthly Flex Pass at €4.99/month",
+      vip_flex: "or a monthly pass, no commitment",
       v_1: "✓ All 6 Complete 3D Worlds (Toy, Sakura, Temple, Crystal, Halloween, Santa)",
       v_2: "✓ All 10 Custom Levels (No-Jump/Squat, 5/10-Min FIT ♾️ Hearts & 6-World Megamix)",
       v_3: "✓ All 4 Difficulties up to EXPERT+ (~175 events + x3 Combos on the beat)",
@@ -437,24 +519,42 @@ document.addEventListener("DOMContentLoaded", () => {
       btn_start_vip: "⏳ Coming Soon",
       life_badge: "ONE-TIME PAYMENT · ZERO SUBSCRIPTION",
       life_name: "INFINITY LIFETIME EDITION",
-      life_sub: "one time",
+      life_sub: "One-time payment, no renewal",
       l_1: "✓ Lifetime Unlock of all BodyRush 3D PRO content",
       l_2: "✓ All 6 Worlds, 10 Levels (FIT & Megamix), 4 Difficulties & 26 Tracks",
       l_3: "✓ 2-to-4 Player Party Tournament & 3D Photo Podium",
       l_4: "✓ All future updates and new worlds included",
       l_5: "✓ Apple Family Sharing supported",
       btn_buy_life: "⏳ Coming Soon",
-      priv_title: "Zero images ever leave your iPhone or iPad",
-      priv_desc: "19-joint body pose tracking runs 100% locally on your device's Apple Neural Engine. No video, no photos and no biometric data are ever uploaded to external servers. Works even in Airplane Mode.",
+      priv_badge: "ON-DEVICE CAMERA",
+      priv_title: "The camera is analyzed on your iPhone or iPad",
+      priv_desc: "The 19 joints are estimated on the device with Apple Vision. No camera video, photo, or biometric data is uploaded. Anonymous usage stats go to Mixpanel (EU), and RevenueCat checks the PRO subscription with an anonymous transaction id.",
+      price_in_app: "Amounts are shown in the app.",
+      btn_offers: "See the offers in the app",
       priv_btn: "Read the Privacy Policy",
       faq_1_q: "How much space do I need in front of my iPhone or iPad?",
       faq_1_a: "Place your iPhone or iPad about 6 to 8 feet (1.8m – 2.5m) in front of you on a coffee table, TV stand or tripod. The smart framing guide turns green as soon as your full body is visible.",
       faq_2_q: "Can I play without jumping (in an apartment) or without squats?",
       faq_2_a: "Yes! Every level explicitly displays its movement rules: Levels 01 & 05 are 100% No-Jump & No-Squat (Boxing & Dodging), Levels 02 & 07 are No-Jump (Postures & Squats), and Levels 03 & 06 are No-Squat (Parkour & Jumps). Plus, FIT Levels 05 to 09 feature Unlimited Hearts (♾️) for uninterrupted 5 or 10-minute cardio workouts!",
-      faq_3_q: "How does the Beat Saber-style difficulty work?",
+      faq_3_q: "How does the Neon Blades style change the number of obstacles?",
       faq_3_a: "Moving from EASY (~40 events) to NORMAL (~80 + x2 Combos), HARD (~125 + x2/x3 Combos) or EXPERT+ (~175 + x3 Combo flurries) multiplies the density of obstacles and chained actions synced to musical accents!",
       footer_bio: "Designed and built in France by Xavier Larrodé. All rights reserved © 2026 BodyRush.",
-      footer_priv_pol: "Privacy"
+      footer_menu: "Game menu",
+      footer_poses: "10 Postures",
+      footer_captures: "Captures",
+      footer_tv: "AirPlay TV",
+      footer_priv_pol: "Privacy",
+      footer_terms: "Terms",
+      footer_support: "Support",
+      hud_example: "EXAMPLE",
+      hud_example_aria: "Sample telemetry, not your stats",
+      nav_menu: "Menu",
+      nav_menu_open: "Open menu",
+      nav_menu_close: "Close menu",
+      lang_aria: "Change language",
+      sound_off: "🔇 SOUND OFF",
+      sound_on: "🔊 SOUND ON",
+      sound_aria: "Turn sound on or off"
     }
   };
 
@@ -554,11 +654,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Tutorial Banner Click ---
   const tutoBanner = document.getElementById("btn-select-tutorial");
   if (tutoBanner) {
-    tutoBanner.addEventListener("click", () => {
+    const startTutorial = () => {
       selectedLevel = "0";
       selectedDiff = "normal";
       refreshConsoleAndViewport();
       setStep(3);
+    };
+    tutoBanner.addEventListener("click", startTutorial);
+    tutoBanner.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        startTutorial();
+      }
     });
   }
 
@@ -614,11 +721,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const soundBtn = document.getElementById("btn-video-sound");
   const soundLabel = document.getElementById("sound-label");
 
+  function refreshSoundLabel() {
+    if (!heroVideo || !soundLabel) return;
+    const dict = i18n[currentLang] || i18n.fr;
+    soundLabel.textContent = heroVideo.muted ? dict.sound_off : dict.sound_on;
+    if (soundBtn) soundBtn.setAttribute("aria-label", dict.sound_aria);
+  }
+
   if (heroVideo && soundBtn && soundLabel) {
     soundBtn.addEventListener("click", () => {
       heroVideo.muted = !heroVideo.muted;
-      soundLabel.textContent = heroVideo.muted ? "🔇 SON OFF" : "🔊 SON ON";
+      refreshSoundLabel();
     });
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncMotion = () => {
+      if (!motionQuery.matches) return;
+      heroVideo.removeAttribute("autoplay");
+      heroVideo.pause();
+    };
+    syncMotion();
+    if (typeof motionQuery.addEventListener === "function") {
+      motionQuery.addEventListener("change", syncMotion);
+    }
   }
 
   // --- Language Switcher (FR / EN) ---
@@ -638,6 +762,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     if (langFlag) langFlag.textContent = lang === "fr" ? "🇫🇷" : "🇬🇧";
     if (langCode) langCode.textContent = lang.toUpperCase();
+    const telemetry = document.getElementById("hud-telemetry");
+    if (telemetry && dict.hud_example_aria) {
+      telemetry.setAttribute("aria-label", dict.hud_example_aria);
+    }
+    if (langBtn && dict.lang_aria) {
+      langBtn.setAttribute("aria-label", dict.lang_aria);
+    }
+    const navToggle = document.getElementById("nav-toggle");
+    const siteNav = document.getElementById("site-nav");
+    if (navToggle && siteNav && dict.nav_menu_open && dict.nav_menu_close) {
+      const open = siteNav.classList.contains("is-open");
+      navToggle.setAttribute("aria-label", open ? dict.nav_menu_close : dict.nav_menu_open);
+    }
+    refreshSoundLabel();
     refreshConsoleAndViewport();
   }
 
@@ -647,5 +785,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const navToggle = document.getElementById("nav-toggle");
+  const siteNav = document.getElementById("site-nav");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+      const open = !siteNav.classList.contains("is-open");
+      siteNav.classList.toggle("is-open", open);
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      const dict = i18n[currentLang] || i18n.fr;
+      navToggle.setAttribute("aria-label", open ? dict.nav_menu_close : dict.nav_menu_open);
+    });
+    siteNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        const dict = i18n[currentLang] || i18n.fr;
+        navToggle.setAttribute("aria-label", dict.nav_menu_open);
+      });
+    });
+  }
+
+  refreshSoundLabel();
   refreshConsoleAndViewport();
 });

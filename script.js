@@ -281,6 +281,26 @@ document.addEventListener("DOMContentLoaded", () => {
       cap6_txt: "Pendant qu'AirPlay diffuse sur la TV, l'iPhone affiche ton squelette Vision à 60 FPS.",
       cap7_txt: "Interface native grand format sur iPad avec mur de posture vert émeraude validé.",
       cap8_txt: "Joue en portrait ou en paysage sur iPad avec détection caméra intégrale à 2 mètres.",
+      cap1_title: "1. Couloir 3D & Fantôme du Record",
+      cap2_title: "2. Murs de Posture & Photo Souvenir",
+      cap3_title: "3. Multiplicateur x8 & Sprint",
+      cap4_title: "4. Boxe & Smash Cristal sur le Beat",
+      cap5_title: "5. Rendu TV AirPlay 16:9 (1080p · 60 FPS)",
+      cap6_title: "6. Cockpit Squelette iPhone (Mode AirPlay)",
+      cap7_title: "7. iPad Pro Portrait — Manoir Halloween",
+      cap8_title: "8. iPad Pro Paysage — Noël Express",
+      cap1_alt: "Course 3D dans Toy Kingdom avec Fantôme du record",
+      cap2_alt: "Validation d'un Mur de Posture Double Biceps",
+      cap3_alt: "Sprint rapide et multiplicateur x8",
+      cap4_alt: "Frappe de cristal au poing en rythme",
+      cap5_alt: "Rendu TV AirPlay 16:9 en plein écran",
+      cap6_alt: "Cockpit Squelette sur iPhone pendant AirPlay",
+      cap7_alt: "BodyRush sur iPad Pro en mode Portrait",
+      cap8_alt: "BodyRush sur iPad Pro en mode Paysage",
+      cap_prev: "Capture précédente",
+      cap_next: "Capture suivante",
+      cap_stage: "Diaporama des captures",
+      cap_thumbs: "Miniatures des captures",
       tv_kicker: "MODE GRAND ÉCRAN SANS FIL",
       tv_title: "JOUE EN 16:9 SUR TA TV VIA AIRPLAY",
       tv_desc: "Pose ton iPhone ou ton iPad sous ta télévision à 2 mètres de toi et active AirPlay : ta TV affiche le couloir 3D en vrai 16:9 plein écran (1080p / 4K à 60 FPS), tandis que ton iPhone passe automatiquement en mode « 📱 Cockpit Squelette » basse consommation pour suivre tes 19 articulations sans chauffer !",
@@ -482,6 +502,26 @@ document.addEventListener("DOMContentLoaded", () => {
       cap6_txt: "While AirPlay streams to the TV, your iPhone displays your live 60 FPS Vision skeleton.",
       cap7_txt: "Native large-screen iPad Pro portrait interface with emerald green posture gate cleared.",
       cap8_txt: "Play in portrait or landscape on iPad with full-body camera tracking from 6 feet away.",
+      cap1_title: "1. 3D Corridor & Record Ghost",
+      cap2_title: "2. Posture Gates & Souvenir Photo",
+      cap3_title: "3. x8 Multiplier & Sprint",
+      cap4_title: "4. Boxing & Crystal Smash on the Beat",
+      cap5_title: "5. AirPlay TV 16:9 (1080p · 60 FPS)",
+      cap6_title: "6. iPhone Skeleton Cockpit (AirPlay Mode)",
+      cap7_title: "7. iPad Pro Portrait — Halloween Mansion",
+      cap8_title: "8. iPad Pro Landscape — Santa Village",
+      cap1_alt: "3D run in Toy Kingdom with the record Ghost",
+      cap2_alt: "Double Biceps posture gate cleared",
+      cap3_alt: "Fast sprint and x8 multiplier",
+      cap4_alt: "Crystal punch on the beat",
+      cap5_alt: "Fullscreen AirPlay TV 16:9 render",
+      cap6_alt: "Skeleton cockpit on iPhone during AirPlay",
+      cap7_alt: "BodyRush on iPad Pro in portrait",
+      cap8_alt: "BodyRush on iPad Pro in landscape",
+      cap_prev: "Previous capture",
+      cap_next: "Next capture",
+      cap_stage: "Capture slideshow",
+      cap_thumbs: "Capture thumbnails",
       tv_kicker: "WIRELESS BIG SCREEN MODE",
       tv_title: "PLAY IN 16:9 ON YOUR TV VIA AIRPLAY",
       tv_desc: "Place your iPhone or iPad below your TV 6 feet away and turn on AirPlay: your TV renders the 3D corridor in true 16:9 fullscreen (1080p / 4K at 60 FPS), while your iPhone automatically switches to the low-power '📱 Skeleton Cockpit' view!",
@@ -760,6 +800,14 @@ document.addEventListener("DOMContentLoaded", () => {
         el.textContent = dict[key];
       }
     });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria");
+      if (dict[key]) el.setAttribute("aria-label", dict[key]);
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-alt");
+      if (dict[key]) el.setAttribute("alt", dict[key]);
+    });
     if (langFlag) langFlag.textContent = lang === "fr" ? "🇫🇷" : "🇬🇧";
     if (langCode) langCode.textContent = lang.toUpperCase();
     const telemetry = document.getElementById("hud-telemetry");
@@ -807,4 +855,201 @@ document.addEventListener("DOMContentLoaded", () => {
 
   refreshSoundLabel();
   refreshConsoleAndViewport();
+
+  // --- Captures slideshow (#captures-wall only) ---
+  const capShow = document.getElementById("cap-show");
+  if (capShow) {
+    const DURATION = 4500;
+    const stage = capShow.querySelector(".cap-stage");
+    const track = capShow.querySelector(".cap-track");
+    const slides = Array.from(capShow.querySelectorAll(".cap-slide"));
+    const segs = Array.from(capShow.querySelectorAll(".cap-progress-seg"));
+    const thumbs = Array.from(capShow.querySelectorAll(".cap-thumb"));
+    const titleEl = capShow.querySelector(".cap-caption strong");
+    const descEl = capShow.querySelector(".cap-caption span");
+    const prevBtn = capShow.querySelector(".cap-prev");
+    const nextBtn = capShow.querySelector(".cap-next");
+    const count = slides.length;
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    let index = 0;
+    let timer = 0;
+    let remaining = DURATION;
+    let stamp = 0;
+    let hovering = false;
+    let touching = false;
+    let focused = false;
+    let reduced = motionQuery.matches;
+    let swipe = null;
+
+    function hold() {
+      return reduced || hovering || touching || focused;
+    }
+
+    function clearTimer() {
+      if (!timer) return;
+      clearTimeout(timer);
+      timer = 0;
+    }
+
+    function hydrate(i) {
+      const slide = slides[(i + count) % count];
+      slide.querySelectorAll("img[data-src]").forEach((img) => {
+        img.loading = "eager";
+        img.src = img.dataset.src;
+        img.removeAttribute("data-src");
+      });
+    }
+
+    function pause() {
+      capShow.classList.add("is-paused");
+      if (reduced || !timer) return;
+      remaining -= Date.now() - stamp;
+      if (remaining < 0) remaining = 0;
+      clearTimer();
+    }
+
+    function arm() {
+      if (hold()) {
+        capShow.classList.add("is-paused");
+        return;
+      }
+      capShow.classList.remove("is-paused");
+      stamp = Date.now();
+      clearTimer();
+      timer = setTimeout(() => {
+        timer = 0;
+        go(index + 1);
+      }, remaining);
+    }
+
+    function writeCaption() {
+      const n = index + 1;
+      const dict = i18n[currentLang] || i18n.fr;
+      if (titleEl) {
+        titleEl.setAttribute("data-i18n", "cap" + n + "_title");
+        if (dict["cap" + n + "_title"]) titleEl.textContent = dict["cap" + n + "_title"];
+      }
+      if (descEl) {
+        descEl.setAttribute("data-i18n", "cap" + n + "_txt");
+        if (dict["cap" + n + "_txt"]) descEl.textContent = dict["cap" + n + "_txt"];
+      }
+    }
+
+    function restartProgress() {
+      const fill = segs[index] && segs[index].querySelector(".cap-progress-fill");
+      if (!fill) return;
+      fill.style.animation = "none";
+      void fill.offsetWidth;
+      fill.style.animation = "";
+    }
+
+    function go(next) {
+      index = (next + count) % count;
+      capShow.style.setProperty("--cap-index", String(index));
+      if (track) track.style.setProperty("--cap-index", String(index));
+      slides.forEach((slide, i) => {
+        const on = i === index;
+        slide.classList.toggle("is-active", on);
+        slide.setAttribute("aria-hidden", on ? "false" : "true");
+      });
+      segs.forEach((seg, i) => {
+        seg.classList.toggle("is-done", i < index);
+        seg.classList.toggle("is-active", i === index);
+      });
+      thumbs.forEach((btn, i) => {
+        const on = i === index;
+        btn.classList.toggle("is-active", on);
+        if (on) btn.setAttribute("aria-current", "true");
+        else btn.removeAttribute("aria-current");
+      });
+      writeCaption();
+      hydrate(index);
+      hydrate(index + 1);
+      hydrate(index - 1);
+      restartProgress();
+      remaining = DURATION;
+      clearTimer();
+      arm();
+    }
+
+    function syncReduced() {
+      reduced = motionQuery.matches;
+      capShow.classList.toggle("is-reduced", reduced);
+      if (reduced) {
+        clearTimer();
+        capShow.classList.add("is-paused");
+      } else {
+        remaining = DURATION;
+        arm();
+      }
+    }
+
+    if (prevBtn) prevBtn.addEventListener("click", () => go(index - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => go(index + 1));
+    thumbs.forEach((btn, i) => btn.addEventListener("click", () => go(i)));
+
+    capShow.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        go(index + 1);
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        go(index - 1);
+      }
+    });
+
+    capShow.addEventListener("pointerenter", (e) => {
+      if (e.pointerType === "touch") return;
+      hovering = true;
+      pause();
+    });
+    capShow.addEventListener("pointerleave", (e) => {
+      if (e.pointerType === "touch") return;
+      hovering = false;
+      if (!touching) arm();
+    });
+    capShow.addEventListener("focusin", () => {
+      focused = true;
+      pause();
+    });
+    capShow.addEventListener("focusout", () => {
+      setTimeout(() => {
+        focused = capShow.contains(document.activeElement);
+        if (!focused) arm();
+      }, 0);
+    });
+
+    if (stage) {
+      stage.addEventListener("pointerdown", (e) => {
+        if (e.target.closest("button")) return;
+        swipe = { x: e.clientX, y: e.clientY, id: e.pointerId };
+        touching = true;
+        pause();
+      });
+      stage.addEventListener("pointerup", (e) => {
+        if (!swipe || e.pointerId !== swipe.id) return;
+        const dx = e.clientX - swipe.x;
+        const dy = e.clientY - swipe.y;
+        swipe = null;
+        touching = false;
+        if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy)) {
+          go(dx < 0 ? index + 1 : index - 1);
+          return;
+        }
+        arm();
+      });
+      stage.addEventListener("pointercancel", () => {
+        swipe = null;
+        touching = false;
+        arm();
+      });
+    }
+
+    if (typeof motionQuery.addEventListener === "function") {
+      motionQuery.addEventListener("change", syncReduced);
+    }
+    syncReduced();
+    go(0);
+  }
 });

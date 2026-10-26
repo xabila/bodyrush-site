@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Support — BodyRush 3D</title>
+  <meta name="description" content="Aide BodyRush 3D : contact, caméra et confidentialité, mode TV AirPlay, abonnement PRO (gérer, annuler, restaurer) et remboursements Apple.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bodyrush.app/support.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bodyrush.app/support.html">
+  <meta property="og:title" content="Support — BodyRush 3D">
+  <meta property="og:description" content="Contact, caméra, AirPlay, abonnement PRO et remboursements pour l'app iPhone et iPad BodyRush 3D.">
+  <meta property="og:image" content="https://bodyrush.app/assets/images/app_icon.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Support — BodyRush 3D">
+  <meta name="twitter:description" content="Contact, caméra, AirPlay, abonnement PRO et remboursements pour BodyRush 3D.">
+  <meta name="twitter:image" content="https://bodyrush.app/assets/images/app_icon.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#0A0B14">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=JetBrains+Mono:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .support-page {
+      padding: 28px 0 72px;
+    }
+
+    .support-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .support-kicker {
+      margin-bottom: 8px;
+    }
+
+    .support-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .support-updated {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 14px;
+    }
+
+    .support-lead {
+      color: var(--text-light);
+      font-size: 1.02rem;
+      line-height: 1.65;
+      max-width: 68ch;
+    }
+
+    .support-card {
+      background: var(--bg-panel);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 20px;
+      padding: 22px 18px;
+      margin-top: 18px;
+    }
+
+    .support-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .support-card p,
+    .support-card li {
+      color: var(--text-light);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .support-card p + p,
+    .support-card ul {
+      margin-top: 12px;
+    }
+
+    .support-card ul {
+      margin-left: 1.15rem;
+    }
+
+    .support-card li + li {
+      margin-top: 6px;
+    }
+
+    .support-card a {
+      color: var(--cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .support-mail {
+      display: inline-block;
+      margin: 14px 0 4px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: #05060D;
+      border: 1.5px solid var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--cyan);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .support-mail:hover {
+      background: var(--cyan);
+      color: #000;
+    }
+
+    .support-faq {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .support-faq .arcade-faq-item p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .support-faq .arcade-faq-item a {
+      color: var(--cyan);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer-links-row a {
+      overflow-wrap: anywhere;
+    }
+
+    @media (min-width: 720px) {
+      .support-page {
+        padding-top: 40px;
+      }
+
+      .support-card {
+        padding: 28px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hud-header" id="site-header">
+    <div class="hud-header-inner">
+      <a href="index.html" class="app-brand">
+        <img src="assets/images/app_icon.png" alt="Icône BodyRush 3D" class="app-brand-icon" width="44" height="44">
+        <div class="app-brand-titles">
+          <span class="app-brand-name">BODYRUSH 3D</span>
+          <span class="app-brand-sub" data-en="FITNESS · BOXING · POSTURES">FITNESS · BOXE · POSTURES</span>
+        </div>
+      </a>
+
+      <nav class="hud-nav" aria-label="Menu du site">
+        <a href="index.html#arcade-lobby" class="hud-nav-btn" data-en="🕹️ Game menu">🕹️ Menu du Jeu</a>
+        <a href="index.html#gameplay-deck" class="hud-nav-btn" data-en="🥊 Moves &amp; 10 postures">🥊 Gestes &amp; 10 Postures</a>
+        <a href="index.html#captures-wall" class="hud-nav-btn" data-en="📸 Captures">📸 Captures</a>
+        <a href="index.html#tv-salon" class="hud-nav-btn" data-en="📺 AirPlay TV">📺 AirPlay TV &amp; Salon</a>
+        <a href="index.html#pro-pass" class="hud-nav-btn hud-nav-pro" data-en="👑 PRO Pass">👑 Pass PRO</a>
+      </nav>
+
+      <div class="hud-actions">
+        <button type="button" class="hud-lang-btn" id="lang-toggle" aria-label="Changer la langue">
+          <span id="lang-flag">🇫🇷</span>
+          <span id="lang-code">FR</span>
+        </button>
+        <a href="https://apps.apple.com/app/id6826362298" target="_blank" rel="noopener" class="hud-store-btn">
+          <svg viewBox="0 0 170 170" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.69-7.85-12-14.42-6.19-9.39-10.9-20.09-14.13-32.09-3.23-12-4.85-23.32-4.85-33.97 0-14.42 3.63-26.4 10.9-35.95 7.27-9.55 16.48-14.43 27.64-14.65 4.35 0 9.27 1.15 14.76 3.44 5.48 2.29 9.38 3.5 11.71 3.65 1.96-.15 5.92-1.36 11.89-3.65 5.97-2.29 10.88-3.32 14.73-3.08 13.43.83 23.94 5.96 31.54 15.4-11.89 7.27-17.7 17.1-17.44 29.49.27 9.8 4.18 18.06 11.74 24.78 7.56 6.72 16.48 10.45 26.77 11.2-.82 2.61-1.85 5.34-3.09 8.19zm-38.3-108.38c0-7.39 2.64-14.28 7.92-20.67 5.28-6.39 12-10.44 20.15-12.16.54 2.28.81 4.56.81 6.84 0 7.39-2.73 14.39-8.19 21-5.46 6.61-12.28 10.63-20.47 12.06-.11-2.39-.22-4.75-.22-7.07z"/>
+          </svg>
+          <span data-en="⏳ Coming Soon on the App Store">⏳ Bientôt sur l'App Store</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="support-page">
+    <div class="support-wrap">
+
+      <div data-lang-panel="fr">
+        <span class="arcade-kicker support-kicker">AIDE · iPHONE · iPAD · AIRPLAY</span>
+        <h1 class="support-title">Support BodyRush 3D</h1>
+        <span class="support-updated">Dernière mise à jour : 26 octobre 2026</span>
+        <p class="support-lead">
+          BodyRush 3D est un jeu d'arcade fitness, de boxe et de postures piloté par la caméra de l'iPhone et de l'iPad. Cette page explique comment nous écrire, comment la caméra est utilisée, comment jouer sur la TV, et comment gérer l'abonnement PRO.
+        </p>
+
+        <section class="support-card" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Nous contacter</h2>
+          <p>
+            Pour une question sur le jeu, la caméra, AirPlay ou l'abonnement, écrivez à l'adresse déjà indiquée dans la politique de confidentialité et les conditions d'utilisation :
+          </p>
+          <a class="support-mail" href="mailto:xlarrodeapp+bodyrush@gmail.com">xlarrodeapp+bodyrush@gmail.com</a>
+          <p>
+            Précisez le modèle d'iPhone ou d'iPad et la version d'iOS. L'app est développée par Xavier Larrodé.
+          </p>
+        </section>
+
+        <section class="support-card" id="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Questions fréquentes</h2>
+          <div class="support-faq">
+            <details class="arcade-faq-item" id="camera" open>
+              <summary>La caméra et la confidentialité</summary>
+              <p>
+                La caméra avant sert à estimer vos articulations avec le framework Apple Vision, directement sur l'iPhone ou l'iPad. Ce calcul reste sur l'appareil. Aucune vidéo, aucune photo et aucune donnée biométrique n'est envoyée à un serveur. La photo souvenir et le court replay de fin de course restent en mémoire locale et sont effacés à la course suivante, sauf si vous touchez Enregistrer ou Partager.
+              </p>
+              <p>
+                L'app envoie aussi des événements d'usage anonymes à Mixpanel (niveau lancé, fin de course, étape du tutoriel, ouverture du paywall) et un identifiant de transaction anonyme à RevenueCat pour vérifier l'abonnement PRO. Le détail est dans la <a href="privacy.html">politique de confidentialité</a>.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="airplay">
+              <summary>Jouer sur la TV avec AirPlay</summary>
+              <p>
+                Posez l'iPhone ou l'iPad à environ 2 mètres et activez AirPlay vers la télévision. La TV affiche le couloir 3D en vrai 16:9 plein écran (1080p / 4K à 60 FPS). L'iPhone passe alors en mode Cockpit Squelette, qui suit les 19 articulations.
+              </p>
+              <p>
+                En tournoi salon, 2, 3 ou 4 joueurs passent chacun leur tour devant la caméra, sur le même monde et la même musique. À la fin, l'app affiche le podium 3D avec la photo souvenir.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="subscription">
+              <summary>Abonnement PRO : gérer ou annuler</summary>
+              <p>
+                Le téléchargement inclut le tutoriel (niv. 00) et le niveau 01 de Toy Kingdom, en difficultés EASY et NORMAL. Le Pass PRO débloque le reste de l'arcade. Les prix affichés sur le site sont : pass mensuel 4,99 €/mois (sans engagement), pass annuel 29,99 €/an, édition à vie 79,99 € (paiement unique, partage familial Apple). Le détail est sur la page <a href="index.html#pro-pass">Pass PRO</a>.
+              </p>
+              <p>
+                Le pass mensuel et le pass annuel se renouvellent automatiquement. Pour gérer ou annuler : sur l'iPhone ou l'iPad, ouvrez <strong>Réglages &gt; [votre nom] (Apple ID) &gt; Abonnements</strong>, puis BodyRush, au moins 24 heures avant la fin de la période en cours. L'édition à vie n'est pas un abonnement : il n'y a rien à résilier. Voir aussi les <a href="terms.html">conditions d'utilisation</a>.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="restore">
+              <summary>Restaurer les achats</summary>
+              <p>
+                Les achats sont liés à l'identifiant Apple utilisé au moment de l'achat (Apple StoreKit). Sur un nouvel appareil, connectez-vous avec ce même identifiant Apple, ouvrez BodyRush et touchez <strong>Restaurer les achats</strong> sur l'écran Pass PRO.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="refund">
+              <summary>Demander un remboursement</summary>
+              <p>
+                Les remboursements sont traités par Apple, pas par BodyRush. Connectez-vous sur <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> avec l'identifiant Apple de l'achat, choisissez BodyRush, puis envoyez la demande.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="distance">
+              <summary>À quelle distance jouer, et quel espace prévoir ?</summary>
+              <p>
+                Posez l'iPhone ou l'iPad à environ 1,80 m – 2,50 m face à vous (table basse, meuble TV ou support). Le guide de cadrage passe au vert quand la silhouette est bien visible. Prévoyez un espace dégagé d'au moins 2 mètres sur 2 mètres. Arrêtez en cas de douleur, de vertige ou d'essoufflement anormal.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="moves">
+              <summary>Peut-on jouer sans sauter ou sans squats ?</summary>
+              <p>
+                Oui. Les niveaux 01 et 05 sont sans saut ni squat. Les niveaux 02 et 07 sont sans saut. Les niveaux 03 et 06 sont sans squat. Les niveaux 04, 08 et 09 utilisent tous les mouvements. Les niveaux FIT 05 à 09 ont des cœurs illimités, sur 5 ou 10 minutes.
+              </p>
+            </details>
+          </div>
+        </section>
+      </div>
+
+      <div data-lang-panel="en" hidden>
+        <span class="arcade-kicker support-kicker">HELP · iPHONE · iPAD · AIRPLAY</span>
+        <h1 class="support-title">BodyRush 3D Support</h1>
+        <span class="support-updated">Last updated: 26 October 2026</span>
+        <p class="support-lead">
+          BodyRush 3D is a fitness, boxing, and posture arcade game driven by the iPhone and iPad camera. This page explains how to reach us, how the camera is used, how to play on a TV, and how to manage the PRO subscription.
+        </p>
+
+        <section class="support-card" id="contact-en" aria-labelledby="contact-title-en">
+          <h2 id="contact-title-en">Contact us</h2>
+          <p>
+            For a question about the game, the camera, AirPlay, or the subscription, write to the address already published in the privacy policy and the terms of use:
+          </p>
+          <a class="support-mail" href="mailto:xlarrodeapp+bodyrush@gmail.com">xlarrodeapp+bodyrush@gmail.com</a>
+          <p>
+            Include your iPhone or iPad model and iOS version. The app is developed by Xavier Larrodé.
+          </p>
+        </section>
+
+        <section class="support-card" id="faq-en" aria-labelledby="faq-title-en">
+          <h2 id="faq-title-en">FAQ</h2>
+          <div class="support-faq">
+            <details class="arcade-faq-item" id="camera-en" open>
+              <summary>Camera and privacy</summary>
+              <p>
+                The front camera estimates your joints with Apple's Vision framework, on the iPhone or iPad itself. That processing stays on the device. No video, photo, or biometric data is sent to a server. The souvenir photo and the short finish replay stay in local memory and are deleted on the next run, unless you tap Save or Share.
+              </p>
+              <p>
+                The app also sends anonymous usage events to Mixpanel (level started, run finished, tutorial step, paywall opened) and an anonymous transaction id to RevenueCat to check the PRO subscription. Details are in the <a href="privacy.html">privacy policy</a>.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="airplay-en">
+              <summary>Play on a TV with AirPlay</summary>
+              <p>
+                Place the iPhone or iPad about 2 meters away and turn on AirPlay to the television. The TV shows the 3D corridor in true 16:9 fullscreen (1080p / 4K at 60 FPS). The iPhone then switches to Skeleton Cockpit mode, which tracks the 19 joints.
+              </p>
+              <p>
+                In a living-room tournament, 2, 3, or 4 players take turns in front of the camera, on the same world and the same track. At the end, the app shows the 3D podium with the souvenir photo.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="subscription-en">
+              <summary>PRO subscription: manage or cancel</summary>
+              <p>
+                The download includes the tutorial (lvl 00) and Toy Kingdom level 01, on EASY and NORMAL. The PRO pass unlocks the rest of the arcade. Prices published on the site are: monthly pass €4.99/month (no commitment), annual pass €29.99/year, lifetime edition €79.99 (one-time payment, Apple Family Sharing). Details are on the <a href="index.html#pro-pass">PRO pass</a> section.
+              </p>
+              <p>
+                The monthly and annual passes renew automatically. To manage or cancel: on iPhone or iPad, open <strong>Settings &gt; [Your Name] (Apple ID) &gt; Subscriptions</strong>, then BodyRush, at least 24 hours before the end of the current period. The lifetime edition is not a subscription, so there is nothing to cancel. See also the <a href="terms.html">terms of use</a>.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="restore-en">
+              <summary>Restore purchases</summary>
+              <p>
+                Purchases are tied to the Apple ID used at the time of purchase (Apple StoreKit). On a new device, sign in with that same Apple ID, open BodyRush, and tap <strong>Restore Purchases</strong> on the PRO pass screen.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="refund-en">
+              <summary>Request a refund</summary>
+              <p>
+                Refunds are handled by Apple, not by BodyRush. Sign in at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> with the Apple ID used for the purchase, choose BodyRush, and submit the request.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="distance-en">
+              <summary>How far away should I stand, and how much space do I need?</summary>
+              <p>
+                Place the iPhone or iPad about 1.8 m to 2.5 m in front of you (coffee table, TV stand, or mount). The framing guide turns green when your silhouette is fully visible. Keep a clear area of at least 2 meters by 2 meters. Stop if you feel pain, dizziness, or unusual shortness of breath.
+              </p>
+            </details>
+
+            <details class="arcade-faq-item" id="moves-en">
+              <summary>Can I play without jumping or without squats?</summary>
+              <p>
+                Yes. Levels 01 and 05 have no jumps and no squats. Levels 02 and 07 have no jumps. Levels 03 and 06 have no squats. Levels 04, 08, and 09 use every movement. FIT levels 05 through 09 have unlimited hearts, for 5 or 10 minutes.
+              </p>
+            </details>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="arcade-footer">
+    <div class="lobby-container footer-inner">
+      <div class="footer-brand-col">
+        <a href="index.html" class="app-brand">
+          <img src="assets/images/app_icon.png" alt="BodyRush 3D" class="app-brand-icon" width="40" height="40">
+          <div class="app-brand-titles">
+            <span class="app-brand-name">BODYRUSH 3D</span>
+            <span class="app-brand-sub">ARCADE FITNESS · iOS &amp; iPAD</span>
+          </div>
+        </a>
+        <p class="footer-copy-text" data-en="Designed and built in France by Xavier Larrodé. All rights reserved © 2026 BodyRush.">
+          Conçu et développé en France par Xavier Larrodé. Tous droits réservés © 2026 BodyRush.
+        </p>
+      </div>
+
+      <div class="footer-links-row">
+        <a href="index.html#arcade-lobby" data-en="Game menu">Menu du Jeu</a>
+        <a href="index.html#gameplay-deck" data-en="10 Postures">10 Postures</a>
+        <a href="index.html#captures-wall" data-en="Captures">Captures</a>
+        <a href="index.html#tv-salon" data-en="AirPlay TV">AirPlay TV</a>
+        <a href="privacy.html" data-en="Privacy">Confidentialité</a>
+        <a href="terms.html" data-en="Terms">Conditions</a>
+        <a href="support.html" aria-current="page">Support</a>
+        <a href="mailto:xlarrodeapp+bodyrush@gmail.com">xlarrodeapp+bodyrush@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var lang = "fr";
+      var btn = document.getElementById("lang-toggle");
+      var flag = document.getElementById("lang-flag");
+      var code = document.getElementById("lang-code");
+      var originals = [];
+      document.querySelectorAll("[data-en]").forEach(function (el) {
+        originals.push([el, el.textContent]);
+      });
+
+      function apply(next) {
+        lang = next;
+        document.documentElement.lang = next;
+        document.querySelectorAll("[data-lang-panel]").forEach(function (panel) {
+          panel.hidden = panel.getAttribute("data-lang-panel") !== next;
+        });
+        originals.forEach(function (pair) {
+          pair[0].textContent = next === "en" ? pair[0].getAttribute("data-en") : pair[1];
+        });
+        if (flag) flag.textContent = next === "fr" ? "🇫🇷" : "🇬🇧";
+        if (code) code.textContent = next === "fr" ? "FR" : "EN";
+        if (btn) {
+          btn.setAttribute("aria-label", next === "fr" ? "Changer la langue" : "Change language");
+        }
+        document.title = next === "fr" ? "Support — BodyRush 3D" : "BodyRush 3D Support";
+      }
+
+      if (btn) {
+        btn.addEventListener("click", function () {
+          apply(lang === "fr" ? "en" : "fr");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

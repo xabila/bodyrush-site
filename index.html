@@ -672,70 +672,91 @@
           </p>
         </div>
 
-        <div class="captures-4-grid">
-          <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_01_corridor.webp" alt="Course 3D dans Toy Kingdom avec Fantôme du record" loading="lazy" width="780" height="1688">
-            <figcaption>
-              <strong>1. Couloir 3D & Fantôme du Record</strong>
-              <span data-i18n="cap1_txt">Cours pour faire avancer le monde et dépasse le Fantôme 3D de ton meilleur score.</span>
-            </figcaption>
-          </figure>
-
-          <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_02_posture.webp" alt="Validation d'un Mur de Posture Double Biceps" loading="lazy" width="780" height="1688">
-            <figcaption>
-              <strong>2. Murs de Posture & Photo Souvenir</strong>
-              <span data-i18n="cap2_txt">Aligne tes bras dans la découpe néon pour faire exploser le mur et capturer ta photo.</span>
-            </figcaption>
-          </figure>
-
-          <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_03_turborun.webp" alt="Sprint rapide et multiplicateur x8" loading="lazy" width="780" height="1688">
-            <figcaption>
-              <strong>3. Multiplicateur x8 & Sprint</strong>
-              <span data-i18n="cap3_txt">Enchaîne les obstacles sans faute pour monter à x8 et brûler un maximum de calories.</span>
-            </figcaption>
-          </figure>
-
-          <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_04_crystal_smash.webp" alt="Frappe de cristal au poing en rythme" loading="lazy" width="780" height="1688">
-            <figcaption>
-              <strong>4. Boxe & Smash Cristal sur le Beat</strong>
-              <span data-i18n="cap4_txt">Pulvérise les boss et les murs fissurés d'un direct du poing sur les drops de la musique.</span>
-            </figcaption>
-          </figure>
-
-          <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_05_airplay_tv.webp" alt="Rendu TV AirPlay 16:9 en plein écran" loading="lazy" width="800" height="450">
-            <figcaption>
-              <strong>5. Rendu TV AirPlay 16:9 (1080p · 60 FPS)</strong>
-              <span data-i18n="cap5_txt">Vue grand angle 16:9 sans bordures sur la télévision du salon via AirPlay.</span>
-            </figcaption>
-          </figure>
-
-          <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_06_iphone_skeleton.webp" alt="Cockpit Squelette sur iPhone pendant AirPlay" loading="lazy" width="800" height="1732">
-            <figcaption>
-              <strong>6. Cockpit Squelette iPhone (Mode AirPlay)</strong>
-              <span data-i18n="cap6_txt">Pendant qu'AirPlay diffuse sur la TV, l'iPhone affiche ton squelette Vision à 60 FPS.</span>
-            </figcaption>
-          </figure>
-
-          <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_07_ipad_portrait.webp" alt="BodyRush sur iPad Pro en mode Portrait" loading="lazy" width="800" height="1068">
-            <figcaption>
-              <strong>7. iPad Pro Portrait — Manoir Halloween</strong>
-              <span data-i18n="cap7_txt">Interface native grand format sur iPad avec mur de posture vert émeraude validé.</span>
-            </figcaption>
-          </figure>
-
-          <figure class="game-capture-card">
-            <img src="assets/images/capture_fr_08_ipad_paysage.webp" alt="BodyRush sur iPad Pro en mode Paysage" loading="lazy" width="800" height="600">
-            <figcaption>
-              <strong>8. iPad Pro Paysage — Noël Express</strong>
-              <span data-i18n="cap8_txt">Joue en portrait ou en paysage sur iPad avec détection caméra intégrale à 2 mètres.</span>
-            </figcaption>
-          </figure>
+        <div class="cap-show" id="cap-show" style="--cap-count: 8; --cap-index: 0;">
+          <div class="cap-stage" role="group" data-i18n-aria="cap_stage" aria-label="Diaporama des captures">
+            <div class="cap-progress" aria-hidden="true">
+              <span class="cap-progress-seg is-active"><span class="cap-progress-fill"></span></span>
+              <span class="cap-progress-seg"><span class="cap-progress-fill"></span></span>
+              <span class="cap-progress-seg"><span class="cap-progress-fill"></span></span>
+              <span class="cap-progress-seg"><span class="cap-progress-fill"></span></span>
+              <span class="cap-progress-seg"><span class="cap-progress-fill"></span></span>
+              <span class="cap-progress-seg"><span class="cap-progress-fill"></span></span>
+              <span class="cap-progress-seg"><span class="cap-progress-fill"></span></span>
+              <span class="cap-progress-seg"><span class="cap-progress-fill"></span></span>
+            </div>
+            <button type="button" class="cap-nav cap-prev" data-i18n-aria="cap_prev" aria-label="Capture précédente">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button type="button" class="cap-nav cap-next" data-i18n-aria="cap_next" aria-label="Capture suivante">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="cap-viewport">
+              <div class="cap-track">
+                <div class="cap-slide is-active" data-index="0">
+                  <img class="cap-blur" src="assets/images/capture_fr_01_corridor.webp" alt="" aria-hidden="true" width="780" height="1688" draggable="false">
+                  <img class="cap-shot" src="assets/images/capture_fr_01_corridor.webp" data-i18n-alt="cap1_alt" alt="Course 3D dans Toy Kingdom avec Fantôme du record" width="780" height="1688" draggable="false">
+                </div>
+                <div class="cap-slide" data-index="1" aria-hidden="true">
+                  <img class="cap-blur" data-src="assets/images/capture_fr_02_posture.webp" alt="" aria-hidden="true" width="780" height="1688" draggable="false">
+                  <img class="cap-shot" data-src="assets/images/capture_fr_02_posture.webp" data-i18n-alt="cap2_alt" alt="Validation d'un Mur de Posture Double Biceps" width="780" height="1688" draggable="false">
+                </div>
+                <div class="cap-slide" data-index="2" aria-hidden="true">
+                  <img class="cap-blur" data-src="assets/images/capture_fr_03_turborun.webp" alt="" aria-hidden="true" width="780" height="1688" draggable="false">
+                  <img class="cap-shot" data-src="assets/images/capture_fr_03_turborun.webp" data-i18n-alt="cap3_alt" alt="Sprint rapide et multiplicateur x8" width="780" height="1688" draggable="false">
+                </div>
+                <div class="cap-slide" data-index="3" aria-hidden="true">
+                  <img class="cap-blur" data-src="assets/images/capture_fr_04_crystal_smash.webp" alt="" aria-hidden="true" width="780" height="1688" draggable="false">
+                  <img class="cap-shot" data-src="assets/images/capture_fr_04_crystal_smash.webp" data-i18n-alt="cap4_alt" alt="Frappe de cristal au poing en rythme" width="780" height="1688" draggable="false">
+                </div>
+                <div class="cap-slide" data-index="4" aria-hidden="true">
+                  <img class="cap-blur" data-src="assets/images/capture_fr_05_airplay_tv.webp" alt="" aria-hidden="true" width="800" height="450" draggable="false">
+                  <img class="cap-shot" data-src="assets/images/capture_fr_05_airplay_tv.webp" data-i18n-alt="cap5_alt" alt="Rendu TV AirPlay 16:9 en plein écran" width="800" height="450" draggable="false">
+                </div>
+                <div class="cap-slide" data-index="5" aria-hidden="true">
+                  <img class="cap-blur" data-src="assets/images/capture_fr_06_iphone_skeleton.webp" alt="" aria-hidden="true" width="800" height="1732" draggable="false">
+                  <img class="cap-shot" data-src="assets/images/capture_fr_06_iphone_skeleton.webp" data-i18n-alt="cap6_alt" alt="Cockpit Squelette sur iPhone pendant AirPlay" width="800" height="1732" draggable="false">
+                </div>
+                <div class="cap-slide" data-index="6" aria-hidden="true">
+                  <img class="cap-blur" data-src="assets/images/capture_fr_07_ipad_portrait.webp" alt="" aria-hidden="true" width="800" height="1068" draggable="false">
+                  <img class="cap-shot" data-src="assets/images/capture_fr_07_ipad_portrait.webp" data-i18n-alt="cap7_alt" alt="BodyRush sur iPad Pro en mode Portrait" width="800" height="1068" draggable="false">
+                </div>
+                <div class="cap-slide" data-index="7" aria-hidden="true">
+                  <img class="cap-blur" data-src="assets/images/capture_fr_08_ipad_paysage.webp" alt="" aria-hidden="true" width="800" height="600" draggable="false">
+                  <img class="cap-shot" data-src="assets/images/capture_fr_08_ipad_paysage.webp" data-i18n-alt="cap8_alt" alt="BodyRush sur iPad Pro en mode Paysage" width="800" height="600" draggable="false">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cap-caption" aria-live="polite">
+            <strong data-i18n="cap1_title">1. Couloir 3D &amp; Fantôme du Record</strong>
+            <span data-i18n="cap1_txt">Cours pour faire avancer le monde et dépasse le Fantôme 3D de ton meilleur score.</span>
+          </div>
+          <div class="cap-thumbs" role="group" data-i18n-aria="cap_thumbs" aria-label="Miniatures des captures">
+            <button type="button" class="cap-thumb is-active" data-i18n-aria="cap1_title" aria-label="1. Couloir 3D &amp; Fantôme du Record" aria-current="true">
+              <img src="assets/images/capture_fr_01_corridor.webp" alt="" width="780" height="1688" draggable="false">
+            </button>
+            <button type="button" class="cap-thumb" data-i18n-aria="cap2_title" aria-label="2. Murs de Posture &amp; Photo Souvenir">
+              <img src="assets/images/capture_fr_02_posture.webp" alt="" width="780" height="1688" loading="lazy" draggable="false">
+            </button>
+            <button type="button" class="cap-thumb" data-i18n-aria="cap3_title" aria-label="3. Multiplicateur x8 &amp; Sprint">
+              <img src="assets/images/capture_fr_03_turborun.webp" alt="" width="780" height="1688" loading="lazy" draggable="false">
+            </button>
+            <button type="button" class="cap-thumb" data-i18n-aria="cap4_title" aria-label="4. Boxe &amp; Smash Cristal sur le Beat">
+              <img src="assets/images/capture_fr_04_crystal_smash.webp" alt="" width="780" height="1688" loading="lazy" draggable="false">
+            </button>
+            <button type="button" class="cap-thumb" data-i18n-aria="cap5_title" aria-label="5. Rendu TV AirPlay 16:9 (1080p · 60 FPS)">
+              <img src="assets/images/capture_fr_05_airplay_tv.webp" alt="" width="800" height="450" loading="lazy" draggable="false">
+            </button>
+            <button type="button" class="cap-thumb" data-i18n-aria="cap6_title" aria-label="6. Cockpit Squelette iPhone (Mode AirPlay)">
+              <img src="assets/images/capture_fr_06_iphone_skeleton.webp" alt="" width="800" height="1732" loading="lazy" draggable="false">
+            </button>
+            <button type="button" class="cap-thumb" data-i18n-aria="cap7_title" aria-label="7. iPad Pro Portrait — Manoir Halloween">
+              <img src="assets/images/capture_fr_07_ipad_portrait.webp" alt="" width="800" height="1068" loading="lazy" draggable="false">
+            </button>
+            <button type="button" class="cap-thumb" data-i18n-aria="cap8_title" aria-label="8. iPad Pro Paysage — Noël Express">
+              <img src="assets/images/capture_fr_08_ipad_paysage.webp" alt="" width="800" height="600" loading="lazy" draggable="false">
+            </button>
+          </div>
         </div>
       </div>
     </section>

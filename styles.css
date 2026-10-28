@@ -336,7 +336,8 @@ a {
   width: 100%;
 }
 
-.lobby-hero-photo img {
+.lobby-hero-photo img,
+.lobby-hero-photo video {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;

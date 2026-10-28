@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hero_pill_devices: "iPHONE · iPAD · AIRPLAY TV 16:9",
       hero_h1: "POSE TON iPHONE À 2 MÈTRES. TON CORPS EST LA MANETTE.",
       hero_lead: "Cours sur place pour faire défiler le couloir 3D, décale-toi à gauche ou à droite, saute par-dessus les pièges, baisse-toi en squat, boxe les monstres en rythme sur la musique et traverse les 10 murs de posture.",
-      hero_photo_alt: "Une femme de dos, en pantalon de jogging, en posture double biceps, devant une télé qui affiche le couloir du Temple avec le gant rubis, et un iPhone sur le meuble TV montrant l'app.",
+      hero_photo_alt: "Une femme fait du jogging sur place dans son salon, face à une télé qui affiche le couloir du Temple, avec un iPhone posé sur le meuble TV qui suit ses mouvements.",
       console_header: "SÉLECTEUR DE COURSE · COMME DANS L'APP",
       console_handsfree: "🥊 Sélection au doigt ou au coup de poing à 2m",
       tuto_title: "PREMIÈRE FOIS ? LANCE LE TUTORIEL (NIV. 00)",
@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hero_pill_devices: "iPHONE · iPAD · AIRPLAY TV 16:9",
       hero_h1: "PLACE YOUR iPHONE 6 FEET AWAY. YOUR BODY IS THE CONTROLLER.",
       hero_lead: "Run in place to drive the 3D corridor forward, dodge across 3 lanes, jump over traps, squat under beams, punch monsters to the beat of the music and clear all 10 neon posture gates.",
-      hero_photo_alt: "A woman seen from behind, in jogging pants, holding a double-biceps pose in front of a TV showing the Temple corridor with the ruby glove, and an iPhone on the TV cabinet showing the app.",
+      hero_photo_alt: "A woman jogs in place in her living room, facing a TV showing the Temple corridor, with an iPhone on the TV cabinet tracking her moves.",
       console_header: "COURSE SELECTOR · JUST LIKE IN THE APP",
       console_handsfree: "🥊 Select by touch or throw a punch from 2m away",
       tuto_title: "FIRST TIME? START THE TUTORIAL (LVL 00)",
@@ -784,6 +784,26 @@ document.addEventListener("DOMContentLoaded", () => {
     syncMotion();
     if (typeof motionQuery.addEventListener === "function") {
       motionQuery.addEventListener("change", syncMotion);
+    }
+  }
+
+  // --- Lobby hero loop: respect prefers-reduced-motion ---
+  const lobbyHeroVideo = document.getElementById("lobby-hero-video");
+  if (lobbyHeroVideo) {
+    const lobbyMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncLobbyMotion = () => {
+      if (lobbyMotion.matches) {
+        lobbyHeroVideo.removeAttribute("autoplay");
+        lobbyHeroVideo.pause();
+        lobbyHeroVideo.currentTime = 0;
+      } else {
+        const playing = lobbyHeroVideo.play();
+        if (playing && typeof playing.catch === "function") playing.catch(() => {});
+      }
+    };
+    syncLobbyMotion();
+    if (typeof lobbyMotion.addEventListener === "function") {
+      lobbyMotion.addEventListener("change", syncLobbyMotion);
     }
   }
 

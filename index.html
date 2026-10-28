@@ -52,6 +52,7 @@
     }
   }
   </script>
+  <link rel="preload" as="image" href="assets/images/hero_loop_poster.webp" fetchpriority="high">
 </head>
 <body>
 
@@ -123,7 +124,10 @@
             </p>
           </div>
           <figure class="lobby-hero-photo" style="margin:0;min-width:0;max-width:100%;flex:1 1 auto;">
-            <img src="assets/images/hero_salon_rear_biceps.webp" data-i18n-alt="hero_photo_alt" alt="Une femme de dos, en pantalon de jogging, en posture double biceps, devant une télé qui affiche le couloir du Temple avec le gant rubis, et un iPhone sur le meuble TV montrant l'app." width="1280" height="720" fetchpriority="high" style="width:100%;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;">
+            <video id="lobby-hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero_loop_poster.webp" width="1280" height="720" data-i18n-aria="hero_photo_alt" aria-label="Une femme fait du jogging sur place dans son salon, face à une télé qui affiche le couloir du Temple, avec un iPhone posé sur le meuble TV qui suit ses mouvements." style="display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;">
+              <source src="assets/videos/hero-loop.webm" type="video/webm">
+              <source src="assets/videos/hero-loop.mp4" type="video/mp4">
+            </video>
           </figure>
         </div>
 

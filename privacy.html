@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Politique de Confidentialité — BodyRush (On-Device AI)</title>
-  <meta name="description" content="Caméra analysée sur l'appareil : aucune vidéo ni photo n'est envoyée. Statistiques anonymes vers Mixpanel (UE). Achats via RevenueCat.">
+  <meta name="description" content="Caméra analysée sur l'appareil : aucune vidéo ni photo n'est envoyée. Télémétrie pseudonyme Mixpanel (UE) et gestion d'abonnements RevenueCat.">
   <link rel="canonical" href="https://bodyrush.app/privacy.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bodyrush.app/privacy.html">
   <meta property="og:title" content="Politique de Confidentialité — BodyRush">
-  <meta property="og:description" content="Caméra sur l'appareil, statistiques anonymes Mixpanel (UE), achats RevenueCat.">
+  <meta property="og:description" content="Caméra sur l'appareil, télémétrie pseudonyme Mixpanel (UE), achats RevenueCat.">
   <meta property="og:image" content="https://bodyrush.app/assets/images/app_icon.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Politique de Confidentialité — BodyRush">
-  <meta name="twitter:description" content="Caméra sur l'appareil, statistiques anonymes Mixpanel (UE), achats RevenueCat.">
+  <meta name="twitter:description" content="Caméra sur l'appareil, télémétrie pseudonyme Mixpanel (UE), achats RevenueCat.">
   <meta name="twitter:image" content="https://bodyrush.app/assets/images/app_icon.png">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
@@ -33,14 +33,14 @@
 
     <div class="legal-card">
       <h1 class="legal-title">Politique de Confidentialité</h1>
-      <span class="legal-updated">Dernière mise à jour : 24 Octobre 2026</span>
+      <span class="legal-updated">Dernière mise à jour : 28 Octobre 2026</span>
 
       <div class="legal-content">
         <p>
           La présente politique de confidentialité décrit la manière dont <strong>BodyRush</strong>, développée par <strong>Xavier Larrodé</strong> (« nous », « notre »), traite les données lors de l'utilisation de l'application mobile BodyRush sur iPhone et iPad.
         </p>
 
-        <h2>1. Traitement 100% Local (On-Device Neural Engine)</h2>
+        <h2>1. Traitement Caméra 100% Local (On-Device Neural Engine)</h2>
         <p>
           BodyRush est conçue avec une priorité absolue : <strong>le respect total de votre vie privée</strong>.
         </p>
@@ -48,6 +48,7 @@
           <li><strong>Utilisation de la caméra avant :</strong> Le flux vidéo de votre caméra sert exclusivement à estimer en temps réel les coordonnées de vos articulations corporelles (Body Pose Tracking) via le framework officiel <strong>Apple Vision</strong> directement sur votre appareil.</li>
           <li><strong>Aucun enregistrement ni transfert distant :</strong> Aucune vidéo, aucune photo ni aucune image issue de la caméra n'est jamais transmise à un serveur externe ou dans le cloud.</li>
           <li><strong>Photo Souvenir & Replay Vidéo Finish (100% Local) :</strong> Lors d'une course, l'application génère localement en mémoire vive une photo souvenir sur votre meilleure posture validée ainsi qu'un court replay vidéo des dernières secondes de la course. Ces fichiers restent strictement en mémoire locale temporaire sur votre appareil et sont détruits à la course suivante, sauf si vous choisissez explicitement d'appuyer sur le bouton « Enregistrer » ou « Partager » (via la feuille de partage standard d'iOS).</li>
+          <li><strong>Estimation indicative des calories (~kcal) :</strong> Le compteur de calories affiché en jeu fournit une estimation indicative calculée localement à partir du nombre d'actions et de la durée de course. BodyRush n'est pas un dispositif médical.</li>
         </ul>
 
         <h2>2. Aucune Donnée Biométrique Stockée</h2>
@@ -55,24 +56,38 @@
           BodyRush ne procède à aucune reconnaissance faciale, identification biométrique ou profilage d'individus. Le tracking détecte uniquement des repères squelettiques abstraits (tête, épaules, coudes, poignets, hanches, genoux, chevilles) afin de déclencher les mécaniques de jeu (boxe, esquive, squats, sauts, postures).
         </p>
 
-        <h2>3. Données Liées aux Achats (Apple StoreKit 2 & RevenueCat)</h2>
+        <h2>3. Données Liées aux Achats (Apple StoreKit 2, RevenueCat & Apple AdServices)</h2>
         <p>
-          Les achats intégrés (Pass Mensuel Pro, Pass Annuel VIP Pro, Déblocage à Vie) sont sécurisés et gérés directement par <strong>Apple StoreKit</strong>. Nous n'avons jamais accès à vos coordonnées bancaires ou informations de carte de crédit. Un identifiant anonyme de transaction est traité via le service <strong>RevenueCat</strong> dans le seul but de vérifier l'état de votre abonnement et de débloquer les mondes PRO.
+          Les achats intégrés (Pass Mensuel Pro, Pass Annuel Pro, Déblocage à Vie) sont sécurisés et gérés directement par <strong>Apple StoreKit 2</strong>. Nous n'avons jamais accès à vos coordonnées bancaires ou informations de carte de crédit.
+        </p>
+        <ul>
+          <li><strong>RevenueCat :</strong> Un identifiant pseudonyme généré par l'application est transmis au sous-traitant <strong>RevenueCat</strong> afin de vérifier l'état de votre abonnement ou achat à vie, permettre la restauration de vos achats et mesurer la conversion du paywall.</li>
+          <li><strong>Apple AdServices :</strong> L'application transmet, lorsqu'il est disponible sur iOS, le jeton d'attribution standard <strong>Apple AdServices</strong> (Apple Search Ads) à RevenueCat afin de mesurer de manière agrégée l'origine des installations issues de l'App Store, sans aucun pistage publicitaire inter-applications (<code>NSPrivacyTracking = false</code>, aucun identifiant IDFA collecté).</li>
+        </ul>
+
+        <h2>4. Statistiques d'Utilisation Pseudonymes & Télémétrie (Mixpanel UE)</h2>
+        <p>
+          Afin d'améliorer l'équilibrage des niveaux, le tutoriel et la stabilité du jeu, BodyRush utilise <strong>Mixpanel (serveurs d'ingestion hébergés dans l'Union européenne : <code>api-eu.mixpanel.com</code>)</strong> avec un identifiant pseudonyme aléatoire généré localement (<code>UUID</code> stocké dans les préférences de l'application et relié à RevenueCat).
+        </p>
+        <ul>
+          <li><strong>Données collectées :</strong> Événements d'interaction produit (ouverture de l'application, étapes de l'onboarding et du tutoriel, lancement et fin de course, score, estimation de kcal, ouverture et conversion du paywall) ainsi que des propriétés techniques et de progression (modèle d'appareil, langue/locale, version de l'application, série quotidienne, monde et musique favoris).</li>
+          <li><strong>Absence d'adresse IP et d'images :</strong> L'ingestion Mixpanel est configurée avec <code>ip=0</code> afin de ne pas conserver votre adresse IP. Aucune image caméra, aucune coordonnée biométrique, aucun nom, ni aucune adresse e-mail n'est collecté dans l'application.</li>
+          <li><strong>Aucun pistage publicitaire tiers :</strong> Vos données ne sont jamais vendues ni partagées avec des courtiers en données ou des régies publicitaires.</li>
+        </ul>
+
+        <h2>5. Durée de Conservation & Droit d'Effacement</h2>
+        <p>
+          Les données techniques et d'utilisation associées à votre identifiant pseudonyme sont conservées pendant une durée maximale de <strong>24 mois</strong> à compter de votre dernière activité dans l'application, ou jusqu'à votre demande de suppression. Vous pouvez réinitialiser cet identifiant en désinstallant l'application ou demander l'effacement complet des données associées par simple e-mail.
         </p>
 
-        <h2>4. Statistiques d'Utilisation Anonymes & Télémétrie (Mixpanel)</h2>
+        <h2>6. Protection des Enfants</h2>
         <p>
-          Afin d'améliorer l'équilibrage des niveaux, le tutoriel et la stabilité du jeu (maintien des 60 FPS), BodyRush collecte des événements techniques d'utilisation strictement anonymes via <strong>Mixpanel (données hébergées dans l'Union européenne)</strong> (ex. : niveau lancé, fin de course, étape du tutoriel franchie, ouverture du paywall) ainsi que des rapports de crash anonymes via App Store Connect. Ces données ne contiennent <strong>aucune image, aucune coordonnée corporelle ni aucune donnée personnelle identifiable</strong>.
+          BodyRush ne demande ni création de compte, ni nom, ni adresse e-mail, ni numéro de téléphone et respecte les normes de protection de la vie privée des mineurs (RGPD et COPPA).
         </p>
 
-        <h2>5. Protection des Enfants</h2>
+        <h2>7. Vos Droits (RGPD) et Contact</h2>
         <p>
-          BodyRush respecte les normes de protection de la vie privée des enfants (COPPA et RGPD). Nous ne collectons aucune information personnelle identifiable auprès des mineurs.
-        </p>
-
-        <h2>6. Vos Droits et Contact</h2>
-        <p>
-          Pour toute question concernant cette politique de confidentialité ou vos données, vous pouvez nous contacter directement à l'adresse suivante :<br>
+          Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'opposition et d'effacement de vos données. Pour exercer vos droits ou pour toute question concernant cette politique de confidentialité, contactez-nous directement à :<br>
           <a href="mailto:xlarrodeapp+bodyrush@gmail.com"><strong>xlarrodeapp+bodyrush@gmail.com</strong></a>
         </p>
         <p>

@@ -9,7 +9,7 @@
 - **Plateformes** : iPhone (iOS 17+), iPad (iPadOS 17+), et affichage grand écran TV 16:9 sans fil via AirPlay
 - **Créateur** : Xavier Larrodé (France)
 - **Site officiel** : https://bodyrush.app/
-- **Confidentialité** : La caméra est analysée sur l'appareil (Apple Vision). Aucune vidéo, photo ou donnée biométrique issue de la caméra n'est envoyée. Des statistiques d'usage anonymes partent vers Mixpanel (UE). RevenueCat vérifie l'abonnement PRO avec un identifiant de transaction anonyme.
+- **Confidentialité** : La caméra est analysée sur l'appareil (Apple Vision). Aucune vidéo, photo ou donnée biométrique issue de la caméra n'est envoyée. Des statistiques d'usage pseudonymes partent vers Mixpanel (UE) ; l'adresse IP n'est pas collectée. Les achats passent par Apple StoreKit 2, RevenueCat (identifiant pseudonyme conservé sur l'appareil) et Apple AdServices. Détail : [politique de confidentialité](https://bodyrush.app/privacy.html).
 
 ## Comment fonctionne le Gameplay ?
 

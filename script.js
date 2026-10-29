@@ -823,6 +823,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (demoStarted || !topReady || !demoNear || demoMotion.matches) return;
       demoStarted = true;
       heroVideo.preload = "auto";
+      heroVideo.loop = true;
+      heroVideo.addEventListener("ended", () => {
+        heroVideo.currentTime = 0;
+        if (demoNear && !demoMotion.matches) heroVideo.play().catch(() => {});
+      });
       const playing = heroVideo.play();
       if (playing && typeof playing.catch === "function") playing.catch(() => {});
     };
@@ -869,6 +874,42 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof lobbyMotion.addEventListener === "function") {
       lobbyMotion.addEventListener("change", syncLobbyMotion);
     }
+
+    // iOS Safari : garder la boucle vivante.
+    // - filet de sécurité si "loop" est ignoré (ended → retour au début + play)
+    // - relance quand la vidéo revient à l'écran, quand l'onglet redevient
+    //   visible ou quand la page sort du cache retour arrière (pageshow)
+    // - mode économie d'énergie : l'autoplay est bloqué, on relance au 1er toucher
+    lobbyHeroVideo.loop = true;
+    const keepLobbyPlaying = () => {
+      if (lobbyMotion.matches || document.hidden || !lobbyHeroVideo.paused) return;
+      const playing = lobbyHeroVideo.play();
+      if (playing && typeof playing.catch === "function") playing.catch(() => {});
+    };
+    lobbyHeroVideo.addEventListener("ended", () => {
+      if (lobbyMotion.matches) return;
+      lobbyHeroVideo.currentTime = 0;
+      keepLobbyPlaying();
+    });
+    document.addEventListener("visibilitychange", keepLobbyPlaying);
+    window.addEventListener("pageshow", keepLobbyPlaying);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) keepLobbyPlaying();
+      }).observe(lobbyHeroVideo);
+    }
+    const unlockOnTouch = () => {
+      keepLobbyPlaying();
+      if (heroVideo && heroVideo.paused && heroVideo.preload === "auto" && !lobbyMotion.matches) {
+        heroVideo.play().catch(() => {});
+      }
+      if (!lobbyHeroVideo.paused || lobbyMotion.matches) {
+        document.removeEventListener("touchend", unlockOnTouch);
+        document.removeEventListener("click", unlockOnTouch);
+      }
+    };
+    document.addEventListener("touchend", unlockOnTouch, { passive: true });
+    document.addEventListener("click", unlockOnTouch);
   }
 
   // --- Language Switcher (FR / EN) ---

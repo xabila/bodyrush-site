@@ -2268,24 +2268,36 @@ a {
 }
 
 .bo-cover {
+  position: relative;
   flex: 0 0 auto;
-  width: 148px;
-  height: 148px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background:
-    radial-gradient(circle at center, #05060D 0 14%, transparent 15%),
-    repeating-radial-gradient(circle at center, #1b1f3a 0 2px, #0b0d1c 2px 5px);
-  border: 2px solid var(--cyan);
-  box-shadow: 0 0 18px rgba(0, 229, 255, 0.45);
+  width: 200px;
+  height: 172px;
 }
 
-.bo-cover img {
-  width: 84px;
-  height: 84px;
-  object-fit: contain;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+.bo-vinyl {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 156px;
+  height: 156px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #B859FF 0 9%, #05060D 9.5% 12%, transparent 12.5%),
+    repeating-radial-gradient(circle at center, #1b1f3a 0 2px, #0b0d1c 2px 5px);
+  border: 2px solid rgba(0, 229, 255, 0.55);
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.35);
+}
+
+.bo-cover-art {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 172px;
+  height: 172px;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+  border: 2px solid #B859FF;
+  box-shadow: 0 0 22px rgba(184, 89, 255, 0.45), 0 6px 0 #05060D;
 }
 
 .bo-album-info {
@@ -2375,12 +2387,16 @@ a {
     gap: 18px;
   }
   .bo-cover {
-    width: 112px;
-    height: 112px;
+    width: 176px;
+    height: 148px;
   }
-  .bo-cover img {
-    width: 64px;
-    height: 64px;
+  .bo-vinyl {
+    width: 132px;
+    height: 132px;
+  }
+  .bo-cover-art {
+    width: 148px;
+    height: 148px;
   }
   .bo-btn {
     flex: 1 1 100%;

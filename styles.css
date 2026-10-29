@@ -2254,6 +2254,17 @@ a {
 .bo-section {
   padding: 48px 0;
   border-top: 2px solid rgba(255, 255, 255, 0.08);
+  /* Garde le kicker + titre visibles sous le header sticky (119px desktop) */
+  scroll-margin-top: 110px;
+}
+
+/* Header sticky sur 2-3 lignes : 167-185px entre 721 et 1080px, 118-221px en mobile */
+@media (max-width: 1080px) {
+  .bo-section { scroll-margin-top: 180px; }
+}
+
+@media (max-width: 720px) {
+  .bo-section { scroll-margin-top: 210px; }
 }
 
 .bo-album-card {

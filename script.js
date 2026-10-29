@@ -893,6 +893,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.addEventListener("visibilitychange", keepLobbyPlaying);
     window.addEventListener("pageshow", keepLobbyPlaying);
+
+    // Garde-fou : si la vidéo est arrivée au bout ou reste bloquée sur place
+    // alors qu'elle devrait jouer (bug de boucle Safari iOS), on la renvoie au début.
+    let lobbyLastTime = -1;
+    let lobbyStuckTicks = 0;
+    window.setInterval(() => {
+      if (lobbyMotion.matches || document.hidden || lobbyHeroVideo.readyState < 2) return;
+      const d = lobbyHeroVideo.duration;
+      const t = lobbyHeroVideo.currentTime;
+      const atEnd = lobbyHeroVideo.ended || (d > 0 && t >= d - 0.05);
+      lobbyStuckTicks = !lobbyHeroVideo.paused && t === lobbyLastTime ? lobbyStuckTicks + 1 : 0;
+      lobbyLastTime = t;
+      if (atEnd || lobbyStuckTicks >= 2) {
+        lobbyStuckTicks = 0;
+        lobbyHeroVideo.currentTime = 0;
+        keepLobbyPlaying();
+      }
+    }, 700);
     if ("IntersectionObserver" in window) {
       new IntersectionObserver((entries) => {
         if (entries.some((entry) => entry.isIntersecting)) keepLobbyPlaying();

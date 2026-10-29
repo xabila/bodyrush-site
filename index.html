@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=JetBrains+Mono:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20261026b">
+  <link rel="stylesheet" href="styles.css?v=20261029b">
 
   <script type="application/ld+json">
   {
@@ -50,6 +50,29 @@
       "@type": "Person",
       "name": "Xavier Larrodé"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    "name": "Spooky Mansion Synth",
+    "image": "https://bodyrush.app/assets/images/app_icon_1400x1400.png",
+    "byArtist": {
+      "@type": "MusicGroup",
+      "name": "BodyRush",
+      "sameAs": [
+        "https://music.apple.com/fr/artist/bodyrush/6827231272",
+        "https://www.deezer.com/artist/424747311",
+        "https://open.spotify.com/artist/6kslBKo5tQu34L0OW31PLT"
+      ]
+    },
+    "numTracks": 26,
+    "datePublished": "2026-10-28",
+    "sameAs": [
+      "https://music.apple.com/fr/album/spooky-mansion-synth/6827952184",
+      "https://www.deezer.com/album/1132693631"
+    ]
   }
   </script>
   <link rel="preload" as="image" href="assets/images/hero_loop_poster.webp" fetchpriority="high">
@@ -181,6 +204,7 @@
 
               <div class="worlds-console-grid">
                 <!-- World 1: Toy Kingdom -->
+                <div class="world-card-wrap">
                 <button type="button" class="world-console-card selected" data-world="toyStory" style="--world-accent: #33A6FF;">
                   <div class="wc-top">
                     <span class="wc-emoji">🐱</span>
@@ -189,10 +213,12 @@
                   </div>
                   <div class="wc-title" data-i18n="w_toy_title">TOY KINGDOM</div>
                   <div class="wc-sub" data-i18n="w_toy_sub">Chambre des jouets · Chat Maine Coon & Robot</div>
-                  <div class="wc-music-pill">🎵 Clockwork · 128 BPM</div>
                 </button>
+                <a class="wc-music-pill wc-music-link" href="#bo">🎵 Clockwork · 128 BPM <span class="wc-music-go" aria-hidden="true">▶</span><span class="sr-only" data-i18n="bo_pill_sr"> — écouter la BO</span></a>
+                </div>
 
                 <!-- World 2: Sakura Zen -->
+                <div class="world-card-wrap">
                 <button type="button" class="world-console-card" data-world="sakuraZen" style="--world-accent: #FF6BC7;">
                   <div class="wc-top">
                     <span class="wc-emoji">🌸</span>
@@ -201,10 +227,12 @@
                   </div>
                   <div class="wc-title" data-i18n="w_sakura_title">SAKURA ZEN</div>
                   <div class="wc-sub" data-i18n="w_sakura_sub">Studio rose & cerisiers · Kitsune & Panda</div>
-                  <div class="wc-music-pill">🎵 Candy Velocity · 130 BPM</div>
                 </button>
+                <a class="wc-music-pill wc-music-link" href="#bo">🎵 Candy Velocity · 130 BPM <span class="wc-music-go" aria-hidden="true">▶</span><span class="sr-only" data-i18n="bo_pill_sr"> — écouter la BO</span></a>
+                </div>
 
                 <!-- World 3: Temple Indiana -->
+                <div class="world-card-wrap">
                 <button type="button" class="world-console-card" data-world="indianaTemple" style="--world-accent: #FFBD24;">
                   <div class="wc-top">
                     <span class="wc-emoji">🏺</span>
@@ -213,10 +241,12 @@
                   </div>
                   <div class="wc-title" data-i18n="w_temple_title">TEMPLE INDIANA</div>
                   <div class="wc-sub" data-i18n="w_temple_sub">Boule géante, pieux & Gardien Tiki</div>
-                  <div class="wc-music-pill">🎵 Hardened Clockwork · 136 BPM</div>
                 </button>
+                <a class="wc-music-pill wc-music-link" href="#bo">🎵 Hardened Clockwork · 136 BPM <span class="wc-music-go" aria-hidden="true">▶</span><span class="sr-only" data-i18n="bo_pill_sr"> — écouter la BO</span></a>
+                </div>
 
                 <!-- World 4: Red Cristal -->
+                <div class="world-card-wrap">
                 <button type="button" class="world-console-card" data-world="superHot" style="--world-accent: #FF2E52;">
                   <div class="wc-top">
                     <span class="wc-emoji">💎</span>
@@ -225,10 +255,12 @@
                   </div>
                   <div class="wc-title" data-i18n="w_red_title">RED CRISTAL</div>
                   <div class="wc-sub" data-i18n="w_red_sub">Bunker de cristal · Boxeurs Rubis & Lasers</div>
-                  <div class="wc-music-pill">🎵 Red Cristal · 134 BPM</div>
                 </button>
+                <a class="wc-music-pill wc-music-link" href="#bo">🎵 Red Cristal · 134 BPM <span class="wc-music-go" aria-hidden="true">▶</span><span class="sr-only" data-i18n="bo_pill_sr"> — écouter la BO</span></a>
+                </div>
 
                 <!-- World 5: Halloween -->
+                <div class="world-card-wrap">
                 <button type="button" class="world-console-card" data-world="halloween" style="--world-accent: #B859FF;">
                   <div class="wc-top">
                     <span class="wc-emoji">🎃</span>
@@ -237,10 +269,12 @@
                   </div>
                   <div class="wc-title" data-i18n="w_hal_title">HALLOWEEN</div>
                   <div class="wc-sub" data-i18n="w_hal_sub">Manoir hanté · Fantômes & Golem de pierre</div>
-                  <div class="wc-music-pill">🎵 Spooky Mansion · 132 BPM</div>
                 </button>
+                <a class="wc-music-pill wc-music-link" href="#bo">🎵 Spooky Mansion · 132 BPM <span class="wc-music-go" aria-hidden="true">▶</span><span class="sr-only" data-i18n="bo_pill_sr"> — écouter la BO</span></a>
+                </div>
 
                 <!-- World 6: Noël Express -->
+                <div class="world-card-wrap">
                 <button type="button" class="world-console-card" data-world="christmas" style="--world-accent: #26E07A;">
                   <div class="wc-top">
                     <span class="wc-emoji">🎄</span>
@@ -249,8 +283,9 @@
                   </div>
                   <div class="wc-title" data-i18n="w_xmas_title">NOËL EXPRESS</div>
                   <div class="wc-sub" data-i18n="w_xmas_sub">Village enneigé · Bonhomme & Casse-Noisette</div>
-                  <div class="wc-music-pill">🎵 Noël Express · 135 BPM</div>
                 </button>
+                <a class="wc-music-pill wc-music-link" href="#bo">🎵 Noël Express · 135 BPM <span class="wc-music-go" aria-hidden="true">▶</span><span class="sr-only" data-i18n="bo_pill_sr"> — écouter la BO</span></a>
+                </div>
               </div>
             </div>
 
@@ -841,6 +876,47 @@
       </div>
     </section>
 
+    <!-- SECTION: SOUNDTRACK (BO) -->
+    <section class="bo-section" id="bo" aria-labelledby="bo-title">
+      <div class="lobby-container">
+
+        <div class="arcade-section-header">
+          <div>
+            <span class="arcade-kicker" data-i18n="bo_kicker">🎧 BANDE ORIGINALE · BODYRUSH</span>
+            <h2 class="arcade-h2" id="bo-title" data-i18n="bo_title">ÉCOUTER LA BO</h2>
+          </div>
+          <p class="arcade-header-desc" data-i18n="bo_desc">
+            Les musiques synthwave de BodyRush s'écoutent aussi hors de l'arcade. Choisis ta plateforme.
+          </p>
+        </div>
+
+        <div class="bo-album-card">
+          <div class="bo-cover">
+            <span class="bo-vinyl" aria-hidden="true"></span>
+            <img class="bo-cover-art" src="assets/images/bo_cover_512.webp" data-i18n-alt="bo_cover_alt" alt="Pochette de l'album Spooky Mansion Synth — icône BodyRush" width="512" height="512" loading="lazy" decoding="async">
+          </div>
+          <div class="bo-album-info">
+            <span class="bo-album-tag" data-i18n="bo_album_tag">ALBUM</span>
+            <h3 class="bo-album-name">Spooky Mansion Synth</h3>
+            <p class="bo-album-meta" data-i18n="bo_album_meta">BodyRush · 26 titres · sorti le 28/10/2026</p>
+            <div class="bo-platforms">
+              <a class="bo-btn bo-apple" href="https://music.apple.com/fr/album/spooky-mansion-synth/6827952184" target="_blank" rel="noopener">
+                <span aria-hidden="true">🎵</span> <span data-i18n="bo_apple">Apple Music</span>
+              </a>
+              <a class="bo-btn bo-deezer" href="https://www.deezer.com/album/1132693631" target="_blank" rel="noopener">
+                <span aria-hidden="true">🎶</span> <span data-i18n="bo_deezer">Deezer</span>
+              </a>
+              <a class="bo-btn bo-spotify" href="https://open.spotify.com/artist/6kslBKo5tQu34L0OW31PLT" target="_blank" rel="noopener">
+                <span aria-hidden="true">🎧</span> <span data-i18n="bo_spotify">Spotify · page artiste</span>
+              </a>
+            </div>
+            <a class="bo-yt-link" href="https://www.youtube.com/watch?v=AW_OVdauKso" target="_blank" rel="noopener" data-i18n="bo_youtube">Aussi sur YouTube ↗</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- SECTION 5: PRO UNLOCK (MATCHING BodyRushPaywallView) -->
     <section class="pro-pass-section" id="pro-pass">
       <div class="lobby-container">
@@ -972,6 +1048,7 @@
         <a href="#gameplay-deck" data-i18n="footer_poses">10 Postures</a>
         <a href="#captures-wall" data-i18n="footer_captures">Captures</a>
         <a href="#tv-salon" data-i18n="footer_tv">AirPlay TV</a>
+        <a href="#bo" data-i18n="footer_bo">BO</a>
         <a href="privacy.html" data-i18n="footer_priv_pol">Confidentialité</a>
         <a href="terms.html" data-i18n="footer_terms">Conditions</a>
         <a href="support.html" data-i18n="footer_support">Support</a>
@@ -980,6 +1057,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261026b"></script>
+  <script src="script.js?v=20261029b"></script>
 </body>
 </html>

@@ -392,6 +392,258 @@ a {
   font-size: 0.98rem;
   color: var(--text-light);
   max-width: 68ch;
+  margin-bottom: 14px;
+}
+
+/* ==========================================================================
+   2-STEP VIP WAITLIST & APPLE TESTFLIGHT MICRO-FORM
+   ========================================================================== */
+
+.vip-waitlist-card {
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, rgba(11, 14, 29, 0.96), rgba(20, 24, 48, 0.96));
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  box-shadow: 0 5px 0 #05060D, 0 0 22px rgba(255, 200, 36, 0.18);
+  scroll-margin-top: 90px;
+}
+
+.vw-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.vw-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #000;
+  background: linear-gradient(90deg, var(--gold), #FF9100);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.vw-step-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--cyan);
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+}
+
+.vw-step {
+  display: none;
+}
+
+.vw-step.active {
+  display: block;
+}
+
+.vw-question {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-white);
+  margin: 0 0 10px;
+}
+
+.vw-device-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.vw-device-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.vw-device-ios {
+  background: var(--cyan);
+  color: #000;
+  border: 2px solid #FFF;
+  box-shadow: 0 4px 0 #007791;
+}
+
+.vw-device-ios:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #007791, 0 0 16px rgba(0, 229, 255, 0.4);
+}
+
+.vw-btn-tag {
+  font-size: 0.64rem;
+  font-weight: 800;
+  background: #000;
+  color: var(--gold);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.vw-device-other {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text-light);
+  border: 1.5px solid rgba(255, 255, 255, 0.24);
+}
+
+.vw-device-other:hover {
+  border-color: var(--gold);
+  color: var(--text-white);
+}
+
+.vw-selected-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 9px;
+  padding: 5px 10px;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.32);
+  border-radius: 9px;
+}
+
+.vw-selected-device {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--cyan);
+}
+
+.vw-change-btn {
+  background: transparent;
+  border: none;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.vw-input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.vw-email-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 10px 13px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.28);
+  background: #060812;
+  color: #FFF;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.vw-email-input:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.22);
+}
+
+.vw-submit-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--ruby), #FF5E3A);
+  color: #FFF;
+  border: 2px solid #FFF;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #7A091D;
+  transition: transform 0.12s ease;
+}
+
+.vw-submit-btn:hover {
+  transform: translateY(-1px);
+}
+
+.vw-tf-check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.vw-tf-check-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--cyan);
+}
+
+.vw-privacy-micro {
+  margin: 0;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.vw-success-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  background: rgba(38, 224, 122, 0.12);
+  border: 1.5px solid var(--emerald);
+  border-radius: 12px;
+}
+
+.vw-success-icon {
+  font-size: 1.4rem;
+}
+
+.vw-success-copy {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vw-success-copy strong {
+  font-size: 0.9rem;
+  color: var(--emerald);
+}
+
+.vw-success-copy span {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+.vw-mailto-fallback {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 6px 11px;
+  border-radius: 8px;
+  background: var(--gold);
+  color: #000;
+  text-decoration: none;
 }
 
 /* SPLIT COCKPIT GRID */

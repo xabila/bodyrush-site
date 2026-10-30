@@ -162,8 +162,26 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_captures: "📸 Captures",
       nav_tv: "📺 AirPlay TV & Salon",
       nav_pro: "👑 Pass PRO",
-      cta_store_short: "⏳ Bientôt sur l'App Store",
-      hero_pill_soon: "⏳ BIENTÔT DISPONIBLE SUR L'APP STORE",
+      cta_store_short: "🔥 Accès Privé en Avant-Première",
+      wl_badge: "🔥 ACCÈS PRIVÉ EN AVANT-PREMIÈRE & BÊTA TESTFLIGHT",
+      wl_step_1: "ÉTAPE 1/2 · TON APPAREIL",
+      wl_step_2: "ÉTAPE 2/2 · TON E-MAIL",
+      wl_step_3: "✓ INSCRIT EN VIP",
+      wl_q1: "Réserve ton accès prioritaire en avant-première (et reçois ton invitation privée Apple TestFlight avant l'ouverture publique). Tu joues sur quel appareil ?",
+      wl_btn_ios: "J'ai un iPhone / iPad (Apple iOS)",
+      wl_tag_tf: "ACCÈS BÊTA PRIVÉ",
+      wl_btn_other: "🤖 Je suis sur Android / Autre",
+      wl_ios_selected: " Appareil iOS (iPhone / iPad) sélectionné",
+      wl_other_selected: "🤖 Android / Autre appareil sélectionné",
+      wl_change: "Changer",
+      wl_email_ph: "ton.email@exemple.com",
+      wl_submit: "🔥 RÉSERVER MON ACCÈS VIP",
+      wl_tf_optin: "✈️ Recevoir en priorité mon invitation privée Apple TestFlight pour jouer en avant-première",
+      wl_micro_priv: "🔒 Zéro spam. Uniquement pour ton invitation privée TestFlight et l'accès prioritaire au lancement.",
+      wl_ok_title: "Tu es sur la liste VIP BodyRush.app !",
+      wl_ok_desc: "On te préviendra en priorité dès l'ouverture des prochains accès TestFlight iOS et de la sortie App Store.",
+      wl_ok_mailto: "✉️ Priorité TestFlight directe",
+      hero_pill_soon: "🔥 INSCRIPTIONS EN AVANT-PREMIÈRE · PLACES VIP LIMITÉES",
       hero_pill_cam: "✓ CAMÉRA VISION 60 FPS",
       hero_pill_gear: "ZÉRO MANETTE · ZÉRO CAPTEUR",
       hero_pill_devices: "iPHONE · iPAD · AIRPLAY TV 16:9",
@@ -232,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
       p_solo: "👤 SOLO",
       recap_label: "CONFIGURATION ACTIVE :",
       btn_next_step: "ÉTAPE SUIVANTE ➔",
-      btn_launch_app: "⏳ BIENTÔT SUR iPHONE & iPAD",
+      btn_launch_app: "🔥 S'INSCRIRE EN AVANT-PREMIÈRE",
       vp_tab_video: "🎬 DÉMO CAMÉRA",
       vp_tab_c1: "📸 COULOIR 3D",
       vp_tab_c2: "📸 POSTURE",
@@ -314,9 +332,9 @@ document.addEventListener("DOMContentLoaded", () => {
       ps2_d: "La caméra immortalise automatiquement ta posture la plus spectaculaire pendant la course.",
       ps3_t: "Podium 3D Final, Carte Morpho & Replay Vidéo partageable",
       ps3_d: "Comparez vos scores, vos calories brûlées et partagez la carte souvenir ou le replay vidéo en un tap.",
-      pro_kicker: "DÉBLOCAGE BODYRUSH PRO",
-      pro_title: "BIENTÔT DISPONIBLE : TESTE GRATUITEMENT, DÉBLOQUE TOUTE L'ARCADE",
-      pro_desc: "Dès sa sortie imminente sur l'App Store, télécharge gratuitement BodyRush pour jouer au Tutoriel complet (Niv. 00) et au Niveau 01 de Toy Kingdom (avec un aperçu en direct des mondes PRO dans les 20 dernières secondes !).",
+      pro_kicker: "ACCÈS PRIVÉ & ÉDITIONS BODYRUSH",
+      pro_title: "INSCRIS-TOI EN AVANT-PREMIÈRE : TESTE GRATUITEMENT, DÉBLOQUE TOUTE L'ARCADE",
+      pro_desc: "Réserve ton accès VIP dès maintenant pour recevoir ton invitation privée TestFlight ou être prévenu en premier à l'ouverture sur l'App Store. La version gratuite inclut le Tutoriel complet (Niv. 00) et le Niveau 01 de Toy Kingdom !",
       free_badge: "INCLUS AU TÉLÉCHARGEMENT",
       free_name: "VERSION GRATUITE",
       free_sub: "pour toujours",
@@ -326,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
       f_4: "✓ Mode Solo, Photo Souvenir & Replay Finish",
       f_5: "🔒 Les 5 autres Mondes 3D & Niveaux 02 à 09 (FIT 5/10 min & Méli-Mélo)",
       f_6: "🔒 Difficultés HARD (~125 obs) & EXPERT+ (~175 obs + Combos x3)",
-      btn_dl_free: "⏳ Bientôt sur l'App Store",
+      btn_dl_free: "🔥 S'inscrire en Avant-Première",
       vip_ribbon: "👑 OFFRE LA PLUS POPULAIRE",
       vip_name: "PASS ANNUEL PRO",
       vip_flex: "ou Pass Mensuel, sans engagement",
@@ -336,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
       v_4: "✓ 26 Musiques Originales avec Détecteur de Drop Musical",
       v_5: "✓ Mode Tournoi Salon 2 à 4 Joueurs & Podium Photo 3D",
       v_6: "✓ Mode TV AirPlay 16:9 Haute Définition",
-      btn_start_vip: "⏳ Bientôt disponible",
+      btn_start_vip: "🔥 S'inscrire en Avant-Première",
       life_badge: "PAIEMENT UNIQUE · ZÉRO ABONNEMENT",
       life_name: "ÉDITION INFINITY À VIE",
       life_sub: "Paiement unique, sans renouvellement",
@@ -345,12 +363,12 @@ document.addEventListener("DOMContentLoaded", () => {
       l_3: "✓ Tournoi Salon 2 à 4 Joueurs & Podium Photo 3D",
       l_4: "✓ Toutes les futures mises à jour et nouveaux mondes inclus",
       l_5: "✓ Compatible Partage Familial Apple",
-      btn_buy_life: "⏳ Bientôt disponible",
+      btn_buy_life: "🔥 S'inscrire en Avant-Première",
       priv_badge: "CAMÉRA SUR L'APPAREIL",
       priv_title: "La caméra est analysée sur ton iPhone ou ton iPad",
       priv_desc: "Les 19 articulations sont estimées sur l'appareil avec Apple Vision. Aucune vidéo, photo ou donnée biométrique issue de la caméra n'est envoyée. Des statistiques d'usage anonymes partent vers Mixpanel (UE), et RevenueCat vérifie l'abonnement PRO avec un identifiant de transaction anonyme.",
       price_in_app: "Les montants sont affichés dans l'app.",
-      btn_offers: "Voir les offres dans l'app",
+      btn_offers: "🔥 S'inscrire en Avant-Première",
       priv_btn: "Consulter la Politique de Confidentialité",
       faq_1_q: "Quelle distance faut-il prévoir devant l'iPhone ou l'iPad ?",
       faq_1_a: "Pose ton iPhone ou ton iPad à environ 1,80 m – 2,50 m face à toi (sur une table basse, un meuble TV ou un support). Le guide de cadrage intelligent passe au vert dès que ta silhouette est bien visible.",
@@ -396,8 +414,26 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_captures: "📸 Captures",
       nav_tv: "📺 AirPlay TV & Party",
       nav_pro: "👑 PRO Pass",
-      cta_store_short: "⏳ Coming Soon on App Store",
-      hero_pill_soon: "⏳ COMING SOON ON THE APP STORE",
+      cta_store_short: "🔥 Exclusive Early Access",
+      wl_badge: "🔥 EXCLUSIVE EARLY ACCESS & TESTFLIGHT BETA",
+      wl_step_1: "STEP 1/2 · YOUR DEVICE",
+      wl_step_2: "STEP 2/2 · YOUR EMAIL",
+      wl_step_3: "✓ VIP REGISTERED",
+      wl_q1: "Reserve your priority Early Access spot (and get a private Apple TestFlight invite before public launch). Which device do you play on?",
+      wl_btn_ios: "I have an iPhone / iPad (Apple iOS)",
+      wl_tag_tf: "PRIVATE BETA",
+      wl_btn_other: "🤖 I'm on Android / Other",
+      wl_ios_selected: " iOS Device (iPhone / iPad) selected",
+      wl_other_selected: "🤖 Android / Other device selected",
+      wl_change: "Change",
+      wl_email_ph: "your.email@example.com",
+      wl_submit: "🔥 CLAIM MY VIP ACCESS",
+      wl_tf_optin: "✈️ Send me a priority Apple TestFlight invite to play the Beta early",
+      wl_micro_priv: "🔒 Zero spam. Only for your private TestFlight Beta invite and priority launch access.",
+      wl_ok_title: "You're on the BodyRush.app VIP List!",
+      wl_ok_desc: "We'll notify you first as soon as the next iOS TestFlight Beta wave and App Store launch open.",
+      wl_ok_mailto: "✉️ Direct TestFlight Priority",
+      hero_pill_soon: "🔥 EXCLUSIVE EARLY ACCESS · LIMITED VIP SPOTS",
       hero_pill_cam: "✓ 60 FPS VISION CAMERA",
       hero_pill_gear: "ZERO CONTROLLER · ZERO SENSOR",
       hero_pill_devices: "iPHONE · iPAD · AIRPLAY TV 16:9",
@@ -466,7 +502,7 @@ document.addEventListener("DOMContentLoaded", () => {
       p_solo: "👤 SOLO",
       recap_label: "ACTIVE SETUP:",
       btn_next_step: "NEXT STEP ➔",
-      btn_launch_app: "⏳ COMING SOON ON iPHONE & iPAD",
+      btn_launch_app: "🔥 JOIN EXCLUSIVE EARLY ACCESS",
       vp_tab_video: "🎬 CAMERA DEMO",
       vp_tab_c1: "📸 3D CORRIDOR",
       vp_tab_c2: "📸 POSTURE",
@@ -548,9 +584,9 @@ document.addEventListener("DOMContentLoaded", () => {
       ps2_d: "The camera automatically snaps your best posture moment during the run.",
       ps3_t: "Final 3D Podium, Morpho Card & Shareable Video Replay",
       ps3_d: "Compare scores and calories burned, and share the souvenir card or finish video replay in one tap.",
-      pro_kicker: "BODYRUSH PRO UNLOCK",
-      pro_title: "COMING SOON: TRY FOR FREE, UNLOCK THE FULL ARCADE",
-      pro_desc: "At launch on the App Store, download BodyRush for free to play the full 8-Move Tutorial (Lvl 00) and Toy Kingdom Level 01 (including a live 20-second PRO world teaser at the end of the song!).",
+      pro_kicker: "PRIVATE ACCESS & BODYRUSH EDITIONS",
+      pro_title: "JOIN EARLY ACCESS: TRY FOR FREE, UNLOCK THE FULL ARCADE",
+      pro_desc: "Reserve your VIP spot now to get a private TestFlight invite or priority notification at App Store launch. The free edition includes the full 8-Move Tutorial (Lvl 00) and Toy Kingdom Level 01!",
       free_badge: "INCLUDED FOR FREE",
       free_name: "FREE EDITION",
       free_sub: "forever",
@@ -560,7 +596,7 @@ document.addEventListener("DOMContentLoaded", () => {
       f_4: "✓ Solo Mode, Souvenir Photo & Finish Replay",
       f_5: "🔒 Remaining 5 3D Worlds & Levels 02 to 09 (5/10-Min FIT & Megamix)",
       f_6: "🔒 HARD (~125 obs) & EXPERT+ (~175 obs + x3 Combos) Difficulties",
-      btn_dl_free: "⏳ Coming Soon on App Store",
+      btn_dl_free: "🔥 Join Exclusive Early Access",
       vip_ribbon: "👑 MOST POPULAR",
       vip_name: "ANNUAL PRO PASS",
       vip_flex: "or a monthly pass, no commitment",
@@ -570,7 +606,7 @@ document.addEventListener("DOMContentLoaded", () => {
       v_4: "✓ 26 Original Tracks with Live Bass-Drop Detector",
       v_5: "✓ 2-to-4 Player Party Tournament & 3D Photo Podium",
       v_6: "✓ High-Definition 16:9 AirPlay TV Mode",
-      btn_start_vip: "⏳ Coming Soon",
+      btn_start_vip: "🔥 Join Exclusive Early Access",
       life_badge: "ONE-TIME PAYMENT · ZERO SUBSCRIPTION",
       life_name: "INFINITY LIFETIME EDITION",
       life_sub: "One-time payment, no renewal",
@@ -579,12 +615,12 @@ document.addEventListener("DOMContentLoaded", () => {
       l_3: "✓ 2-to-4 Player Party Tournament & 3D Photo Podium",
       l_4: "✓ All future updates and new worlds included",
       l_5: "✓ Apple Family Sharing supported",
-      btn_buy_life: "⏳ Coming Soon",
+      btn_buy_life: "🔥 Join Exclusive Early Access",
       priv_badge: "ON-DEVICE CAMERA",
       priv_title: "The camera is analyzed on your iPhone or iPad",
       priv_desc: "The 19 joints are estimated on the device with Apple Vision. No camera video, photo, or biometric data is uploaded. Anonymous usage stats go to Mixpanel (EU), and RevenueCat checks the PRO subscription with an anonymous transaction id.",
       price_in_app: "Amounts are shown in the app.",
-      btn_offers: "See the offers in the app",
+      btn_offers: "🔥 Join Exclusive Early Access",
       priv_btn: "Read the Privacy Policy",
       faq_1_q: "How much space do I need in front of my iPhone or iPad?",
       faq_1_a: "Place your iPhone or iPad about 6 to 8 feet (1.8m – 2.5m) in front of you on a coffee table, TV stand or tripod. The smart framing guide turns green as soon as your full body is visible.",
@@ -953,6 +989,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const key = el.getAttribute("data-i18n-alt");
       if (dict[key]) el.setAttribute("alt", dict[key]);
     });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (dict[key]) el.setAttribute("placeholder", dict[key]);
+    });
     if (langFlag) langFlag.textContent = lang === "fr" ? "🇫🇷" : "🇬🇧";
     if (langCode) langCode.textContent = lang.toUpperCase();
     const telemetry = document.getElementById("hud-telemetry");
@@ -1000,6 +1040,125 @@ document.addEventListener("DOMContentLoaded", () => {
 
   refreshSoundLabel();
   refreshConsoleAndViewport();
+
+  // --- 2-Step VIP Waitlist & Apple TestFlight Micro-Form ---
+  const waitlistBox = document.getElementById("vip-waitlist-box");
+  const vwStep1 = document.getElementById("vw-step-1");
+  const vwStep2 = document.getElementById("vw-step-2");
+  const vwStep3 = document.getElementById("vw-step-3");
+  const vwStepIndicator = document.getElementById("vw-step-indicator");
+  const vwSelectedLabel = document.getElementById("vw-selected-label");
+  const vwBtnChange = document.getElementById("vw-btn-change");
+  const vwEmailInput = document.getElementById("vw-email-input");
+  const vwTfRow = document.getElementById("vw-tf-row");
+  const vwTfCheckbox = document.getElementById("vw-tf-checkbox");
+  const vwMailtoBtn = document.getElementById("vw-mailto-btn");
+  let waitlistDevice = "ios";
+
+  function setWaitlistStep(stepNum) {
+    if (!vwStep1 || !vwStep2 || !vwStep3) return;
+    vwStep1.classList.toggle("active", stepNum === 1);
+    vwStep2.classList.toggle("active", stepNum === 2);
+    vwStep3.classList.toggle("active", stepNum === 3);
+    const dict = i18n[currentLang] || i18n.fr;
+    if (vwStepIndicator) {
+      const key = stepNum === 1 ? "wl_step_1" : stepNum === 2 ? "wl_step_2" : "wl_step_3";
+      vwStepIndicator.setAttribute("data-i18n", key);
+      if (dict[key]) vwStepIndicator.textContent = dict[key];
+    }
+    if (stepNum === 2) {
+      const devKey = waitlistDevice === "ios" ? "wl_ios_selected" : "wl_other_selected";
+      if (vwSelectedLabel) {
+        vwSelectedLabel.setAttribute("data-i18n", devKey);
+        if (dict[devKey]) vwSelectedLabel.textContent = dict[devKey];
+      }
+      if (vwTfRow && vwTfCheckbox) {
+        vwTfRow.style.display = waitlistDevice === "ios" ? "flex" : "none";
+        vwTfCheckbox.checked = waitlistDevice === "ios";
+      }
+      if (vwEmailInput) {
+        setTimeout(() => vwEmailInput.focus(), 60);
+      }
+    }
+  }
+
+  document.querySelectorAll(".vw-device-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      waitlistDevice = btn.getAttribute("data-device") || "ios";
+      setWaitlistStep(2);
+    });
+  });
+
+  if (vwBtnChange) {
+    vwBtnChange.addEventListener("click", () => {
+      setWaitlistStep(1);
+    });
+  }
+
+  if (vwStep2) {
+    vwStep2.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!vwEmailInput) return;
+      const email = vwEmailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        vwEmailInput.focus();
+        vwEmailInput.style.borderColor = "#FF2E52";
+        return;
+      }
+      vwEmailInput.style.borderColor = "";
+      const wantsTestFlight = waitlistDevice === "ios" && (!vwTfCheckbox || vwTfCheckbox.checked);
+      const payload = {
+        email,
+        device: waitlistDevice === "ios" ? "Apple iOS (iPhone / iPad)" : "Android / Other",
+        testflight: wantsTestFlight ? "YES (TestFlight Beta)" : "Launch Alert Only",
+        lang: currentLang,
+        timestamp: new Date().toISOString()
+      };
+
+      try {
+        localStorage.setItem("bodyrush_vip_waitlist_v1", JSON.stringify(payload));
+      } catch (_) {}
+
+      // Async submission to FormSubmit (delivers directly to xlarrodeapp+bodyrush@gmail.com)
+      fetch("https://formsubmit.co/ajax/xlarrodeapp+bodyrush@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          _subject: `[BodyRush.app VIP] ${wantsTestFlight ? "✈️ TestFlight iOS" : "🔔 Waitlist"} — ${email}`,
+          email: payload.email,
+          device: payload.device,
+          testflight_beta: payload.testflight,
+          language: payload.lang
+        })
+      }).catch(() => {});
+
+      if (vwMailtoBtn) {
+        const subject = encodeURIComponent(
+          wantsTestFlight
+            ? "BodyRush.app — Accès Bêta TestFlight iOS (iPhone / iPad)"
+            : "BodyRush.app — Liste d'attente VIP"
+        );
+        const body = encodeURIComponent(
+          `Bonjour,\n\nJe m'inscris sur la liste VIP BodyRush.app :\n- Email : ${email}\n- Appareil : ${payload.device}\n- TestFlight Beta iOS : ${wantsTestFlight ? "Oui, je veux tester sur TestFlight !" : "Prévenez-moi à la sortie"}\n`
+        );
+        vwMailtoBtn.href = `mailto:xlarrodeapp+bodyrush@gmail.com?subject=${subject}&body=${body}`;
+      }
+
+      setWaitlistStep(3);
+    });
+  }
+
+  document.querySelectorAll(".js-scroll-waitlist, #hud-waitlist-cta").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      if (!waitlistBox) return;
+      e.preventDefault();
+      waitlistBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
 
   // --- Captures slideshow (#captures-wall only) ---
   const capShow = document.getElementById("cap-show");

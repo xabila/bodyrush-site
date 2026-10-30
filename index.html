@@ -117,12 +117,12 @@
           <span id="lang-flag">🇫🇷</span>
           <span id="lang-code">FR</span>
         </button>
-        <span class="hud-store-btn">
+        <a href="#vip-waitlist-box" class="hud-store-btn" id="hud-waitlist-cta">
           <svg viewBox="0 0 170 170" width="16" height="16" fill="currentColor" aria-hidden="true">
             <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.69-7.85-12-14.42-6.19-9.39-10.9-20.09-14.13-32.09-3.23-12-4.85-23.32-4.85-33.97 0-14.42 3.63-26.4 10.9-35.95 7.27-9.55 16.48-14.43 27.64-14.65 4.35 0 9.27 1.15 14.76 3.44 5.48 2.29 9.38 3.5 11.71 3.65 1.96-.15 5.92-1.36 11.89-3.65 5.97-2.29 10.88-3.32 14.73-3.08 13.43.83 23.94 5.96 31.54 15.4-11.89 7.27-17.7 17.1-17.44 29.49.27 9.8 4.18 18.06 11.74 24.78 7.56 6.72 16.48 10.45 26.77 11.2-.82 2.61-1.85 5.34-3.09 8.19zm-38.3-108.38c0-7.39 2.64-14.28 7.92-20.67 5.28-6.39 12-10.44 20.15-12.16.54 2.28.81 4.56.81 6.84 0 7.39-2.73 14.39-8.19 21-5.46 6.61-12.28 10.63-20.47 12.06-.11-2.39-.22-4.75-.22-7.07z"/>
           </svg>
-          <span data-i18n="cta_store_short">⏳ Bientôt sur l'App Store</span>
-        </span>
+          <span data-i18n="cta_store_short">🔥 Accès Privé en Avant-Première</span>
+        </a>
       </div>
     </div>
   </header>
@@ -136,7 +136,7 @@
         <div class="lobby-hero-banner">
           <div class="lobby-hero-copy">
             <div class="game-status-row">
-              <span class="status-pill status-gold" data-i18n="hero_pill_soon">⏳ BIENTÔT DISPONIBLE SUR L'APP STORE</span>
+              <span class="status-pill status-gold" data-i18n="hero_pill_soon">🔥 INSCRIPTIONS EN AVANT-PREMIÈRE · PLACES VIP LIMITÉES</span>
               <span class="status-pill status-green" data-i18n="hero_pill_cam">✓ CAMÉRA VISION 60 FPS</span>
               <span class="status-pill status-cyan" data-i18n="hero_pill_gear">ZÉRO MANETTE · ZÉRO CAPTEUR</span>
               <span class="status-pill status-cyan" data-i18n="hero_pill_devices">iPHONE · iPAD · AIRPLAY TV 16:9</span>
@@ -145,6 +145,60 @@
             <p class="game-main-lead" data-i18n="hero_lead">
               Cours sur place pour faire défiler le couloir 3D, décale-toi à gauche ou à droite, saute par-dessus les pièges, baisse-toi en squat, boxe les monstres en rythme sur la musique et traverse les 10 murs de posture.
             </p>
+
+            <!-- 2-STEP VIP WAITLIST & APPLE TESTFLIGHT MICRO-FORM -->
+            <div class="vip-waitlist-card" id="vip-waitlist-box" aria-live="polite">
+              <div class="vw-header">
+                <span class="vw-badge" data-i18n="wl_badge">🔥 ACCÈS PRIVÉ EN AVANT-PREMIÈRE & BÊTA TESTFLIGHT</span>
+                <span class="vw-step-pill" id="vw-step-indicator" data-i18n="wl_step_1">ÉTAPE 1/2 · TON APPAREIL</span>
+              </div>
+
+              <!-- STEP 1: iOS / Apple Device Check -->
+              <div class="vw-step active" id="vw-step-1">
+                <p class="vw-question" data-i18n="wl_q1">Réserve ton accès prioritaire en avant-première (et reçois ton invitation privée Apple TestFlight avant l'ouverture publique). Tu joues sur quel appareil ?</p>
+                <div class="vw-device-buttons">
+                  <button type="button" class="vw-device-btn vw-device-ios" data-device="ios" id="btn-device-ios">
+                    <svg viewBox="0 0 170 170" width="18" height="18" fill="currentColor" aria-hidden="true">
+                      <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.69-7.85-12-14.42-6.19-9.39-10.9-20.09-14.13-32.09-3.23-12-4.85-23.32-4.85-33.97 0-14.42 3.63-26.4 10.9-35.95 7.27-9.55 16.48-14.43 27.64-14.65 4.35 0 9.27 1.15 14.76 3.44 5.48 2.29 9.38 3.5 11.71 3.65 1.96-.15 5.92-1.36 11.89-3.65 5.97-2.29 10.88-3.32 14.73-3.08 13.43.83 23.94 5.96 31.54 15.4-11.89 7.27-17.7 17.1-17.44 29.49.27 9.8 4.18 18.06 11.74 24.78 7.56 6.72 16.48 10.45 26.77 11.2-.82 2.61-1.85 5.34-3.09 8.19zm-38.3-108.38c0-7.39 2.64-14.28 7.92-20.67 5.28-6.39 12-10.44 20.15-12.16.54 2.28.81 4.56.81 6.84 0 7.39-2.73 14.39-8.19 21-5.46 6.61-12.28 10.63-20.47 12.06-.11-2.39-.22-4.75-.22-7.07z"/>
+                    </svg>
+                    <span data-i18n="wl_btn_ios">J'ai un iPhone / iPad (Apple iOS)</span>
+                    <span class="vw-btn-tag" data-i18n="wl_tag_tf">ACCÈS BÊTA PRIVÉ</span>
+                  </button>
+                  <button type="button" class="vw-device-btn vw-device-other" data-device="android" id="btn-device-other">
+                    <span data-i18n="wl_btn_other">🤖 Je suis sur Android / Autre</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 2: Email + TestFlight Checkbox -->
+              <form class="vw-step" id="vw-step-2" novalidate>
+                <div class="vw-selected-bar">
+                  <span class="vw-selected-device" id="vw-selected-label" data-i18n="wl_ios_selected"> Appareil iOS (iPhone / iPad) sélectionné</span>
+                  <button type="button" class="vw-change-btn" id="vw-btn-change" data-i18n="wl_change">Changer</button>
+                </div>
+                <div class="vw-input-row">
+                  <input type="email" id="vw-email-input" class="vw-email-input" name="email" required autocomplete="email" placeholder="ton.email@exemple.com" data-i18n-placeholder="wl_email_ph" aria-label="Adresse e-mail">
+                  <button type="submit" class="vw-submit-btn" id="vw-submit-btn" data-i18n="wl_submit">🔥 RÉSERVER MON ACCÈS VIP</button>
+                </div>
+                <label class="vw-tf-check-row" id="vw-tf-row">
+                  <input type="checkbox" id="vw-tf-checkbox" checked>
+                  <span data-i18n="wl_tf_optin">✈️ Recevoir en priorité mon invitation privée Apple TestFlight pour jouer en avant-première</span>
+                </label>
+                <p class="vw-privacy-micro" data-i18n="wl_micro_priv">🔒 Zéro spam. Uniquement pour ton invitation privée TestFlight et l'accès prioritaire au lancement.</p>
+              </form>
+
+              <!-- STEP 3: Instant Confirmation -->
+              <div class="vw-step" id="vw-step-3">
+                <div class="vw-success-box">
+                  <span class="vw-success-icon">🎉</span>
+                  <div class="vw-success-copy">
+                    <strong id="vw-success-title" data-i18n="wl_ok_title">Tu es sur la liste VIP BodyRush.app !</strong>
+                    <span id="vw-success-desc" data-i18n="wl_ok_desc">On te préviendra en priorité dès l'ouverture des prochains accès TestFlight iOS et de la sortie App Store.</span>
+                  </div>
+                  <a href="mailto:xlarrodeapp+bodyrush@gmail.com" class="vw-mailto-fallback" id="vw-mailto-btn" data-i18n="wl_ok_mailto">✉️ Priorité TestFlight directe</a>
+                </div>
+              </div>
+            </div>
           </div>
           <figure class="lobby-hero-photo" style="margin:0;min-width:0;max-width:100%;flex:1 1 auto;">
             <video id="lobby-hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/hero_loop_poster.webp" width="1280" height="720" data-i18n-aria="hero_photo_alt" aria-label="Une femme fait du jogging sur place dans son salon, face à une télé qui affiche le couloir du Temple, avec un iPhone posé sur le meuble TV qui suit ses mouvements." style="display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;">
@@ -445,8 +499,8 @@
               </div>
               <div class="console-bottom-buttons">
                 <button type="button" class="btn-console-next" id="btn-next-step" data-i18n="btn_next_step">ÉTAPE SUIVANTE ➔</button>
-                <a href="#pro-pass" class="btn-console-launch" data-i18n="btn_launch_app">
-                  ⏳ BIENTÔT SUR iPHONE & iPAD
+                <a href="#vip-waitlist-box" class="btn-console-launch js-scroll-waitlist" data-i18n="btn_launch_app">
+                  🔥 S'INSCRIRE EN AVANT-PREMIÈRE
                 </a>
               </div>
             </div>
@@ -923,11 +977,11 @@
 
         <div class="arcade-section-header">
           <div>
-            <span class="arcade-kicker" data-i18n="pro_kicker">DÉBLOCAGE BODYRUSH PRO</span>
-            <h2 class="arcade-h2" data-i18n="pro_title">BIENTÔT DISPONIBLE : TESTE GRATUITEMENT, DÉBLOQUE TOUTE L'ARCADE</h2>
+            <span class="arcade-kicker" data-i18n="pro_kicker">ACCÈS PRIVÉ & ÉDITIONS BODYRUSH</span>
+            <h2 class="arcade-h2" data-i18n="pro_title">INSCRIS-TOI EN AVANT-PREMIÈRE : TESTE GRATUITEMENT, DÉBLOQUE TOUTE L'ARCADE</h2>
           </div>
           <p class="arcade-header-desc" data-i18n="pro_desc">
-            Dès sa sortie imminente sur l'App Store, télécharge gratuitement BodyRush pour jouer au Tutoriel complet (Niv. 00) et au Niveau 01 de Toy Kingdom (avec un aperçu en direct des mondes PRO dans les 20 dernières secondes !).
+            Réserve ton accès VIP dès maintenant pour recevoir ton invitation privée TestFlight ou être prévenu en premier à l'ouverture sur l'App Store. La version gratuite inclut le Tutoriel complet (Niv. 00) et le Niveau 01 de Toy Kingdom !
           </p>
         </div>
 
@@ -948,7 +1002,7 @@
               <li class="pt-no" data-i18n="f_5">🔒 Les 5 autres Mondes 3D & Niveaux 02 à 09 (FIT 5/10 min & Méli-Mélo)</li>
               <li class="pt-no" data-i18n="f_6">🔒 Difficultés HARD (~125 obs) & EXPERT+ (~175 obs + Combos x3)</li>
             </ul>
-            <span class="pt-btn pt-btn-cyan" data-i18n="btn_offers">Voir les offres dans l'app</span>
+            <a href="#vip-waitlist-box" class="pt-btn pt-btn-cyan js-scroll-waitlist" data-i18n="btn_offers">🔥 S'inscrire en Avant-Première</a>
           </div>
 
           <!-- Tier 2: Annual VIP Pass -->
@@ -970,7 +1024,7 @@
               <li class="pt-yes"><strong data-i18n="v_5">✓ Mode Tournoi Salon 2 à 4 Joueurs & Podium Photo 3D</strong></li>
               <li class="pt-yes"><strong data-i18n="v_6">✓ Mode TV AirPlay 16:9 Haute Définition</strong></li>
             </ul>
-            <span class="pt-btn pt-btn-gold" data-i18n="btn_offers">Voir les offres dans l'app</span>
+            <a href="#vip-waitlist-box" class="pt-btn pt-btn-gold js-scroll-waitlist" data-i18n="btn_offers">🔥 S'inscrire en Avant-Première</a>
           </div>
 
           <!-- Tier 3: Lifetime Unlock -->
@@ -991,7 +1045,7 @@
               <li class="pt-yes" data-i18n="l_4">✓ Toutes les futures mises à jour et nouveaux mondes inclus</li>
               <li class="pt-yes" data-i18n="l_5">✓ Compatible Partage Familial Apple</li>
             </ul>
-            <span class="pt-btn pt-btn-ruby" data-i18n="btn_offers">Voir les offres dans l'app</span>
+            <a href="#vip-waitlist-box" class="pt-btn pt-btn-ruby js-scroll-waitlist" data-i18n="btn_offers">🔥 S'inscrire en Avant-Première</a>
           </div>
 
         </div>

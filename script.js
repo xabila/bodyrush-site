@@ -164,13 +164,13 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_pro: "👑 Pass PRO",
       cta_store_short: "🔥 Accès Privé en Avant-Première",
       wl_badge: "🔥 ACCÈS PRIVÉ EN AVANT-PREMIÈRE & BÊTA TESTFLIGHT",
-      wl_step_1: "ÉTAPE 1/2 · TON APPAREIL",
-      wl_step_2: "ÉTAPE 2/2 · TON E-MAIL",
+      wl_step_1: "INVITATION PRIORITAIRE",
+      wl_step_2: "INVITATION PRIORITAIRE",
       wl_step_3: "✓ INSCRIT EN VIP",
-      wl_q1: "Réserve ton accès prioritaire en avant-première (et reçois ton invitation privée Apple TestFlight avant l'ouverture publique). Tu joues sur quel appareil ?",
-      wl_btn_ios: "J'ai un iPhone / iPad (Apple iOS)",
-      wl_tag_tf: "ACCÈS BÊTA PRIVÉ",
-      wl_btn_other: "🤖 Je suis sur Android / Autre",
+      wl_q1: "Réserve ton accès prioritaire en avant-première :",
+      wl_btn_ios: "iPhone / iPad (iOS)",
+      wl_tag_tf: "✓ TESTFLIGHT",
+      wl_btn_other: "🤖 Android / Autre",
       wl_ios_selected: " Appareil iOS (iPhone / iPad) sélectionné",
       wl_other_selected: "🤖 Android / Autre appareil sélectionné",
       wl_change: "Changer",
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
       wl_tf_optin: "✈️ Recevoir en priorité mon invitation privée Apple TestFlight pour jouer en avant-première",
       wl_micro_priv: "🔒 Zéro spam. Uniquement pour ton invitation privée TestFlight et l'accès prioritaire au lancement.",
       wl_ok_title: "Tu es sur la liste VIP BodyRush.app !",
-      wl_ok_desc: "On te préviendra en priorité dès l'ouverture des prochains accès TestFlight iOS et de la sortie App Store.",
+      wl_ok_desc: "Ton client mail s'est ouvert automatiquement pour valider ta priorité TestFlight iOS.",
       wl_ok_mailto: "✉️ Priorité TestFlight directe",
       hero_pill_soon: "🔥 INSCRIPTIONS EN AVANT-PREMIÈRE · PLACES VIP LIMITÉES",
       hero_pill_cam: "✓ CAMÉRA VISION 60 FPS",
@@ -416,13 +416,13 @@ document.addEventListener("DOMContentLoaded", () => {
       nav_pro: "👑 PRO Pass",
       cta_store_short: "🔥 Exclusive Early Access",
       wl_badge: "🔥 EXCLUSIVE EARLY ACCESS & TESTFLIGHT BETA",
-      wl_step_1: "STEP 1/2 · YOUR DEVICE",
-      wl_step_2: "STEP 2/2 · YOUR EMAIL",
+      wl_step_1: "PRIORITY INVITE",
+      wl_step_2: "PRIORITY INVITE",
       wl_step_3: "✓ VIP REGISTERED",
-      wl_q1: "Reserve your priority Early Access spot (and get a private Apple TestFlight invite before public launch). Which device do you play on?",
-      wl_btn_ios: "I have an iPhone / iPad (Apple iOS)",
-      wl_tag_tf: "PRIVATE BETA",
-      wl_btn_other: "🤖 I'm on Android / Other",
+      wl_q1: "Reserve your priority Early Access spot:",
+      wl_btn_ios: "iPhone / iPad (iOS)",
+      wl_tag_tf: "✓ TESTFLIGHT",
+      wl_btn_other: "🤖 Android / Other",
       wl_ios_selected: " iOS Device (iPhone / iPad) selected",
       wl_other_selected: "🤖 Android / Other device selected",
       wl_change: "Change",
@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
       wl_tf_optin: "✈️ Send me a priority Apple TestFlight invite to play the Beta early",
       wl_micro_priv: "🔒 Zero spam. Only for your private TestFlight Beta invite and priority launch access.",
       wl_ok_title: "You're on the BodyRush.app VIP List!",
-      wl_ok_desc: "We'll notify you first as soon as the next iOS TestFlight Beta wave and App Store launch open.",
+      wl_ok_desc: "Your email app opened automatically to confirm your priority iOS TestFlight invite.",
       wl_ok_mailto: "✉️ Direct TestFlight Priority",
       hero_pill_soon: "🔥 EXCLUSIVE EARLY ACCESS · LIMITED VIP SPOTS",
       hero_pill_cam: "✓ 60 FPS VISION CAMERA",
@@ -1041,59 +1041,25 @@ document.addEventListener("DOMContentLoaded", () => {
   refreshSoundLabel();
   refreshConsoleAndViewport();
 
-  // --- 2-Step VIP Waitlist & Apple TestFlight Micro-Form ---
+  // --- 1-Step Direct VIP Waitlist & Automatic mailto ---
   const waitlistBox = document.getElementById("vip-waitlist-box");
-  const vwStep1 = document.getElementById("vw-step-1");
   const vwStep2 = document.getElementById("vw-step-2");
   const vwStep3 = document.getElementById("vw-step-3");
   const vwStepIndicator = document.getElementById("vw-step-indicator");
-  const vwSelectedLabel = document.getElementById("vw-selected-label");
-  const vwBtnChange = document.getElementById("vw-btn-change");
   const vwEmailInput = document.getElementById("vw-email-input");
-  const vwTfRow = document.getElementById("vw-tf-row");
-  const vwTfCheckbox = document.getElementById("vw-tf-checkbox");
-  const vwMailtoBtn = document.getElementById("vw-mailto-btn");
   let waitlistDevice = "ios";
-
-  function setWaitlistStep(stepNum) {
-    if (!vwStep1 || !vwStep2 || !vwStep3) return;
-    vwStep1.classList.toggle("active", stepNum === 1);
-    vwStep2.classList.toggle("active", stepNum === 2);
-    vwStep3.classList.toggle("active", stepNum === 3);
-    const dict = i18n[currentLang] || i18n.fr;
-    if (vwStepIndicator) {
-      const key = stepNum === 1 ? "wl_step_1" : stepNum === 2 ? "wl_step_2" : "wl_step_3";
-      vwStepIndicator.setAttribute("data-i18n", key);
-      if (dict[key]) vwStepIndicator.textContent = dict[key];
-    }
-    if (stepNum === 2) {
-      const devKey = waitlistDevice === "ios" ? "wl_ios_selected" : "wl_other_selected";
-      if (vwSelectedLabel) {
-        vwSelectedLabel.setAttribute("data-i18n", devKey);
-        if (dict[devKey]) vwSelectedLabel.textContent = dict[devKey];
-      }
-      if (vwTfRow && vwTfCheckbox) {
-        vwTfRow.style.display = waitlistDevice === "ios" ? "flex" : "none";
-        vwTfCheckbox.checked = waitlistDevice === "ios";
-      }
-      if (vwEmailInput) {
-        setTimeout(() => vwEmailInput.focus(), 60);
-      }
-    }
-  }
 
   document.querySelectorAll(".vw-device-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       waitlistDevice = btn.getAttribute("data-device") || "ios";
-      setWaitlistStep(2);
+      document.querySelectorAll(".vw-device-btn").forEach((b) => {
+        b.classList.toggle("is-selected", b === btn);
+      });
+      if (vwEmailInput) {
+        vwEmailInput.focus();
+      }
     });
   });
-
-  if (vwBtnChange) {
-    vwBtnChange.addEventListener("click", () => {
-      setWaitlistStep(1);
-    });
-  }
 
   if (vwStep2) {
     vwStep2.addEventListener("submit", (e) => {
@@ -1107,7 +1073,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
       vwEmailInput.style.borderColor = "";
-      const wantsTestFlight = waitlistDevice === "ios" && (!vwTfCheckbox || vwTfCheckbox.checked);
+      const wantsTestFlight = waitlistDevice === "ios";
       const payload = {
         email,
         device: waitlistDevice === "ios" ? "Apple iOS (iPhone / iPad)" : "Android / Other",
@@ -1120,35 +1086,28 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("bodyrush_vip_waitlist_v1", JSON.stringify(payload));
       } catch (_) {}
 
-      // Async submission to FormSubmit (delivers directly to xlarrodeapp+bodyrush@gmail.com)
-      fetch("https://formsubmit.co/ajax/xlarrodeapp+bodyrush@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: JSON.stringify({
-          _subject: `[BodyRush.app VIP] ${wantsTestFlight ? "✈️ TestFlight iOS" : "🔔 Waitlist"} — ${email}`,
-          email: payload.email,
-          device: payload.device,
-          testflight_beta: payload.testflight,
-          language: payload.lang
-        })
-      }).catch(() => {});
+      const subject = encodeURIComponent(
+        wantsTestFlight
+          ? `BodyRush.app — Accès Bêta TestFlight iOS (${email})`
+          : `BodyRush.app — Liste d'attente VIP (${email})`
+      );
+      const body = encodeURIComponent(
+        `Bonjour,\n\nJe m'inscris en avant-première sur BodyRush.app :\n- Email : ${email}\n- Appareil : ${payload.device}\n- TestFlight Beta iOS : ${wantsTestFlight ? "Oui, envoyez-moi l'accès TestFlight !" : "Prévenez-moi à la sortie"}\n`
+      );
+      const mailtoUrl = `mailto:xlarrodeapp+bodyrush@gmail.com?subject=${subject}&body=${body}`;
 
-      if (vwMailtoBtn) {
-        const subject = encodeURIComponent(
-          wantsTestFlight
-            ? "BodyRush.app — Accès Bêta TestFlight iOS (iPhone / iPad)"
-            : "BodyRush.app — Liste d'attente VIP"
-        );
-        const body = encodeURIComponent(
-          `Bonjour,\n\nJe m'inscris sur la liste VIP BodyRush.app :\n- Email : ${email}\n- Appareil : ${payload.device}\n- TestFlight Beta iOS : ${wantsTestFlight ? "Oui, je veux tester sur TestFlight !" : "Prévenez-moi à la sortie"}\n`
-        );
-        vwMailtoBtn.href = `mailto:xlarrodeapp+bodyrush@gmail.com?subject=${subject}&body=${body}`;
+      if (vwStep2 && vwStep3) {
+        vwStep2.classList.remove("active");
+        vwStep3.classList.add("active");
+      }
+      if (vwStepIndicator) {
+        const dict = i18n[currentLang] || i18n.fr;
+        vwStepIndicator.setAttribute("data-i18n", "wl_step_3");
+        if (dict.wl_step_3) vwStepIndicator.textContent = dict.wl_step_3;
       }
 
-      setWaitlistStep(3);
+      // BAM: Open mailto automatically right on submit!
+      window.location.href = mailtoUrl;
     });
   }
 
@@ -1161,13 +1120,8 @@ document.addEventListener("DOMContentLoaded", () => {
       void waitlistBox.offsetWidth;
       waitlistBox.classList.add("vw-highlight-pulse");
       setTimeout(() => {
-        if (vwStep2 && vwStep2.classList.contains("active") && vwEmailInput) {
-          vwEmailInput.focus();
-        } else {
-          const iosBtn = document.getElementById("btn-device-ios");
-          if (iosBtn) iosBtn.focus({ preventScroll: true });
-        }
-      }, 320);
+        if (vwEmailInput) vwEmailInput.focus({ preventScroll: true });
+      }, 280);
     });
   });
 

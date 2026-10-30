@@ -1157,6 +1157,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!waitlistBox) return;
       e.preventDefault();
       waitlistBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      waitlistBox.classList.remove("vw-highlight-pulse");
+      void waitlistBox.offsetWidth;
+      waitlistBox.classList.add("vw-highlight-pulse");
+      setTimeout(() => {
+        if (vwStep2 && vwStep2.classList.contains("active") && vwEmailInput) {
+          vwEmailInput.focus();
+        } else {
+          const iosBtn = document.getElementById("btn-device-ios");
+          if (iosBtn) iosBtn.focus({ preventScroll: true });
+        }
+      }, 320);
     });
   });
 

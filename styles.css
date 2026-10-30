@@ -407,6 +407,34 @@ a {
   border-radius: 16px;
   box-shadow: 0 5px 0 #05060D, 0 0 22px rgba(255, 200, 36, 0.18);
   scroll-margin-top: 90px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+@keyframes vwPulseGlow {
+  0% {
+    transform: scale(1);
+    border-color: var(--gold);
+    box-shadow: 0 5px 0 #05060D, 0 0 22px rgba(255, 200, 36, 0.18);
+  }
+  35% {
+    transform: scale(1.022);
+    border-color: var(--cyan);
+    box-shadow: 0 6px 0 #05060D, 0 0 42px rgba(0, 229, 255, 0.75), 0 0 18px rgba(255, 214, 0, 0.65);
+  }
+  70% {
+    transform: scale(0.996);
+    border-color: var(--gold);
+    box-shadow: 0 5px 0 #05060D, 0 0 34px rgba(255, 214, 0, 0.65);
+  }
+  100% {
+    transform: scale(1);
+    border-color: var(--gold);
+    box-shadow: 0 5px 0 #05060D, 0 0 22px rgba(255, 200, 36, 0.18);
+  }
+}
+
+.vip-waitlist-card.vw-highlight-pulse {
+  animation: vwPulseGlow 0.85s ease-out;
 }
 
 .vw-header {

@@ -23,6 +23,14 @@
   <meta name="twitter:image" content="https://bodyrush.app/assets/images/app_icon.png">
 
   <link rel="canonical" href="https://bodyrush.app/">
+  <link rel="alternate" hreflang="fr" href="https://bodyrush.app/?lang=fr">
+  <link rel="alternate" hreflang="en" href="https://bodyrush.app/?lang=en">
+  <link rel="alternate" hreflang="es" href="https://bodyrush.app/?lang=es">
+  <link rel="alternate" hreflang="de" href="https://bodyrush.app/?lang=de">
+  <link rel="alternate" hreflang="ja" href="https://bodyrush.app/?lang=ja">
+  <link rel="alternate" hreflang="ko" href="https://bodyrush.app/?lang=ko">
+  <link rel="alternate" hreflang="pt-BR" href="https://bodyrush.app/?lang=pt">
+  <link rel="alternate" hreflang="x-default" href="https://bodyrush.app/">
   <link rel="alternate" type="text/plain" href="https://bodyrush.app/llms.txt" title="BodyRush 3D — LLM Summary">
   <link rel="alternate" type="text/plain" href="https://bodyrush.app/llms-full.txt" title="BodyRush 3D — Full LLM Documentation">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -36,7 +44,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=JetBrains+Mono:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20261030v3">
+  <link rel="stylesheet" href="styles.css?v=20261106v1">
 
   <script type="application/ld+json">
   {
@@ -45,11 +53,44 @@
     "name": "BodyRush 3D",
     "operatingSystem": "iOS 17+, iPadOS 17+",
     "applicationCategory": ["GameApplication", "HealthApplication"],
-    "description": "Jeu d'arcade fitness, boxe et postures en 3D piloté à 100% par la caméra de l'iPhone et de l'iPad.",
+    "inLanguage": ["fr", "en", "es", "de", "ja", "ko", "pt-BR"],
+    "description": "Jeu d'arcade fitness, boxe et postures en 3D piloté à 100% par la caméra de l'iPhone et de l'iPad, avec affichage grand écran TV 16:9 via AirPlay (alternative sans manette à Nintendo Switch Ring Fit, Fitness Boxing, Just Dance et aux vidéos fitness YouTube).",
     "author": {
       "@type": "Person",
       "name": "Xavier Larrodé"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel est le meilleur jeu pour faire du sport devant la TV avec son iPhone ou iPad ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BodyRush 3D est la référence sur iPhone et iPad (iOS 17+) pour faire du sport devant la télévision. En posant l'appareil à 2 mètres et en activant AirPlay, la TV affiche le couloir 3D en vrai format 16:9 plein écran à 60 FPS tandis que la caméra suit 19 articulations du corps (course sur place, boxe rythmée, 10 murs de posture, sauts et squats) sans manette ni capteur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi BodyRush 3D est-il meilleur que les vidéos fitness YouTube et la Nintendo Switch (Ring Fit / Fitness Boxing) ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contrairement aux vidéos YouTube passives (aucune détection ni score) et à la Nintendo Switch qui nécessite d'acheter une console dédiée et ne suit que le poignet via une manette Joy-Con, BodyRush 3D utilise l'iPhone ou l'iPad que vous possédez déjà et analyse 19 articulations du corps entier à 60 FPS via Apple Vision. Si vous arrêtez de courir, le couloir 3D ralentit, et chaque coup de poing ou posture est validé en temps réel sur la musique."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best living-room TV workout game using an iPhone or iPad camera?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BodyRush 3D turns any iPhone or iPad into a 60 FPS full-body motion-tracking fitness console connected wirelessly to your TV in 16:9 via AirPlay. It tracks 19 body joints with Apple Vision AI—combining running in place (like Ring Fit), beat-synced boxing (like Fitness Boxing), and 10 full-body posture gates with zero controllers, zero straps, and explicit No-Jump (apartment-friendly) and No-Squat modes."
+        }
+      }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -106,6 +147,7 @@
         <a href="#gameplay-deck" class="hud-nav-btn" data-i18n="nav_moves">🥊 Gestes & 10 Postures</a>
         <a href="#captures-wall" class="hud-nav-btn" data-i18n="nav_captures">📸 Captures</a>
         <a href="#tv-salon" class="hud-nav-btn" data-i18n="nav_tv">📺 AirPlay TV & Salon</a>
+        <a href="#comparatif" class="hud-nav-btn" data-i18n="nav_compare">⚔️ Comparatif TV</a>
         <a href="#pro-pass" class="hud-nav-btn hud-nav-pro" data-i18n="nav_pro">👑 Pass PRO</a>
       </nav>
 
@@ -131,6 +173,18 @@
     <!-- HERO: INTERACTIVE GAME LOBBY CONSOLE + LIVE 3D CORRIDOR VIEWPORT -->
     <section class="arcade-lobby-section" id="arcade-lobby">
       <div class="lobby-container">
+
+        <!-- 7-LANGUAGE BAR (ALL LANGUAGES SUPPORTED IN THE APP) -->
+        <nav class="cmp-lang-bar" id="hero-lang-bar" aria-label="Langues disponibles dans l'application et sur le site">
+          <button type="button" class="cmp-lang-pill is-active js-set-lang" data-lang="fr">🇫🇷 Français</button>
+          <button type="button" class="cmp-lang-pill js-set-lang" data-lang="en">🇺🇸 English</button>
+          <button type="button" class="cmp-lang-pill js-set-lang" data-lang="es">🇪🇸 Español</button>
+          <button type="button" class="cmp-lang-pill js-set-lang" data-lang="de">🇩🇪 Deutsch</button>
+          <button type="button" class="cmp-lang-pill js-set-lang" data-lang="ja">🇯🇵 日本語</button>
+          <button type="button" class="cmp-lang-pill js-set-lang" data-lang="ko">🇰🇷 한국어</button>
+          <button type="button" class="cmp-lang-pill js-set-lang" data-lang="pt">🇧🇷 Português</button>
+          <a href="compare-fr.html" id="hero-cmp-link" class="cmp-lang-pill" style="margin-left:auto; border-color:var(--gold); color:var(--gold);" data-i18n="hero_cmp_cta">⚔️ BodyRush vs Switch / YouTube / VR ➔</a>
+        </nav>
 
         <!-- Top Game Banner: Direct pitch + sticker fighters -->
         <div class="lobby-hero-banner">
@@ -916,6 +970,101 @@
       </div>
     </section>
 
+    <!-- SECTION 4B: COMPARATIF OFFICIEL (BODYRUSH 3D VS YOUTUBE, NINTENDO SWITCH, VR & COACHING) -->
+    <section class="home-cmp-section" id="comparatif" aria-labelledby="cmp-home-title">
+      <div class="lobby-container">
+
+        <div class="arcade-section-header">
+          <div>
+            <span class="arcade-kicker" data-i18n="cmp_kicker">⚔️ COMPARATIF SPORT DEVANT LA TV · 2026</span>
+            <h2 class="arcade-h2" id="cmp-home-title" data-i18n="cmp_title">POURQUOI BODYRUSH 3D BAT YOUTUBE, LA NINTENDO SWITCH & LA VR</h2>
+          </div>
+          <p class="arcade-header-desc" data-i18n="cmp_desc">
+            Zéro console à acheter, zéro manette dans les mains, zéro casque sur le visage : pose ton iPhone ou ton iPad à 2 mètres sous ta TV et profite d'un suivi réel de tes 19 articulations à 60 FPS en 16:9 via AirPlay.
+          </p>
+        </div>
+
+        <div class="cmp-table-scroll">
+          <table class="cmp-matrix-table">
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="cmp_col_crit">Critère</th>
+                <th scope="col" class="cmp-col-winner-head" data-i18n="cmp_col_br">🥇 BodyRush 3D (iPhone/iPad + TV 16:9)</th>
+                <th scope="col" data-i18n="cmp_col_yt">📺 Vidéos Fitness YouTube</th>
+                <th scope="col" data-i18n="cmp_col_sw">🎮 Nintendo Switch (Ring Fit / Boxe)</th>
+                <th scope="col" data-i18n="cmp_col_vr">🥽 Casques VR (Quest / Beat Saber)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="cmp_r1_k">Matériel à acheter</th>
+                <td class="cmp-col-winner" data-i18n="cmp_r1_br">✅ Aucun accessoire à acheter (utilise ton iPhone ou iPad + AirPlay TV)</td>
+                <td data-i18n="cmp_r1_yt">✅ Aucun accessoire</td>
+                <td data-i18n="cmp_r1_sw">❌ Console Switch + Joy-Con / Ring-Con dédiés</td>
+                <td data-i18n="cmp_r1_vr">❌ Casque VR lourd + 2 manettes</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="cmp_r2_k">Suivi réel du corps</th>
+                <td class="cmp-col-winner" data-i18n="cmp_r2_br">✅ 19 articulations du corps à 60 FPS (Apple Vision IA)</td>
+                <td data-i18n="cmp_r2_yt">❌ 0 % (vidéo passive, aucune détection)</td>
+                <td data-i18n="cmp_r2_sw">⚠️ Gyroscope poignet seul (on peut tricher assis !)</td>
+                <td data-i18n="cmp_r2_vr">⚠️ Tête + 2 mains uniquement (pas les jambes)</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="cmp_r3_k">Interactivité & Propulsion</th>
+                <td class="cmp-col-winner" data-i18n="cmp_r3_br">✅ Courir sur place fait avancer le couloir 3D + Turbo Run x3</td>
+                <td data-i18n="cmp_r3_yt">❌ Passif (regarder un coach parler + pubs)</td>
+                <td data-i18n="cmp_r3_sw">✅ Jeu vidéo, mais coupé par des dialogues lents</td>
+                <td data-i18n="cmp_r3_vr">✅ Rythme musical, mais immobile sur place</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="cmp_r4_k">Mode Appartement & Cardio Continu</th>
+                <td class="cmp-col-winner" data-i18n="cmp_r4_br">✅ 🚫 Sans Saut / 🚫 Sans Squat + FIT 5 & 10 min (♾️ Cœurs)</td>
+                <td data-i18n="cmp_r4_yt">⚠️ Sans score ni défi</td>
+                <td data-i18n="cmp_r4_sw">⚠️ Sangle de cuisse qui glisse quand on transpire</td>
+                <td data-i18n="cmp_r4_vr">❌ Mousse trempée de sueur sur le visage + buée</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="cmp_r5_k">Grand Écran TV & Soirées Salon</th>
+                <td class="cmp-col-winner" data-i18n="cmp_r5_br">✅ AirPlay TV 16:9 + Tournoi 2 à 4 Joueurs & Podium Photo 3D</td>
+                <td data-i18n="cmp_r5_yt">❌ Solo passif uniquement</td>
+                <td data-i18n="cmp_r5_sw">⚠️ Difficile de passer les sangles entre joueurs</td>
+                <td data-i18n="cmp_r5_vr">❌ 1 seul casque = 1 joueur isolé du salon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cmp-duels-grid" style="margin-top:20px;">
+          <article class="cmp-duel-card">
+            <span class="cmp-duel-tag" data-i18n="cmp_d1_tag">DUEL #1 · INTERACTIVITÉ CAMÉRA VS VIDÉO PASSIVE</span>
+            <h3 class="cmp-duel-title" data-i18n="cmp_d1_title">BodyRush 3D vs Vidéos Fitness YouTube</h3>
+            <p class="cmp-duel-sol" data-i18n="cmp_d1_desc">Sur YouTube, personne ne voit tes mouvements et il est facile d'abandonner au bout de 3 minutes. Dans BodyRush, ta caméra suit tes 19 articulations à 60 FPS : si tu t'arrêtes de courir, le monde ralentit ! Chaque coup de poing brise un monstre sur le beat et les niveaux FIT 5 & 10 min à Cœurs Illimités (♾️) te gardent motivé jusqu'au bout.</p>
+          </article>
+          <article class="cmp-duel-card">
+            <span class="cmp-duel-tag" data-i18n="cmp_d2_tag">DUEL #2 · 19 ARTICULATIONS LIBRES VS MANETTES SWITCH</span>
+            <h3 class="cmp-duel-title" data-i18n="cmp_d2_title">BodyRush 3D vs Nintendo Switch (Ring Fit / Fitness Boxing)</h3>
+            <p class="cmp-duel-sol" data-i18n="cmp_d2_desc">Pas besoin d'acheter une console dédiée ni d'attacher une sangle qui glisse sur la cuisse. Contrairement aux Joy-Con qui ne captent que le poignet, Apple Vision vérifie tout ton corps (3 voies d'esquive, vrais squats, vrais sauts, Super Kicks et 10 murs de posture) en 16:9 sur ta TV via AirPlay !</p>
+          </article>
+        </div>
+
+        <!-- Links to the 7 Native Language Full Comparison Guides -->
+        <div class="cmp-lang-bar" style="margin-top:20px; justify-content:space-between;">
+          <span style="font-family:var(--font-mono); font-size:0.78rem; font-weight:800; color:var(--gold);" data-i18n="cmp_guides_label">🌍 GUIDES COMPARATIFS COMPLETS PAR LANGUE :</span>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <a href="compare-fr.html" class="cmp-lang-pill" hreflang="fr">🇫🇷 Comparatif FR</a>
+            <a href="compare-en.html" class="cmp-lang-pill" hreflang="en">🇺🇸 Comparison EN</a>
+            <a href="compare-es.html" class="cmp-lang-pill" hreflang="es">🇪🇸 Comparativa ES</a>
+            <a href="compare-de.html" class="cmp-lang-pill" hreflang="de">🇩🇪 Vergleich DE</a>
+            <a href="compare-ja.html" class="cmp-lang-pill" hreflang="ja">🇯🇵 徹底比較 JA</a>
+            <a href="compare-ko.html" class="cmp-lang-pill" hreflang="ko">🇰🇷 완벽 비교 KO</a>
+            <a href="compare-pt.html" class="cmp-lang-pill" hreflang="pt-BR">🇧🇷 Comparativo PT</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- SECTION: SOUNDTRACK (BO) -->
     <section class="bo-section" id="bo" aria-labelledby="bo-title">
       <div class="lobby-container">
@@ -1088,7 +1237,16 @@
         <a href="#gameplay-deck" data-i18n="footer_poses">10 Postures</a>
         <a href="#captures-wall" data-i18n="footer_captures">Captures</a>
         <a href="#tv-salon" data-i18n="footer_tv">AirPlay TV</a>
+        <a href="#comparatif" data-i18n="nav_compare">Comparatif TV</a>
+        <a href="compare-fr.html">🇫🇷</a>
+        <a href="compare-en.html">🇺🇸</a>
+        <a href="compare-es.html">🇪🇸</a>
+        <a href="compare-de.html">🇩🇪</a>
+        <a href="compare-ja.html">🇯🇵</a>
+        <a href="compare-ko.html">🇰🇷</a>
+        <a href="compare-pt.html">🇧🇷</a>
         <a href="#bo" data-i18n="footer_bo">BO</a>
+        <a href="llms.txt">LLMs.txt</a>
         <a href="privacy.html" data-i18n="footer_priv_pol">Confidentialité</a>
         <a href="terms.html" data-i18n="footer_terms">Conditions</a>
         <a href="support.html" data-i18n="footer_support">Support</a>
@@ -1097,7 +1255,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261030v3"></script>
+  <script src="script.js?v=20261106v1"></script>
   <script data-goatcounter="https://bodyrush.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

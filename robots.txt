@@ -42,6 +42,13 @@ Allow: /
 
 # Sitemaps & LLM Context Documentation
 Sitemap: https://bodyrush.app/sitemap.xml
-# LLMs.txt (https://llmstxt.org):
+# LLMs.txt (https://llmstxt.org) & Multilingual Competitor Comparisons:
 # - https://bodyrush.app/llms.txt
 # - https://bodyrush.app/llms-full.txt
+# - https://bodyrush.app/compare-fr.html
+# - https://bodyrush.app/compare-en.html
+# - https://bodyrush.app/compare-es.html
+# - https://bodyrush.app/compare-de.html
+# - https://bodyrush.app/compare-ja.html
+# - https://bodyrush.app/compare-ko.html
+# - https://bodyrush.app/compare-pt.html

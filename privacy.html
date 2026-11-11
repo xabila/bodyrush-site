@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de Confidentialité — BodyRush (On-Device AI)</title>
-  <meta name="description" content="Caméra analysée sur l'appareil : aucune vidéo ni photo n'est envoyée. Télémétrie pseudonyme Mixpanel (UE) et gestion d'abonnements RevenueCat.">
+  <title>Privacy Policy / Politique de Confidentialité — BodyRush (On-Device AI)</title>
+  <meta name="description" content="100% On-Device Camera & Apple Vision Body Pose Tracking: zero video, photo, or face data is ever uploaded or shared with third parties. Bilingual EN / FR Privacy Policy.">
   <link rel="canonical" href="https://bodyrush.app/privacy.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bodyrush.app/privacy.html">
-  <meta property="og:title" content="Politique de Confidentialité — BodyRush">
-  <meta property="og:description" content="Caméra sur l'appareil, télémétrie pseudonyme Mixpanel (UE), achats RevenueCat.">
+  <meta property="og:title" content="Privacy Policy / Politique de Confidentialité — BodyRush">
+  <meta property="og:description" content="100% on-device Apple Vision tracking, face & head keypoint handling, EU pseudonymous Mixpanel telemetry, RevenueCat purchases.">
   <meta property="og:image" content="https://bodyrush.app/assets/images/app_icon.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Politique de Confidentialité — BodyRush">
-  <meta name="twitter:description" content="Caméra sur l'appareil, télémétrie pseudonyme Mixpanel (UE), achats RevenueCat.">
+  <meta name="twitter:title" content="Privacy Policy — BodyRush">
+  <meta name="twitter:description" content="100% on-device camera processing, zero third-party sharing of camera or face data.">
   <meta name="twitter:image" content="https://bodyrush.app/assets/images/app_icon.png">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
@@ -29,74 +29,195 @@
 <body>
 
   <main class="legal-page-container">
-    <a href="index.html" class="btn-back-home">← Retour au site BodyRush</a>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+      <a href="index.html" class="btn-back-home" style="margin-bottom:0;">← Back to BodyRush / Retour au site</a>
+      <div style="display:flex; gap:10px; font-family:'JetBrains Mono', monospace; font-size:0.85rem;">
+        <a href="#en" style="color:#00F0FF; text-decoration:underline; font-weight:700;">🇬🇧 English Policy</a>
+        <span style="color:rgba(255,255,255,0.4);">|</span>
+        <a href="#fr" style="color:#00F0FF; text-decoration:underline; font-weight:700;">🇫🇷 Version Française</a>
+      </div>
+    </div>
 
-    <div class="legal-card">
-      <h1 class="legal-title">Politique de Confidentialité</h1>
-      <span class="legal-updated">Dernière mise à jour : 28 Octobre 2026</span>
+    <!-- ========================================== -->
+    <!-- ENGLISH PRIVACY POLICY                     -->
+    <!-- ========================================== -->
+    <div id="en" class="legal-card" style="margin-bottom: 36px;">
+      <h1 class="legal-title">Privacy Policy (BodyRush: 3D Fitness &amp; Boxing)</h1>
+      <span class="legal-updated">Last updated: November 11, 2026</span>
 
       <div class="legal-content">
         <p>
-          La présente politique de confidentialité décrit la manière dont <strong>BodyRush</strong>, développée par <strong>Xavier Larrodé</strong> (« nous », « notre »), traite les données lors de l'utilisation de l'application mobile BodyRush sur iPhone et iPad.
+          This Privacy Policy explains how <strong>BodyRush: 3D Fitness &amp; Boxing</strong> ("BodyRush"), developed by <strong>Xavier Larrodé</strong> ("we", "us", "our"), handles data when you use the BodyRush mobile application on iPhone and iPad.
+        </p>
+
+        <h2>1. 100% On-Device Camera Processing (Apple Vision Neural Engine)</h2>
+        <p>
+          BodyRush is built around one strict privacy principle: <strong>all camera and motion processing stays on your device</strong>.
+        </p>
+        <ul>
+          <li><strong>Front-Facing Camera Purpose:</strong> The live front camera feed is used solely to detect real-time body movements (running in place, punches, dodges, squats, jumps, and fitness poses) using Apple's official on-device <strong>Apple Vision</strong> framework (<code>VNDetectHumanBodyPoseRequest</code>).</li>
+          <li><strong>Zero Remote Upload:</strong> No camera video stream, photo, or raw image is ever transmitted to any external server or cloud service.</li>
+          <li><strong>Estimated Calories (~kcal):</strong> The in-game calorie counter provides an indicative fitness estimate computed locally from workout duration and actions completed. BodyRush is not a medical device.</li>
+        </ul>
+
+        <h2 id="face-data">2. Face Data &amp; Head Pose Keypoints (Collection, Use, Sharing, Storage, Retention &amp; Deletion)</h2>
+        <p>
+          Because BodyRush uses the front-facing camera for full-body motion gameplay, this section specifically details how the application handles any face-related or head-position data:
+        </p>
+        <ul>
+          <li><strong>What Face Data Is Collected:</strong> BodyRush does <strong>not</strong> use TrueDepth ARKit face tracking (<code>ARFaceTrackingConfiguration</code>), 3D facial geometry meshes, facial expression analysis, Face ID, or biometric facial recognition/identification. When processing the live camera feed on-device via Apple's <code>VNDetectHumanBodyPoseRequest</code>, the app extracts <strong>only a single coarse 2D head-center coordinate (the <code>nose</code> <code>(x, y)</code> point in normalized screen space)</strong> alongside standard skeletal body joints (<code>neck</code>, shoulders, elbows, wrists, hips, knees, and ankles). Fine facial landmarks (<code>leftEye</code>, <code>rightEye</code>, <code>leftEar</code>, <code>rightEar</code>) are explicitly ignored and immediately discarded in memory. In addition, when a player clears an in-game Posture Gate, the app captures optional local workout souvenir images and short 3-second composite replay frames (combining the 3D game corridor with the front-camera picture-in-picture preview, in which the player's face and body may appear visually) strictly on the user's device.</li>
+          <li><strong>Planned Use of Face Data:</strong>
+            <ol>
+              <li><em>Real-time gameplay control (in-memory only):</em> The coarse 2D <code>nose</code> coordinate is used locally in real time to detect vertical squats/ducks and jumps relative to shoulder height, verify boxing-guard hand height, calibrate distance-invariant stature proportions (child vs. adult gameplay thresholds), and animate the abstract stick-figure head dot in the HUD.</li>
+              <li><em>Local stick-figure Ghost &amp; local party leaderboard:</em> Normalized 2D stick-figure joint coordinates (including the abstract <code>nose</code> point) of the player's personal-best run per level and four anonymous body-proportion ratios (<code>shoulderToHipRatio</code>, <code>torsoToShoulderRatio</code>, <code>armSpanRatio</code>, <code>headToShoulderRatio</code>) are used solely on-device to display a stick-figure pace-runner ("Ghost") and local living-room party scores.</li>
+              <li><em>Local workout souvenirs &amp; user-initiated sharing:</em> Local composite souvenir cards and 3-second replay clips allow players to review their workout highlight at the end of a run and optionally save or share them via the standard iOS Share Sheet / Photo Library only when explicitly triggered by the user.</li>
+            </ol>
+          </li>
+          <li><strong>Third-Party Sharing &amp; Disclosure:</strong> <strong>None.</strong> Face data, head coordinates, camera frames, workout souvenir images, and replay videos are <strong>never</strong> shared with, disclosed to, or transmitted to any third parties (including analytics or subscription providers such as Mixpanel or RevenueCat) or any external server.</li>
+          <li><strong>Where Face Data Is Stored:</strong> <strong>Exclusively locally on the user's iPhone or iPad</strong> inside the app's private iOS sandbox: live camera frames and real-time <code>nose</code> keypoints reside only in volatile device memory (<code>RAM</code>); temporary 3-second replay <code>.mp4</code> renders are written to the local iOS <code>temporaryDirectory</code>; local stick-figure Ghost files (<code>Documents/bodyrush_ghost_completed_v5_*.json</code>), local workout souvenir cards (<code>Documents/PartySouvenirs/</code>), and anonymous proportion ratios (<code>UserDefaults</code>) are stored strictly on-device.</li>
+          <li><strong>Retention Period &amp; Deletion:</strong>
+            <ul>
+              <li><em>Live camera frames &amp; real-time head coordinates:</em> Retained for <strong>0 seconds on disk</strong> — processed in volatile <code>RAM</code> for a single video frame (~16–33 milliseconds) and immediately overwritten/discarded.</li>
+              <li><em>Temporary replay video files:</em> Stored transiently in the local iOS <code>temporaryDirectory</code> for end-of-run preview/export and automatically purged by iOS or overwritten on subsequent runs.</li>
+              <li><em>Local workout souvenir cards (<code>PartySouvenirs</code>):</em> Retained locally on-device up to a rolling maximum of <strong>24 souvenirs</strong> (whenever a new souvenir exceeds 24, the oldest item is automatically deleted from disk). Users can delete any individual souvenir or delete all souvenirs immediately at any time using the <strong>Delete / Delete All</strong> controls in the in-app Souvenirs / Replays screen.</li>
+              <li><em>Local stick-figure Ghost &amp; proportion ratios:</em> Retained locally on-device until overwritten by a better score, reset by the user in-app, or permanently and immediately deleted upon <strong>uninstalling BodyRush</strong> from the device.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>3. In-App Purchases (Apple StoreKit 2, RevenueCat &amp; Apple AdServices)</h2>
+        <p>
+          In-app purchases (Monthly Pro, Annual Pro, Lifetime Unlock) are processed securely by <strong>Apple StoreKit 2</strong>. We never access your banking or credit card details.
+        </p>
+        <ul>
+          <li><strong>RevenueCat:</strong> A random pseudonymous app user ID generated locally is sent to our processor <strong>RevenueCat</strong> solely to verify subscription/entitlement status, support purchase restoration, and measure paywall conversion.</li>
+          <li><strong>Apple AdServices:</strong> Where available on iOS, the standard <strong>Apple AdServices</strong> attribution token (Apple Search Ads) is passed to RevenueCat for aggregated App Store install attribution without cross-app advertising tracking (<code>NSPrivacyTracking = false</code>, zero IDFA collected).</li>
+        </ul>
+
+        <h2>4. Pseudonymous Product Analytics (Mixpanel EU)</h2>
+        <p>
+          To balance level difficulty, improve onboarding, and monitor app stability, BodyRush uses <strong>Mixpanel (EU data residency: <code>api-eu.mixpanel.com</code>)</strong> with a locally generated random pseudonymous <code>UUID</code>.
+        </p>
+        <ul>
+          <li><strong>Collected Events:</strong> Product interaction events (app launch, onboarding/tutorial steps, level start/completion, score, estimated kcal, paywall views/conversions) and technical metadata (device model, OS version, app locale, daily streak, favorite world/music).</li>
+          <li><strong>No IP Storage &amp; Zero Camera Data:</strong> Mixpanel ingestion is called with <code>ip=0</code> so your IP address is not stored. Zero camera images, zero facial/head coordinates, zero names, and zero email addresses are collected.</li>
+          <li><strong>No Third-Party Ad Tracking:</strong> Your data is never sold or shared with data brokers or ad networks.</li>
+        </ul>
+
+        <h2>5. Telemetry Retention &amp; Right to Erasure</h2>
+        <p>
+          Pseudonymous analytics and purchase records associated with your random app UUID are retained for a maximum of <strong>24 months</strong> from your last activity, or until you request deletion. Uninstalling the app resets local identifiers, and you may request complete deletion at any time by email.
+        </p>
+
+        <h2>6. Children's Privacy</h2>
+        <p>
+          BodyRush requires no account creation, name, email address, or phone number, and complies with applicable children's privacy protections (GDPR and COPPA).
+        </p>
+
+        <h2>7. Your Privacy Rights (GDPR) &amp; Contact</h2>
+        <p>
+          Under GDPR and applicable privacy laws, you have the right to access, rectify, object to, or erase your data. For any privacy question or request, contact us at:<br>
+          <a href="mailto:xlarrodeapp+bodyrush@gmail.com"><strong>xlarrodeapp+bodyrush@gmail.com</strong></a>
+        </p>
+        <p>
+          For help with camera setup, AirPlay TV mode, PRO subscriptions, or purchase restoration, visit our <a href="support.html"><strong>Support Page</strong></a>.
+        </p>
+
+        <h2>8. Website Audience Measurement (GoatCounter)</h2>
+        <p>
+          The website <code>bodyrush.app</code> uses <strong>GoatCounter</strong>, a cookie-free, privacy-friendly web counter (page views, referrer, campaign parameters). No cookies are set, IP addresses are not stored, and no cross-site profiling occurs.
+        </p>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- POLITIQUE DE CONFIDENTIALITÉ (FRANÇAIS)    -->
+    <!-- ========================================== -->
+    <div id="fr" class="legal-card">
+      <h1 class="legal-title">Politique de Confidentialité (Version Française)</h1>
+      <span class="legal-updated">Dernière mise à jour : 11 Novembre 2026</span>
+
+      <div class="legal-content">
+        <p>
+          La présente politique de confidentialité décrit la manière dont <strong>BodyRush : 3D Fitness &amp; Boxing</strong> (« BodyRush »), développée par <strong>Xavier Larrodé</strong> (« nous », « notre »), traite les données lors de l'utilisation de l'application mobile BodyRush sur iPhone et iPad.
         </p>
 
         <h2>1. Traitement Caméra 100% Local (On-Device Neural Engine)</h2>
         <p>
-          BodyRush est conçue avec une priorité absolue : <strong>le respect total de votre vie privée</strong>.
+          BodyRush est conçue avec une priorité absolue : <strong>l'intégralité du traitement caméra et mouvement reste sur votre appareil</strong>.
         </p>
         <ul>
-          <li><strong>Utilisation de la caméra avant :</strong> Le flux vidéo de votre caméra sert exclusivement à estimer en temps réel les coordonnées de vos articulations corporelles (Body Pose Tracking) via le framework officiel <strong>Apple Vision</strong> directement sur votre appareil.</li>
-          <li><strong>Aucun enregistrement ni transfert distant :</strong> Aucune vidéo, aucune photo ni aucune image issue de la caméra n'est jamais transmise à un serveur externe ou dans le cloud.</li>
-          <li><strong>Photo Souvenir & Replay Vidéo Finish (100% Local) :</strong> Lors d'une course, l'application génère localement en mémoire vive une photo souvenir sur votre meilleure posture validée ainsi qu'un court replay vidéo des dernières secondes de la course. Ces fichiers restent strictement en mémoire locale temporaire sur votre appareil et sont détruits à la course suivante, sauf si vous choisissez explicitement d'appuyer sur le bouton « Enregistrer » ou « Partager » (via la feuille de partage standard d'iOS).</li>
-          <li><strong>Estimation indicative des calories (~kcal) :</strong> Le compteur de calories affiché en jeu fournit une estimation indicative calculée localement à partir du nombre d'actions et de la durée de course. BodyRush n'est pas un dispositif médical.</li>
+          <li><strong>Utilisation de la caméra avant :</strong> Le flux vidéo en direct sert exclusivement à détecter vos mouvements corporels en temps réel (course sur place, coups de poing, esquives, squats, sauts et postures) via le framework officiel <strong>Apple Vision</strong> (<code>VNDetectHumanBodyPoseRequest</code>) directement sur votre appareil.</li>
+          <li><strong>Aucun transfert distant :</strong> Aucune vidéo, aucune photo ni aucune image brute issue de la caméra n'est jamais transmise à un serveur externe ou dans le cloud.</li>
+          <li><strong>Estimation indicative des calories (~kcal) :</strong> Le compteur de calories fournit une estimation indicative calculée localement à partir du nombre d'actions et de la durée de la séance. BodyRush n'est pas un dispositif médical.</li>
         </ul>
 
-        <h2>2. Aucune Donnée Biométrique Stockée</h2>
+        <h2>2. Données Faciales &amp; Repères de Tête (Collecte, Utilisation, Partage, Stockage, Conservation et Suppression)</h2>
         <p>
-          BodyRush ne procède à aucune reconnaissance faciale, identification biométrique ou profilage d'individus. Le tracking détecte uniquement des repères squelettiques abstraits (tête, épaules, coudes, poignets, hanches, genoux, chevilles) afin de déclencher les mécaniques de jeu (boxe, esquive, squats, sauts, postures).
-        </p>
-
-        <h2>3. Données Liées aux Achats (Apple StoreKit 2, RevenueCat & Apple AdServices)</h2>
-        <p>
-          Les achats intégrés (Pass Mensuel Pro, Pass Annuel Pro, Déblocage à Vie) sont sécurisés et gérés directement par <strong>Apple StoreKit 2</strong>. Nous n'avons jamais accès à vos coordonnées bancaires ou informations de carte de crédit.
+          BodyRush utilisant la caméra frontale pour le suivi corporel à distance (~2 mètres), cette section détaille précisément le traitement de toute donnée liée au visage ou à la position de la tête :
         </p>
         <ul>
-          <li><strong>RevenueCat :</strong> Un identifiant pseudonyme généré par l'application est transmis au sous-traitant <strong>RevenueCat</strong> afin de vérifier l'état de votre abonnement ou achat à vie, permettre la restauration de vos achats et mesurer la conversion du paywall.</li>
-          <li><strong>Apple AdServices :</strong> L'application transmet, lorsqu'il est disponible sur iOS, le jeton d'attribution standard <strong>Apple AdServices</strong> (Apple Search Ads) à RevenueCat afin de mesurer de manière agrégée l'origine des installations issues de l'App Store, sans aucun pistage publicitaire inter-applications (<code>NSPrivacyTracking = false</code>, aucun identifiant IDFA collecté).</li>
+          <li><strong>Quelles données faciales sont collectées :</strong> BodyRush <strong>n'utilise pas</strong> la caméra TrueDepth ARKit (<code>ARFaceTrackingConfiguration</code>), ni maillage 3D du visage, ni analyse d'expressions faciales, ni Face ID, ni reconnaissance ou identification biométrique. Lors de l'analyse locale du flux caméra via <code>VNDetectHumanBodyPoseRequest</code> (Apple Vision), l'application extrait <strong>uniquement une coordonnée 2D grossière du centre de la tête (le point <code>nose</code> <code>(x, y)</code> normalisé à l'écran)</strong> avec les articulations standards du corps (<code>neck</code>, épaules, coudes, poignets, hanches, genoux, chevilles). Les points fins du visage (<code>leftEye</code>, <code>rightEye</code>, <code>leftEar</code>, <code>rightEar</code>) sont explicitement ignorés et immédiatement écartés en mémoire. Par ailleurs, lorsqu'un joueur valide un Mur de Posture en course, l'application génère localement des cartes souvenirs optionnelles et de courts extraits replay de 3 secondes (combinant le couloir 3D et l'aperçu caméra incrusté où le visage et le corps du joueur peuvent apparaître visuellement), uniquement sur l'appareil de l'utilisateur.</li>
+          <li><strong>Utilisation prévue :</strong>
+            <ol>
+              <li><em>Contrôle du jeu en temps réel (mémoire vive uniquement) :</em> La coordonnée 2D grossière <code>nose</code> sert uniquement en direct sur l'appareil à détecter les squats/esquives basses et les sauts par rapport aux épaules, vérifier la hauteur des poings en garde de boxe, calibrer les seuils selon la stature (enfant vs adulte) et animer la tête du bonhomme-bâton dans l'interface.</li>
+              <li><em>Fantôme (« Ghost ») local &amp; classement local de soirée :</em> Les coordonnées 2D du squelette filaire (incluant le point abstrait <code>nose</code>) du meilleur score par niveau ainsi que quatre ratios anatomiques anonymes (<code>shoulderToHipRatio</code>, <code>torsoToShoulderRatio</code>, <code>armSpanRatio</code>, <code>headToShoulderRatio</code>) servent uniquement en local sur l'appareil à afficher le fantôme de course et le tableau des scores du salon.</li>
+              <li><em>Souvenirs d'entraînement locaux &amp; partage à l'initiative du joueur :</em> Les cartes souvenirs et replays de 3 secondes permettent au joueur de revoir sa séance en fin de partie et, s'il le décide explicitement via les boutons « Enregistrer » ou « Partager », de les exporter via la feuille de partage standard d'iOS.</li>
+            </ol>
+          </li>
+          <li><strong>Partage avec des tiers :</strong> <strong>Aucun.</strong> Aucune donnée faciale, coordonnée de tête, image caméra, photo souvenir ou vidéo replay n'est jamais partagée, divulguée ou transmise à des tiers (y compris nos sous-traitants Mixpanel ou RevenueCat) ni à aucun serveur externe.</li>
+          <li><strong>Lieu de stockage :</strong> <strong>Exclusivement en local sur l'iPhone ou l'iPad de l'utilisateur</strong>, dans le bac à sable privé (sandbox) iOS de l'application : mémoire vive volatile (<code>RAM</code>) pendant la partie ; dossier temporaire iOS (<code>temporaryDirectory</code>) pour le rendu vidéo MP4 de 3 secondes ; fichiers locaux <code>Documents/bodyrush_ghost_completed_v5_*.json</code> pour le squelette Ghost, <code>Documents/PartySouvenirs/</code> pour les cartes souvenirs locales et <code>UserDefaults</code> pour les ratios de proportions anonymes.</li>
+          <li><strong>Durée de conservation &amp; suppression :</strong>
+            <ul>
+              <li><em>Flux caméra en direct &amp; coordonnées temps réel :</em> Conservés <strong>0 seconde sur disque</strong> — traités uniquement en mémoire vive (<code>RAM</code>) le temps d'une image vidéo (~16 à 33 millisecondes) puis immédiatement écrasés.</li>
+              <li><em>Fichiers vidéo replay temporaires :</em> Stockés temporairement dans <code>temporaryDirectory</code> pour l'aperçu de fin de course et purgés automatiquement par iOS ou écrasés lors des courses suivantes.</li>
+              <li><em>Cartes souvenirs locales (<code>PartySouvenirs</code>) :</em> Conservées localement sur l'appareil dans la limite glissante de <strong>24 souvenirs maximum</strong> (tout nouveau souvenir au-delà de 24 supprime automatiquement le plus ancien du disque). L'utilisateur peut supprimer à tout moment un souvenir individuel ou l'intégralité de l'album (« Tout supprimer ») directement depuis l'écran <strong>Souvenirs / Replays</strong> de l'application.</li>
+              <li><em>Fantôme filaire local &amp; ratios anonymes :</em> Conservés localement sur l'appareil jusqu'à leur remplacement par un meilleur score, leur réinitialisation dans l'application, ou leur effacement définitif et immédiat lors de la <strong>désinstallation de BodyRush</strong>.</li>
+            </ul>
+          </li>
         </ul>
 
-        <h2>4. Statistiques d'Utilisation Pseudonymes & Télémétrie (Mixpanel UE)</h2>
+        <h2>3. Données Liées aux Achats (Apple StoreKit 2, RevenueCat &amp; Apple AdServices)</h2>
         <p>
-          Afin d'améliorer l'équilibrage des niveaux, le tutoriel et la stabilité du jeu, BodyRush utilise <strong>Mixpanel (serveurs d'ingestion hébergés dans l'Union européenne : <code>api-eu.mixpanel.com</code>)</strong> avec un identifiant pseudonyme aléatoire généré localement (<code>UUID</code> stocké dans les préférences de l'application et relié à RevenueCat).
+          Les achats intégrés (Pass Mensuel Pro, Pass Annuel Pro, Déblocage à Vie) sont sécurisés et gérés directement par <strong>Apple StoreKit 2</strong>. Nous n'avons jamais accès à vos coordonnées bancaires.
         </p>
         <ul>
-          <li><strong>Données collectées :</strong> Événements d'interaction produit (ouverture de l'application, étapes de l'onboarding et du tutoriel, lancement et fin de course, score, estimation de kcal, ouverture et conversion du paywall) ainsi que des propriétés techniques et de progression (modèle d'appareil, langue/locale, version de l'application, série quotidienne, monde et musique favoris).</li>
-          <li><strong>Absence d'adresse IP et d'images :</strong> L'ingestion Mixpanel est configurée avec <code>ip=0</code> afin de ne pas conserver votre adresse IP. Aucune image caméra, aucune coordonnée biométrique, aucun nom, ni aucune adresse e-mail n'est collecté dans l'application.</li>
-          <li><strong>Aucun pistage publicitaire tiers :</strong> Vos données ne sont jamais vendues ni partagées avec des courtiers en données ou des régies publicitaires.</li>
+          <li><strong>RevenueCat :</strong> Un identifiant pseudonyme aléatoire généré localement est transmis à <strong>RevenueCat</strong> afin de vérifier vos droits d'abonnement, permettre la restauration des achats et mesurer la conversion du paywall.</li>
+          <li><strong>Apple AdServices :</strong> Lorsqu'il est disponible sur iOS, le jeton d'attribution standard <strong>Apple AdServices</strong> (Apple Search Ads) est transmis à RevenueCat pour mesurer de manière agrégée l'origine des installations App Store, sans pistage inter-applications (<code>NSPrivacyTracking = false</code>, aucun IDFA collecté).</li>
         </ul>
 
-        <h2>5. Durée de Conservation & Droit d'Effacement</h2>
+        <h2>4. Statistiques d'Utilisation Pseudonymes (Mixpanel UE)</h2>
         <p>
-          Les données techniques et d'utilisation associées à votre identifiant pseudonyme sont conservées pendant une durée maximale de <strong>24 mois</strong> à compter de votre dernière activité dans l'application, ou jusqu'à votre demande de suppression. Vous pouvez réinitialiser cet identifiant en désinstallant l'application ou demander l'effacement complet des données associées par simple e-mail.
+          Pour améliorer l'équilibrage des niveaux, l'onboarding et la stabilité, BodyRush utilise <strong>Mixpanel (serveurs dans l'Union européenne : <code>api-eu.mixpanel.com</code>)</strong> avec un identifiant pseudonyme aléatoire (<code>UUID</code>).
+        </p>
+        <ul>
+          <li><strong>Données collectées :</strong> Événements d'interaction produit (ouverture, étapes d'onboarding/tutoriel, début et fin de niveau, score, estimation kcal, affichage/conversion paywall) et métadonnées techniques (modèle d'appareil, version iOS, langue, série quotidienne, monde et musique favoris).</li>
+          <li><strong>Absence d'adresse IP et d'images :</strong> L'ingestion Mixpanel utilise <code>ip=0</code> afin de ne pas stocker votre adresse IP. Aucune image caméra, aucune coordonnée faciale ou corporelle, aucun nom ni aucune adresse e-mail n'est collecté.</li>
+          <li><strong>Aucun pistage publicitaire tiers :</strong> Vos données ne sont jamais vendues ni partagées avec des courtiers en données ou régies publicitaires.</li>
+        </ul>
+
+        <h2>5. Conservation de la Télémétrie &amp; Droit d'Effacement</h2>
+        <p>
+          Les données techniques associées à votre identifiant pseudonyme sont conservées au maximum <strong>24 mois</strong> après votre dernière activité, ou jusqu'à votre demande de suppression. La désinstallation réinitialise les identifiants locaux, et vous pouvez demander l'effacement complet par simple e-mail.
         </p>
 
         <h2>6. Protection des Enfants</h2>
         <p>
-          BodyRush ne demande ni création de compte, ni nom, ni adresse e-mail, ni numéro de téléphone et respecte les normes de protection de la vie privée des mineurs (RGPD et COPPA).
+          BodyRush ne demande ni compte, ni nom, ni adresse e-mail, ni numéro de téléphone et respecte les normes de protection des mineurs (RGPD et COPPA).
         </p>
 
         <h2>7. Vos Droits (RGPD) et Contact</h2>
         <p>
-          Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'opposition et d'effacement de vos données. Pour exercer vos droits ou pour toute question concernant cette politique de confidentialité, contactez-nous directement à :<br>
+          Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'opposition et d'effacement. Contactez-nous à :<br>
           <a href="mailto:xlarrodeapp+bodyrush@gmail.com"><strong>xlarrodeapp+bodyrush@gmail.com</strong></a>
         </p>
         <p>
-          Pour de l'aide sur l'app — caméra, mode TV AirPlay, abonnement PRO, restauration des achats ou remboursement — consultez la <a href="support.html"><strong>page de support</strong></a>.
+          Pour toute aide sur l'application, consultez notre <a href="support.html"><strong>page de support</strong></a>.
         </p>
 
-        <h2>8. Mesure d'audience du site (GoatCounter)</h2>
+        <h2>8. Mesure d'Audience du Site (GoatCounter)</h2>
         <p>
-          Le site bodyrush.app utilise <strong>GoatCounter</strong>, une mesure d'audience anonyme et sans cookies. Sont comptées les pages vues, le site de provenance et les paramètres de campagne. Aucun cookie n'est déposé, aucun profil personnel n'est constitué et aucun suivi d'un site à l'autre n'est effectué. L'adresse IP n'est pas stockée. Ces données sont hébergées par GoatCounter.
+          Le site <code>bodyrush.app</code> utilise <strong>GoatCounter</strong>, une mesure d'audience anonyme sans cookies et sans stockage d'adresse IP.
         </p>
       </div>
     </div>
@@ -104,7 +225,7 @@
 
   <footer class="site-footer">
     <div class="footer-bottom-container">
-      <p>&copy; 2026 BodyRush — Xavier Larrodé. Tous droits réservés.</p>
+      <p>&copy; 2026 BodyRush — Xavier Larrodé. All rights reserved / Tous droits réservés.</p>
       <a href="support.html">Support</a>
       <a href="index.html">bodyrush.app</a>
     </div>

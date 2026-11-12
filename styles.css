@@ -3292,3 +3292,11 @@ a {
   content-visibility: auto;
   contain-intrinsic-size: auto 420px;
 }
+
+@media (max-width: 959px) {
+  .console-selector-panel,
+  .game-viewport-cabinet {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 960px;
+  }
+}

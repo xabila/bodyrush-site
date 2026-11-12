@@ -3283,19 +3283,12 @@ a {
 .tv-salon-section,
 .home-cmp-section,
 .bo-section,
-.pro-pass-section,
-.cmp-table-section,
-.cmp-duels-section,
-.cmp-faq-section,
-.arcade-footer {
+.pro-pass-section {
   content-visibility: auto;
-  contain-intrinsic-size: auto 680px;
+  contain-intrinsic-size: auto 1200px;
 }
 
-@media (max-width: 959px) {
-  .console-selector-panel,
-  .game-viewport-cabinet {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 640px;
-  }
+.arcade-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 420px;
 }

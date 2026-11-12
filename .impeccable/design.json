@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T14:30:43Z",
+  "title": "Design System: BodyRush 3D Arcade Cockpit",
+  "extensions": {
+    "colorMeta": {
+      "electric-cyan": {
+        "role": "primary",
+        "displayName": "Electric Cyan",
+        "canonical": "#00E5FF",
+        "tonalRamp": [
+          "#00262B",
+          "#00444D",
+          "#006673",
+          "#008B9C",
+          "#00B4C9",
+          "#00E5FF",
+          "#73F0FF",
+          "#CCF9FF"
+        ]
+      },
+      "arcade-gold": {
+        "role": "primary",
+        "displayName": "Arcade Gold",
+        "canonical": "#FFD600",
+        "tonalRamp": [
+          "#2B2300",
+          "#4D3F00",
+          "#735F00",
+          "#9E8300",
+          "#CCA900",
+          "#FFD600",
+          "#FFE566",
+          "#FFF5BF"
+        ]
+      },
+      "vision-emerald": {
+        "role": "secondary",
+        "displayName": "Vision Emerald",
+        "canonical": "#26E07A",
+        "tonalRamp": [
+          "#062915",
+          "#0B4A27",
+          "#116E3B",
+          "#189650",
+          "#1FBD66",
+          "#26E07A",
+          "#6EEBA6",
+          "#C4F8DB"
+        ]
+      },
+      "ruby-punch": {
+        "role": "secondary",
+        "displayName": "Ruby Punch",
+        "canonical": "#FF3B5C",
+        "tonalRamp": [
+          "#2E070E",
+          "#520D1A",
+          "#7A1427",
+          "#A61B36",
+          "#D42648",
+          "#FF3B5C",
+          "#FF8FA3",
+          "#FFD1D9"
+        ]
+      },
+      "obsidian-stage": {
+        "role": "neutral",
+        "displayName": "Obsidian Stage",
+        "canonical": "#070811",
+        "tonalRamp": [
+          "#070811",
+          "#0C0E1D",
+          "#13172E",
+          "#1B2140",
+          "#2E3766",
+          "#5D6B9E",
+          "#A3B0D6",
+          "#E4EAFD"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 headlines across landing and comparison pages."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major section H2 headers."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Specialty cards, matchup cards, and pricing tier headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Readable 65-72ch explanatory copy, comparison matrix cells, and FAQs."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Tabular-numeral telemetry badges, BPM indicators, and compact controls (>=12px)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "cabinet-depth",
+        "value": "0 14px 34px rgba(3, 4, 10, 0.62)",
+        "purpose": "Grounds primary console and viewport cabinets on the obsidian stage."
+      },
+      {
+        "name": "control-lift",
+        "value": "0 6px 16px rgba(3, 4, 10, 0.45)",
+        "purpose": "Directional hover/active elevation on interactive buttons and cards."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Crisp arcade-responsive state and tab transitions."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "860px"
+      },
+      {
+        "name": "lg",
+        "value": "1080px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Arcade CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "High-contrast gold pill button for primary quiz and conversion actions.",
+      "html": "<button class=\"ds-btn-primary\">BUILD MY TV WORKOUT PLAN</button>",
+      "css": ".ds-btn-primary { background: #FFD600; color: #070811; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.02em; padding: 14px 26px; min-height: 46px; border: 1.5px solid #FFFFFF; border-radius: 999px; box-shadow: 0 6px 16px rgba(3,4,10,0.45); cursor: pointer; transition: transform 0.16s cubic-bezier(0.16,1,0.3,1), background-color 0.16s ease; } .ds-btn-primary:hover { background: #00E5FF; color: #070811; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #00E5FF; outline-offset: 3px; }"
+    },
+    {
+      "name": "Language / Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip-active",
+      "description": "Accessible 12px+ pill control for 7-language switching and movement filters.",
+      "html": "<button class=\"ds-chip is-active\">🇺🇸 English</button>",
+      "css": ".ds-chip { background: #13172E; color: #E4EAFD; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.78rem; padding: 8px 14px; min-height: 38px; border: 1px solid rgba(228,234,253,0.22); border-radius: 999px; cursor: pointer; transition: background-color 0.15s ease, color 0.15s ease; } .ds-chip:hover, .ds-chip.is-active { background: #00E5FF; color: #070811; border-color: #FFFFFF; } .ds-chip:focus-visible { outline: 2px solid #FFD600; outline-offset: 2px; }"
+    },
+    {
+      "name": "Console Option Card",
+      "kind": "card",
+      "refersTo": "button-secondary",
+      "description": "Selectable world, level, or quiz option tile with crisp 1.5px active bezel.",
+      "html": "<button class=\"ds-card\"><strong class=\"ds-card-title\">TOY KINGDOM · 128 BPM</strong><span class=\"ds-card-sub\">No-Jump Boxing & Rhythm Cubes</span></button>",
+      "css": ".ds-card { display: flex; flex-direction: column; gap: 4px; text-align: left; background: #13172E; color: #FFFFFF; padding: 14px 16px; border: 1.5px solid rgba(228,234,253,0.18); border-radius: 14px; cursor: pointer; transition: border-color 0.16s ease, background-color 0.16s ease, transform 0.16s cubic-bezier(0.16,1,0.3,1); } .ds-card:hover { background: #1B2140; border-color: #00E5FF; transform: translateY(-1px); } .ds-card:focus-visible { outline: 2px solid #00E5FF; outline-offset: 2px; } .ds-card-title { font-family: 'Chakra Petch', sans-serif; font-size: 0.98rem; font-weight: 700; } .ds-card-sub { font-family: 'Barlow', sans-serif; font-size: 0.82rem; color: #E4EAFD; }"
+    },
+    {
+      "name": "VIP Email Field",
+      "kind": "input",
+      "refersTo": "button-secondary",
+      "description": "16px mobile-safe email input with Electric Cyan focus ring.",
+      "html": "<input class=\"ds-input\" type=\"email\" placeholder=\"you@example.com\" aria-label=\"Email address\" />",
+      "css": ".ds-input { background: #0A0D1C; color: #FFFFFF; font-family: 'Barlow', sans-serif; font-size: 1rem; padding: 12px 16px; min-height: 48px; border: 1.5px solid rgba(228,234,253,0.28); border-radius: 12px; caret-color: #00E5FF; } .ds-input::placeholder { color: #A3B0D6; } .ds-input:focus-visible { outline: 2px solid #00E5FF; outline-offset: 2px; border-color: #00E5FF; }"
+    },
+    {
+      "name": "HUD Nav Pill",
+      "kind": "nav",
+      "refersTo": "button-secondary",
+      "description": "Top sticky HUD navigation button with high-contrast active state.",
+      "html": "<a class=\"ds-nav-btn\" href=\"#arcade-lobby\">Game Console</a>",
+      "css": ".ds-nav-btn { display: inline-flex; align-items: center; min-height: 40px; padding: 8px 13px; border-radius: 10px; background: #13172E; color: #E4EAFD; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 700; text-decoration: none; border: 1px solid rgba(228,234,253,0.18); transition: background-color 0.14s ease, color 0.14s ease; } .ds-nav-btn:hover { background: #00E5FF; color: #070811; border-color: #FFFFFF; } .ds-nav-btn:focus-visible { outline: 2px solid #FFD600; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Living-Room Arcade Cabinet",
+    "overview": "BodyRush 3D's web interface translates the exact physical sensation of standing 2 meters in front of a glowing 16:9 television in a dim living room: crisp dark obsidian staging so vibrant 3D worlds and neon skeleton telemetry pop immediately, tactile arcade buttons that invite immediate interaction, and instrument-grade clarity for BPM, joint count, duration, and movement rules.",
+    "keyCharacteristics": [
+      "1:1 In-App Fidelity: Mirrors SuperHotGameView.swift and LevelSelectModalOverlayView.",
+      "High-Contrast Dark Telemetry: Pure #070811 dark ink on luminous Gold/Cyan/Emerald actions (>11:1 contrast).",
+      "Tabular Data Precision: JetBrains Mono with tabular-nums reserved strictly for BPM, FPS, KCAL, obstacle counts, and durations.",
+      "Multilingual CJK + Latin Harmony: Self-hosted Chakra Petch + Barlow paired with native Apple/Android CJK fallbacks."
+    ],
+    "rules": [
+      {
+        "name": "The Dark-Ink-On-Neon Rule",
+        "body": "Every filled Cyan, Gold, Amber, or Emerald button and badge uses #070811 dark ink—never white text on bright yellow, orange, or cyan, and never colored hover text on a bright fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Chromatic-Halo Rule",
+        "body": "Never apply zero-offset colored box-shadow glows or radial background purple blobs; express energy through crisp 1.5px colored borders and directional dark elevation shadows.",
+        "section": "colors"
+      },
+      {
+        "name": "The 12px Floor Rule",
+        "body": "No functional label, badge, or body element ever renders below 12px (0.75rem), ensuring effortless legibility on mobile screens and for Japanese/Korean characters.",
+        "section": "typography"
+      },
+      {
+        "name": "The Data-Only Mono Rule",
+        "body": "JetBrains Mono is reserved for numbers, BPM, durations, scores, and compact HUD controls—never long paragraphs.",
+        "section": "typography"
+      },
+      {
+        "name": "The Single-Elevation Declaration Rule",
+        "body": "Cards declare structural boundaries via crisp 1px–1.5px borders and tonal surface steps; reserve soft dark drop shadows for top-level cabinets and active hover lift, and never nest bordered cards inside bordered cards with duplicate shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do self-host subsetted WOFF2 fonts (Chakra Petch, Barlow, JetBrains Mono) for zero render-blocking network requests.",
+      "Do keep every <video> file untouched at original bitrate (preload=\"none\" + instant responsive .webp poster + Cloudflare 30-day Edge cache).",
+      "Do verify >=4.5:1 WCAG AA contrast on every default, :hover, and :focus-visible state, and include visible button text inside aria-label when overriding (WCAG 2.5.3).",
+      "Do theme browser defaults (::selection in Electric Cyan #00E5FF with #070811 ink, dark custom scrollbars, tabular-nums)."
+    ],
+    "donts": [
+      "Don't compress, re-encode, or downscale .mp4 or .webm gameplay videos.",
+      "Don't use zero-offset neon box-shadow halos, decorative stripe/grid background gradients, or purple radial glow blobs.",
+      "Don't render any UI text below 12px (0.75rem) or leave <img> tags without a valid src, width, and height.",
+      "Don't place white or yellow text on bright orange, gold, or cyan fills."
+    ]
+  }
+}

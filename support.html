@@ -26,12 +26,9 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <meta name="apple-itunes-app" content="app-id=6826362298">
   <meta name="theme-color" content="#0A0B14">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=JetBrains+Mono:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css?v=20261029c">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/chakra-petch-700-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-sans-600-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="styles.min.css?v=20261112">
   <style>
     .support-page {
       padding: 28px 0 72px;
@@ -173,7 +170,7 @@
   <header class="hud-header" id="site-header">
     <div class="hud-header-inner">
       <a href="index.html" class="app-brand">
-        <img src="assets/images/app_icon.png" alt="Icône BodyRush 3D" class="app-brand-icon" width="44" height="44">
+        <img src="assets/images/app_icon_96.webp" alt="Icône BodyRush 3D" class="app-brand-icon" width="44" height="44">
         <div class="app-brand-titles">
           <span class="app-brand-name">BODYRUSH 3D</span>
           <span class="app-brand-sub" data-en="FITNESS · BOXING · POSTURES">FITNESS · BOXE · POSTURES</span>
@@ -189,11 +186,11 @@
       </nav>
 
       <div class="hud-actions">
-        <button type="button" class="hud-menu-btn" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">
+        <button type="button" class="hud-menu-btn" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu — Ouvrir">
           <span data-en="Menu">Menu</span>
         </button>
-        <button type="button" class="hud-lang-btn" id="lang-toggle" aria-label="Changer la langue">
-          <span id="lang-flag">🇫🇷</span>
+        <button type="button" class="hud-lang-btn" id="lang-toggle" aria-label="FR — Changer la langue">
+          <span id="lang-flag" aria-hidden="true">🇫🇷</span>
           <span id="lang-code">FR</span>
         </button>
         <span class="hud-store-btn">
@@ -382,7 +379,7 @@
     <div class="lobby-container footer-inner">
       <div class="footer-brand-col">
         <a href="index.html" class="app-brand">
-          <img src="assets/images/app_icon.png" alt="BodyRush 3D" class="app-brand-icon" width="40" height="40">
+          <img src="assets/images/app_icon_96.webp" alt="BodyRush 3D" class="app-brand-icon" width="40" height="40">
           <div class="app-brand-titles">
             <span class="app-brand-name">BODYRUSH 3D</span>
             <span class="app-brand-sub">ARCADE FITNESS · iOS &amp; iPAD</span>

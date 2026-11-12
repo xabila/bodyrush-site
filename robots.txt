@@ -1,8 +1,8 @@
-# BodyRush 3D — Official Search & AI / LLM Crawler Policy
+# BodyRush 3D — Official Search & AI / LLM Crawler Policy (GEO Optimized)
 User-agent: *
 Allow: /
 
-# OpenAI / ChatGPT Search
+# OpenAI / ChatGPT Search & Operator
 User-agent: GPTBot
 Allow: /
 
@@ -12,7 +12,7 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-# Anthropic / Claude
+# Anthropic / Claude Search & Citations
 User-agent: ClaudeBot
 Allow: /
 
@@ -26,29 +26,44 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-# Google Gemini / Search
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini / AI Overviews / Search
 User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-# Apple / Spotlight / Apple Intelligence
+# Apple Spotlight / Apple Intelligence / Siri
 User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-# Sitemaps & LLM Context Documentation
+# Microsoft Bing / Copilot / DuckDuckGo / Mistral / Meta AI
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 Sitemap: https://bodyrush.app/sitemap.xml
-# LLMs.txt (https://llmstxt.org) & Multilingual Competitor Comparisons:
-# - https://bodyrush.app/llms.txt
-# - https://bodyrush.app/llms-full.txt
-# - https://bodyrush.app/compare-fr.html
-# - https://bodyrush.app/compare-en.html
-# - https://bodyrush.app/compare-es.html
-# - https://bodyrush.app/compare-de.html
-# - https://bodyrush.app/compare-ja.html
-# - https://bodyrush.app/compare-ko.html
-# - https://bodyrush.app/compare-pt.html
+
+# Native Multilingual Landing Pages & Competitor Comparison Guides (7 Languages):
+# - FR: https://bodyrush.app/ | https://bodyrush.app/compare-fr.html
+# - EN: https://bodyrush.app/en.html | https://bodyrush.app/compare-en.html
+# - ES: https://bodyrush.app/es.html | https://bodyrush.app/compare-es.html
+# - DE: https://bodyrush.app/de.html | https://bodyrush.app/compare-de.html
+# - JA: https://bodyrush.app/ja.html | https://bodyrush.app/compare-ja.html
+# - KO: https://bodyrush.app/ko.html | https://bodyrush.app/compare-ko.html
+# - PT: https://bodyrush.app/pt.html | https://bodyrush.app/compare-pt.html
+# - LLM Docs: https://bodyrush.app/llms.txt | https://bodyrush.app/llms-full.txt

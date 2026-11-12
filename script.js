@@ -819,9 +819,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- Captures slideshow (#captures-wall) deferred off critical boot path ---
-  const scheduleIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 120));
-  scheduleIdle(() => {
+  // --- Captures slideshow (#captures-wall) initialized lazily when section nears viewport ---
+  function initCapturesSlideshow() {
   const capShow = document.getElementById("cap-show");
   if (capShow) {
     const DURATION = 4500;
@@ -1018,5 +1017,17 @@ document.addEventListener("DOMContentLoaded", () => {
     syncReduced();
     writeCaption();
   }
-  });
+  }
+  const capWallSection = document.getElementById("captures-wall");
+  if (capWallSection && "IntersectionObserver" in window) {
+    const capWallObs = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        capWallObs.disconnect();
+        initCapturesSlideshow();
+      }
+    }, { rootMargin: "350px 0px" });
+    capWallObs.observe(capWallSection);
+  } else {
+    initCapturesSlideshow();
+  }
 });

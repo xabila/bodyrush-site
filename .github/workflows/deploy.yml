@@ -1,37 +1,41 @@
-name: Deploy BodyRush Site to GitHub Pages
+name: Deploy BodyRush Site to Cloudflare Pages
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "cloudflare-pages"
+  cancel-in-progress: true
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    name: Deploy to Cloudflare Pages (bodyrush-site)
     runs-on: ubuntu-latest
+    if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Stage Public Web Assets
+        run: |
+          mkdir -p _dist
+          rsync -av \
+            --exclude='_dist' \
+            --exclude='.git*' \
+            --exclude='.impeccable' \
+            --exclude='scripts' \
+            --exclude='DESIGN.md' \
+            --exclude='PRODUCT.md' \
+            --exclude='README.md' \
+            --exclude='LICENSE' \
+            --exclude='.DS_Store' \
+            ./ _dist/
 
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
         with:
-          path: '.'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: "6e924e77d063c32f4b8b2654054af323"
+          command: pages deploy _dist --project-name=bodyrush-site --branch=main

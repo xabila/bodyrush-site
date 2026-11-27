@@ -13,12 +13,25 @@ jobs:
   deploy:
     name: Deploy to Cloudflare Pages (bodyrush-site)
     runs-on: ubuntu-latest
-    if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    env:
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     steps:
+      - name: Check Cloudflare API token
+        id: cf_token
+        run: |
+          if [ -z "$CF_TOKEN" ]; then
+            echo "::warning::CLOUDFLARE_API_TOKEN missing, skipping deploy"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout Repository
+        if: steps.cf_token.outputs.ok == 'true'
         uses: actions/checkout@v4
 
       - name: Stage Public Web Assets
+        if: steps.cf_token.outputs.ok == 'true'
         run: |
           mkdir -p _dist
           rsync -av \
@@ -34,6 +47,7 @@ jobs:
             ./ _dist/
 
       - name: Deploy to Cloudflare Pages
+        if: steps.cf_token.outputs.ok == 'true'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

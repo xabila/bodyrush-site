@@ -53,6 +53,31 @@ def esc(val: str) -> str:
     return html.escape(str(val), quote=True)
 
 
+def public_path(filename: str) -> str:
+    """URL path served by Cloudflare Pages Pretty URLs.
+
+    Files stay on disk (page.html is still page.html). index.html is /,
+    and a nested xx/index.html is /xx/. Other HTML files drop the extension
+    with no trailing slash, matching the live 308 (/en.html -> /en).
+    """
+    name = (filename or "").strip().lstrip("/")
+    if name in ("", "index.html"):
+        return "/"
+    if name.endswith("/index.html"):
+        directory = name[: -len("index.html")]
+        return "/" + directory if directory.endswith("/") else "/" + directory + "/"
+    if name.endswith(".html"):
+        return "/" + name[:-5]
+    return "/" + name
+
+
+def public_url(filename: str) -> str:
+    path = public_path(filename)
+    if path == "/":
+        return "https://bodyrush.app/"
+    return "https://bodyrush.app" + path
+
+
 def make_qr_svg(target_url: str) -> str:
     qr = qrcode.QRCode(
         version=None,
@@ -75,12 +100,10 @@ def build_hreflang_links(is_compare: bool) -> str:
     lines = []
     for code in LANG_ORDER:
         ux = UI_EXTRAS[code]
-        if is_compare:
-            url = f"https://bodyrush.app/{ux['compare_file']}"
-        else:
-            url = "https://bodyrush.app/" if code == "fr" else f"https://bodyrush.app/{ux['page_file']}"
+        filename = ux["compare_file"] if is_compare else ux["page_file"]
+        url = public_url(filename)
         lines.append(f'  <link rel="alternate" hreflang="{ux["hreflang"]}" href="{url}">')
-    x_def = "https://bodyrush.app/compare-en.html" if is_compare else "https://bodyrush.app/en.html"
+    x_def = public_url("compare-en.html" if is_compare else "en.html")
     lines.append(f'  <link rel="alternate" hreflang="x-default" href="{x_def}">')
     return "\n".join(lines)
 
@@ -88,7 +111,7 @@ def build_hreflang_links(is_compare: bool) -> str:
 def build_landing_page(lang: str, d: dict) -> str:
     ux = UI_EXTRAS[lang]
     rg = REGIONAL_GEO[lang]
-    canonical = "https://bodyrush.app/" if lang == "fr" else f"https://bodyrush.app/{ux['page_file']}"
+    canonical = public_url(ux["page_file"])
     qr_url = f"{canonical}?utm_source=qr_desktop"
     qr_svg = make_qr_svg(qr_url)
 
@@ -182,10 +205,10 @@ def build_landing_page(lang: str, d: dict) -> str:
         active_cls = " is-active" if code == lang else ""
         aria_cur = ' aria-current="page"' if code == lang else ""
         lang_pills.append(
-            f'          <a href="{c_ux["page_file"]}" class="cmp-lang-pill{active_cls}" hreflang="{c_ux["hreflang"]}"{aria_cur}>{LANG_PILL_LABELS[code]}</a>'
+            f'          <a href="{public_path(c_ux["page_file"])}" class="cmp-lang-pill{active_cls}" hreflang="{c_ux["hreflang"]}"{aria_cur}>{LANG_PILL_LABELS[code]}</a>'
         )
     lang_pills.append(
-        f'          <a href="{ux["compare_file"]}" id="hero-cmp-link" class="cmp-lang-pill cmp-lang-pill--cta">{t("hero_cmp_cta")}</a>'
+        f'          <a href="{public_path(ux["compare_file"])}" id="hero-cmp-link" class="cmp-lang-pill cmp-lang-pill--cta">{t("hero_cmp_cta")}</a>'
     )
     lang_bar_html = "\n".join(lang_pills)
 
@@ -1072,13 +1095,13 @@ def build_landing_page(lang: str, d: dict) -> str:
         <div class="cmp-lang-bar" style="margin-top:20px; justify-content:space-between;">
           <span style="font-family:var(--font-mono); font-size:0.78rem; font-weight:800; color:var(--gold);">{t("cmp_guides_label")}</span>
           <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            <a href="compare-fr.html" class="cmp-lang-pill" hreflang="fr">🇫🇷 Comparatif FR</a>
-            <a href="compare-en.html" class="cmp-lang-pill" hreflang="en">🇺🇸 Comparison EN</a>
-            <a href="compare-es.html" class="cmp-lang-pill" hreflang="es">🇪🇸 Comparativa ES</a>
-            <a href="compare-de.html" class="cmp-lang-pill" hreflang="de">🇩🇪 Vergleich DE</a>
-            <a href="compare-ja.html" class="cmp-lang-pill" hreflang="ja">🇯🇵 徹底比較 JA</a>
-            <a href="compare-ko.html" class="cmp-lang-pill" hreflang="ko">🇰🇷 완벽 비교 KO</a>
-            <a href="compare-pt.html" class="cmp-lang-pill" hreflang="pt-BR">🇧🇷 Comparativo PT</a>
+            <a href="/compare-fr" class="cmp-lang-pill" hreflang="fr">🇫🇷 Comparatif FR</a>
+            <a href="/compare-en" class="cmp-lang-pill" hreflang="en">🇺🇸 Comparison EN</a>
+            <a href="/compare-es" class="cmp-lang-pill" hreflang="es">🇪🇸 Comparativa ES</a>
+            <a href="/compare-de" class="cmp-lang-pill" hreflang="de">🇩🇪 Vergleich DE</a>
+            <a href="/compare-ja" class="cmp-lang-pill" hreflang="ja">🇯🇵 徹底比較 JA</a>
+            <a href="/compare-ko" class="cmp-lang-pill" hreflang="ko">🇰🇷 완벽 비교 KO</a>
+            <a href="/compare-pt" class="cmp-lang-pill" hreflang="pt-BR">🇧🇷 Comparativo PT</a>
           </div>
         </div>
 
@@ -1198,7 +1221,7 @@ def build_landing_page(lang: str, d: dict) -> str:
             <div class="priv-badge">{t("priv_badge")}</div>
             <h3>{t("priv_title")}</h3>
             <p>{t("priv_desc")}</p>
-            <a href="privacy.html" class="priv-link">{t("priv_btn")}</a>
+            <a href="/privacy" class="priv-link">{t("priv_btn")}</a>
           </div>
 
           <div class="faq-arcade-box">
@@ -1224,19 +1247,19 @@ def build_landing_page(lang: str, d: dict) -> str:
       </div>
 
       <div class="footer-links-row">
-        <a href="index.html" hreflang="fr">🇫🇷 FR</a>
-        <a href="en.html" hreflang="en">🇺🇸 EN</a>
-        <a href="es.html" hreflang="es">🇪🇸 ES</a>
-        <a href="de.html" hreflang="de">🇩🇪 DE</a>
-        <a href="ja.html" hreflang="ja">🇯🇵 JA</a>
-        <a href="ko.html" hreflang="ko">🇰🇷 KO</a>
-        <a href="pt.html" hreflang="pt-BR">🇧🇷 PT</a>
-        <a href="{ux['compare_file']}">{t("nav_compare")}</a>
+        <a href="/" hreflang="fr">🇫🇷 FR</a>
+        <a href="/en" hreflang="en">🇺🇸 EN</a>
+        <a href="/es" hreflang="es">🇪🇸 ES</a>
+        <a href="/de" hreflang="de">🇩🇪 DE</a>
+        <a href="/ja" hreflang="ja">🇯🇵 JA</a>
+        <a href="/ko" hreflang="ko">🇰🇷 KO</a>
+        <a href="/pt" hreflang="pt-BR">🇧🇷 PT</a>
+        <a href="{public_path(ux['compare_file'])}">{t("nav_compare")}</a>
         <a href="#bo">{t("footer_bo")}</a>
         <a href="llms.txt">LLMs.txt</a>
-        <a href="privacy.html">{t("footer_priv_pol")}</a>
-        <a href="terms.html">{t("footer_terms")}</a>
-        <a href="support.html">{t("footer_support")}</a>
+        <a href="/privacy">{t("footer_priv_pol")}</a>
+        <a href="/terms">{t("footer_terms")}</a>
+        <a href="/support">{t("footer_support")}</a>
         <a href="mailto:xlarrodeapp+bodyrush@gmail.com">xlarrodeapp+bodyrush@gmail.com</a>
       </div>
     </div>
@@ -1252,7 +1275,7 @@ def build_landing_page(lang: str, d: dict) -> str:
 def build_compare_page(lang: str, cdata: dict, out_filename: str) -> str:
     ux = UI_EXTRAS[lang]
     rg = REGIONAL_GEO[lang]
-    canonical = f"https://bodyrush.app/{out_filename}"
+    canonical = public_url(out_filename)
     hreflangs = build_hreflang_links(is_compare=True)
 
     # Combine 4 core FAQs + 2 regional local-competitor FAQs = 6 rich GEO FAQs
@@ -1285,7 +1308,7 @@ def build_compare_page(lang: str, cdata: dict, out_filename: str) -> str:
                 "operatingSystem": "iOS 17+, iPadOS 17+",
                 "applicationCategory": ["GameApplication", "HealthApplication"],
                 "inLanguage": ["fr", "en", "es", "de", "ja", "ko", "pt-BR"],
-                "url": f"https://bodyrush.app/{'' if lang == 'fr' else ux['page_file']}",
+                "url": public_url(ux["page_file"]),
                 "sameAs": ["https://apps.apple.com/app/id6826362298"],
                 "description": cdata["desc"],
                 "author": {"@type": "Person", "name": "Xavier Larrodé"}
@@ -1297,7 +1320,7 @@ def build_compare_page(lang: str, cdata: dict, out_filename: str) -> str:
                         "@type": "ListItem",
                         "position": 1,
                         "name": "BodyRush 3D",
-                        "item": "https://bodyrush.app/" if lang == "fr" else f"https://bodyrush.app/{ux['page_file']}"
+                        "item": public_url(ux["page_file"])
                     },
                     {
                         "@type": "ListItem",
@@ -1328,7 +1351,7 @@ def build_compare_page(lang: str, cdata: dict, out_filename: str) -> str:
         active_cls = " is-active" if code == lang else ""
         aria_cur = ' aria-current="page"' if code == lang else ""
         lang_pills.append(
-            f'        <a href="{c_ux["compare_file"]}" class="cmp-lang-pill{active_cls}" hreflang="{c_ux["hreflang"]}"{aria_cur}>{LANG_PILL_LABELS[code]}</a>'
+            f'        <a href="{public_path(c_ux["compare_file"])}" class="cmp-lang-pill{active_cls}" hreflang="{c_ux["hreflang"]}"{aria_cur}>{LANG_PILL_LABELS[code]}</a>'
         )
     lang_bar_html = "\n".join(lang_pills)
 
@@ -1359,7 +1382,7 @@ def build_compare_page(lang: str, cdata: dict, out_filename: str) -> str:
             f'          </details>'
         )
 
-    home_href = ux["page_file"]
+    home_href = public_path(ux["page_file"])
 
     return f"""<!DOCTYPE html>
 <html lang="{ux['html_lang']}">
@@ -1496,16 +1519,16 @@ def build_compare_page(lang: str, cdata: dict, out_filename: str) -> str:
         </div>
       </div>
       <div class="footer-links-row">
-        <a href="index.html" hreflang="fr">🇫🇷 FR</a>
-        <a href="en.html" hreflang="en">🇺🇸 EN</a>
-        <a href="es.html" hreflang="es">🇪🇸 ES</a>
-        <a href="de.html" hreflang="de">🇩🇪 DE</a>
-        <a href="ja.html" hreflang="ja">🇯🇵 JA</a>
-        <a href="ko.html" hreflang="ko">🇰🇷 KO</a>
-        <a href="pt.html" hreflang="pt-BR">🇧🇷 PT</a>
+        <a href="/" hreflang="fr">🇫🇷 FR</a>
+        <a href="/en" hreflang="en">🇺🇸 EN</a>
+        <a href="/es" hreflang="es">🇪🇸 ES</a>
+        <a href="/de" hreflang="de">🇩🇪 DE</a>
+        <a href="/ja" hreflang="ja">🇯🇵 JA</a>
+        <a href="/ko" hreflang="ko">🇰🇷 KO</a>
+        <a href="/pt" hreflang="pt-BR">🇧🇷 PT</a>
         <a href="llms.txt">LLMs.txt</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/support">Support</a>
       </div>
     </div>
   </footer>
@@ -1579,13 +1602,13 @@ Allow: /
 Sitemap: https://bodyrush.app/sitemap.xml
 
 # Native Multilingual Landing Pages & Competitor Comparison Guides (7 Languages):
-# - FR: https://bodyrush.app/ | https://bodyrush.app/compare-fr.html
-# - EN: https://bodyrush.app/en.html | https://bodyrush.app/compare-en.html
-# - ES: https://bodyrush.app/es.html | https://bodyrush.app/compare-es.html
-# - DE: https://bodyrush.app/de.html | https://bodyrush.app/compare-de.html
-# - JA: https://bodyrush.app/ja.html | https://bodyrush.app/compare-ja.html
-# - KO: https://bodyrush.app/ko.html | https://bodyrush.app/compare-ko.html
-# - PT: https://bodyrush.app/pt.html | https://bodyrush.app/compare-pt.html
+# - FR: https://bodyrush.app/ | https://bodyrush.app/compare-fr
+# - EN: https://bodyrush.app/en | https://bodyrush.app/compare-en
+# - ES: https://bodyrush.app/es | https://bodyrush.app/compare-es
+# - DE: https://bodyrush.app/de | https://bodyrush.app/compare-de
+# - JA: https://bodyrush.app/ja | https://bodyrush.app/compare-ja
+# - KO: https://bodyrush.app/ko | https://bodyrush.app/compare-ko
+# - PT: https://bodyrush.app/pt | https://bodyrush.app/compare-pt
 # - LLM Docs: https://bodyrush.app/llms.txt | https://bodyrush.app/llms-full.txt
 """
     with open(os.path.join(SITE_ROOT, "robots.txt"), "w", encoding="utf-8") as f:
@@ -1594,36 +1617,36 @@ Sitemap: https://bodyrush.app/sitemap.xml
     # 2. sitemap.xml with full reciprocal hreflang clusters on BOTH landing pages and comparison pages
     landing_cluster = []
     for code in LANG_ORDER:
-        u = "https://bodyrush.app/" if code == "fr" else f"https://bodyrush.app/{UI_EXTRAS[code]['page_file']}"
+        u = public_url(UI_EXTRAS[code]["page_file"])
         landing_cluster.append(f'    <xhtml:link rel="alternate" hreflang="{UI_EXTRAS[code]["hreflang"]}" href="{u}" />')
-    landing_cluster.append('    <xhtml:link rel="alternate" hreflang="x-default" href="https://bodyrush.app/en.html" />')
+    landing_cluster.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{public_url("en.html")}" />')
     landing_cluster_xml = "\n".join(landing_cluster)
 
     compare_cluster = []
     for code in LANG_ORDER:
-        u = f"https://bodyrush.app/{UI_EXTRAS[code]['compare_file']}"
+        u = public_url(UI_EXTRAS[code]["compare_file"])
         compare_cluster.append(f'    <xhtml:link rel="alternate" hreflang="{UI_EXTRAS[code]["hreflang"]}" href="{u}" />')
-    compare_cluster.append('    <xhtml:link rel="alternate" hreflang="x-default" href="https://bodyrush.app/compare-en.html" />')
+    compare_cluster.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{public_url("compare-en.html")}" />')
     compare_cluster_xml = "\n".join(compare_cluster)
 
     url_entries = []
     for code in LANG_ORDER:
-        loc = "https://bodyrush.app/" if code == "fr" else f"https://bodyrush.app/{UI_EXTRAS[code]['page_file']}"
+        loc = public_url(UI_EXTRAS[code]["page_file"])
         url_entries.append(
             f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>2026-11-12</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n{landing_cluster_xml}\n  </url>"
         )
     for code in LANG_ORDER:
-        loc = f"https://bodyrush.app/{UI_EXTRAS[code]['compare_file']}"
+        loc = public_url(UI_EXTRAS[code]["compare_file"])
         url_entries.append(
             f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>2026-11-12</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.95</priority>\n{compare_cluster_xml}\n  </url>"
         )
     for loc, prio, freq, mod in [
-        ("https://bodyrush.app/compare.html", "0.85", "weekly", "2026-11-12"),
+        (public_url("compare.html"), "0.85", "weekly", "2026-11-12"),
         ("https://bodyrush.app/llms.txt", "0.9", "weekly", "2026-11-12"),
         ("https://bodyrush.app/llms-full.txt", "0.9", "weekly", "2026-11-12"),
-        ("https://bodyrush.app/privacy.html", "0.5", "monthly", "2026-11-11"),
-        ("https://bodyrush.app/terms.html", "0.5", "monthly", "2026-11-12"),
-        ("https://bodyrush.app/support.html", "0.6", "monthly", "2026-11-12"),
+        (public_url("privacy.html"), "0.5", "monthly", "2026-11-11"),
+        (public_url("terms.html"), "0.5", "monthly", "2026-11-12"),
+        (public_url("support.html"), "0.6", "monthly", "2026-11-12"),
     ]:
         url_entries.append(
             f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{mod}</lastmod>\n    <changefreq>{freq}</changefreq>\n    <priority>{prio}</priority>\n  </url>"
@@ -1644,25 +1667,25 @@ Sitemap: https://bodyrush.app/sitemap.xml
 ## Native Multilingual Pages & Regional Market Positioning (7 Languages / 12 App Store Locales)
 
 - **Apple App Store ID**: `6826362298` (`https://apps.apple.com/app/id6826362298`)
-- **🇫🇷 Français (`fr-FR`, `fr-CA`)**: [Accueil FR](https://bodyrush.app/) · [Comparatif FR](https://bodyrush.app/compare-fr.html)
+- **🇫🇷 Français (`fr-FR`, `fr-CA`)**: [Accueil FR](https://bodyrush.app/) · [Comparatif FR](https://bodyrush.app/compare-fr)
   - *Local Competitors Beat*: Vidéos YouTube passives (*Tibo InShape*, *Sissy Mua / Trainsweeat*, *Lucile Woodward*), coaching *FizzUp* / *Freeletics*, *Nintendo Switch* (*Ring Fit Adventure*, *Fitness Boxing 3*, *Just Dance*).
   - *Key Local Why*: Mode Appartement **🚫 Sans Saut** (zéro impact voisins), zéro console à 350 €, Tournoi Salon 2–4 joueurs.
-- **🇺🇸🇬🇧🇨🇦🇦🇺 English (`en-US`, `en-GB`, `en-CA`, `en-AU`)**: [English Home](https://bodyrush.app/en.html) · [English Comparison](https://bodyrush.app/compare-en.html)
+- **🇺🇸🇬🇧🇨🇦🇦🇺 English (`en-US`, `en-GB`, `en-CA`, `en-AU`)**: [English Home](https://bodyrush.app/en) · [English Comparison](https://bodyrush.app/compare-en)
   - *Local Competitors Beat*: *Nex Playground* ($249 cube + $89/yr pass), *Supernatural VR* & *Beat Saber* (*Meta Quest 3*), *Nintendo Switch* (*Ring Fit*, *Fitness Boxing 3*), *Peloton App / Guide*, *MadFit* / *GrowWithJo* YouTube HIIT, *Apple Fitness+*.
   - *Key Local Why*: $0 hardware cost, hands-free 19-joint Apple Vision AI at 60 FPS on 16:9 AirPlay TV, zero sweaty VR headset foam, 2–4P Family Game Night.
-- **🇪🇸🇲🇽 Español (`es-ES`, `es-MX`)**: [Inicio ES](https://bodyrush.app/es.html) · [Comparativa ES](https://bodyrush.app/compare-es.html)
+- **🇪🇸🇲🇽 Español (`es-ES`, `es-MX`)**: [Inicio ES](https://bodyrush.app/es) · [Comparativa ES](https://bodyrush.app/compare-es)
   - *Local Competitors Beat*: *Patry Jordán (Gym Virtual)*, *Fausto Murillo*, *Sergio Peinado (Fuertafit)*, *Freeletics*, *Nintendo Switch* (*Ring Fit*, *Fitness Boxing 3*).
   - *Key Local Why*: Modo Piso / Departamento **🚫 Sin Saltos** sin ruido para vecinos, cero gasto en consolas o accesorios.
-- **🇩🇪🇦🇹🇨🇭 Deutsch (`de-DE`)**: [Startseite DE](https://bodyrush.app/de.html) · [TV-Fitness-Vergleich DE](https://bodyrush.app/compare-de.html)
+- **🇩🇪🇦🇹🇨🇭 Deutsch (`de-DE`)**: [Startseite DE](https://bodyrush.app/de) · [TV-Fitness-Vergleich DE](https://bodyrush.app/compare-de)
   - *Local Competitors Beat*: *Pamela Reif*, *Sascha Huber*, *Mady Morrison* (YouTube), *Freeletics*, *Gymondo*, *Nintendo Switch* (*Ring Fit*, *Fitness Boxing 3*), *Meta Quest 3*.
   - *Key Local Why*: **100 % On-Device Kamera-Datenschutz (DSGVO-freundlich, 0 Video-Upload)** + Mietwohnung-Modus **🚫 Ohne Springen** ohne Trittschall.
-- **🇯🇵 日本語 (`ja`)**: [日本語ホーム](https://bodyrush.app/ja.html) · [公式徹底比較 JA](https://bodyrush.app/compare-ja.html)
+- **🇯🇵 日本語 (`ja`)**: [日本語ホーム](https://bodyrush.app/ja) · [公式徹底比較 JA](https://bodyrush.app/compare-ja)
   - *Local Competitors Beat*: *竹脇まりな*・*なかやまきんに君*（YouTube宅トレ）、*Nintendo Switch*（『リングフィット アドベンチャー』『Fit Boxing 3』『ジャストダンス』）、*chocoZAP（チョコザップ）*、*Meta Quest 3*。
   - *Key Local Why*: 日本の賃貸マンション向け**「🚫ジャンプなし」静音モード**＆省スペース（約1.8m〜2m）、専用機器0円・手ぶら19関節追跡。
-- **🇰🇷 한국어 (`ko`)**: [한국어 홈](https://bodyrush.app/ko.html) · [완벽 비교 KO](https://bodyrush.app/compare-ko.html)
+- **🇰🇷 한국어 (`ko`)**: [한국어 홈](https://bodyrush.app/ko) · [완벽 비교 KO](https://bodyrush.app/compare-ko)
   - *Local Competitors Beat*: *땅끄부부*·*힙으뜸*·*비타민신지니* (유튜브 홈트), *야핏 (YaFit)*·*콰트 (QUAT)*, *닌텐도 스위치* (『링피트 어드벤처』『피트니스 복싱 3』), *메타 퀘스트 3*。
   - *Key Local Why*: 대한민국 아파트 **층간소음 제로 ('🚫 점프 없음' 모드)**, 고가 콘솔·센서 구매 비용 0원, 온디바이스 프라이버시 보호.
-- **🇧🇷 Português (`pt-BR`)**: [Início PT-BR](https://bodyrush.app/pt.html) · [Comparativo PT-BR](https://bodyrush.app/compare-pt.html)
+- **🇧🇷 Português (`pt-BR`)**: [Início PT-BR](https://bodyrush.app/pt) · [Comparativo PT-BR](https://bodyrush.app/compare-pt)
   - *Local Competitors Beat*: *Queima Diária*, *Carol Borba* / *Exercício em Casa* (YouTube), *Smart Fit App* / *BTFIT*, *Nintendo Switch* (*Ring Fit*, *Fitness Boxing 3*).
   - *Key Local Why*: Economia de **R$ 2.500 a R$ 4.000+** sem precisar comprar console importado no Brasil + Modo Apartamento **🚫 Sem Pulos**.
 """

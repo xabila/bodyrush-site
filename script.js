@@ -281,13 +281,13 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const langMeta = {
-    fr: { flag: "🇫🇷", page: "index.html", aria: "FR — Changer la langue", soundOff: "🔇 SON OFF", soundOn: "🔊 SON ON", menuOpen: "Menu — Ouvrir", menuClose: "Menu — Fermer" },
-    en: { flag: "🇺🇸", page: "en.html", aria: "EN — Change language", soundOff: "🔇 SOUND OFF", soundOn: "🔊 SOUND ON", menuOpen: "Menu — Open", menuClose: "Menu — Close" },
-    es: { flag: "🇪🇸", page: "es.html", aria: "ES — Cambiar idioma", soundOff: "🔇 SONIDO OFF", soundOn: "🔊 SONIDO ON", menuOpen: "Menú — Abrir", menuClose: "Menú — Cerrar" },
-    de: { flag: "🇩🇪", page: "de.html", aria: "DE — Sprache ändern", soundOff: "🔇 TON AUS", soundOn: "🔊 TON AN", menuOpen: "Menü — Öffnen", menuClose: "Menü — Schließen" },
-    ja: { flag: "🇯🇵", page: "ja.html", aria: "JA — 言語を変更", soundOff: "🔇 音声OFF", soundOn: "🔊 音声ON", menuOpen: "メニューを開く", menuClose: "メニューを閉じる" },
-    ko: { flag: "🇰🇷", page: "ko.html", aria: "KO — 언어 변경", soundOff: "🔇 소리 끔", soundOn: "🔊 소리 켬", menuOpen: "메뉴 열기", menuClose: "메뉴 닫기" },
-    pt: { flag: "🇧🇷", page: "pt.html", aria: "PT — Mudar idioma", soundOff: "🔇 SOM OFF", soundOn: "🔊 SOM ON", menuOpen: "Menu — Abrir", menuClose: "Menu — Fechar" }
+    fr: { flag: "🇫🇷", page: "/", aria: "FR — Changer la langue", soundOff: "🔇 SON OFF", soundOn: "🔊 SON ON", menuOpen: "Menu — Ouvrir", menuClose: "Menu — Fermer" },
+    en: { flag: "🇺🇸", page: "/en", aria: "EN — Change language", soundOff: "🔇 SOUND OFF", soundOn: "🔊 SOUND ON", menuOpen: "Menu — Open", menuClose: "Menu — Close" },
+    es: { flag: "🇪🇸", page: "/es", aria: "ES — Cambiar idioma", soundOff: "🔇 SONIDO OFF", soundOn: "🔊 SONIDO ON", menuOpen: "Menú — Abrir", menuClose: "Menú — Cerrar" },
+    de: { flag: "🇩🇪", page: "/de", aria: "DE — Sprache ändern", soundOff: "🔇 TON AUS", soundOn: "🔊 TON AN", menuOpen: "Menü — Öffnen", menuClose: "Menü — Schließen" },
+    ja: { flag: "🇯🇵", page: "/ja", aria: "JA — 言語を変更", soundOff: "🔇 音声OFF", soundOn: "🔊 音声ON", menuOpen: "メニューを開く", menuClose: "メニューを閉じる" },
+    ko: { flag: "🇰🇷", page: "/ko", aria: "KO — 언어 변경", soundOff: "🔇 소리 끔", soundOn: "🔊 소리 켬", menuOpen: "메뉴 열기", menuClose: "메뉴 닫기" },
+    pt: { flag: "🇧🇷", page: "/pt", aria: "PT — Mudar idioma", soundOff: "🔇 SOM OFF", soundOn: "🔊 SOM ON", menuOpen: "Menu — Abrir", menuClose: "Menu — Fechar" }
   };
 
   // --- Console Step Switching ---

@@ -59,11 +59,11 @@ Allow: /
 Sitemap: https://bodyrush.app/sitemap.xml
 
 # Native Multilingual Landing Pages & Competitor Comparison Guides (7 Languages):
-# - FR: https://bodyrush.app/ | https://bodyrush.app/compare-fr.html
-# - EN: https://bodyrush.app/en.html | https://bodyrush.app/compare-en.html
-# - ES: https://bodyrush.app/es.html | https://bodyrush.app/compare-es.html
-# - DE: https://bodyrush.app/de.html | https://bodyrush.app/compare-de.html
-# - JA: https://bodyrush.app/ja.html | https://bodyrush.app/compare-ja.html
-# - KO: https://bodyrush.app/ko.html | https://bodyrush.app/compare-ko.html
-# - PT: https://bodyrush.app/pt.html | https://bodyrush.app/compare-pt.html
+# - FR: https://bodyrush.app/ | https://bodyrush.app/compare-fr
+# - EN: https://bodyrush.app/en | https://bodyrush.app/compare-en
+# - ES: https://bodyrush.app/es | https://bodyrush.app/compare-es
+# - DE: https://bodyrush.app/de | https://bodyrush.app/compare-de
+# - JA: https://bodyrush.app/ja | https://bodyrush.app/compare-ja
+# - KO: https://bodyrush.app/ko | https://bodyrush.app/compare-ko
+# - PT: https://bodyrush.app/pt | https://bodyrush.app/compare-pt
 # - LLM Docs: https://bodyrush.app/llms.txt | https://bodyrush.app/llms-full.txt

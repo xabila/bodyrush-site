@@ -1,0 +1,8 @@
+# Le français est la racine (fichier index.html, URL /). Il n'y a pas de fr.html
+# ni de dossier /fr : en production /fr sert le même HTML que /. Ces règles
+# remplacent ce 200 (repli sans 404.html) par un 301 vers /.
+# Ne pas rediriger une URL propre vers son .html : Pretty URLs fait déjà
+# l'inverse (/page.html → /page en 308) et l'inverse créerait une boucle.
+/fr / 301
+/fr/ / 301
+/fr/* / 301
